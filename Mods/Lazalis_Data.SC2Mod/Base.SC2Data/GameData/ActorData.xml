@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorUnit id="Bodyguard" parent="GenericUnitStandard" unitName="Bodyguard">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="BodyguardDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Marine_Death"/>
+        <PortraitModel value="BodyguardPortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="40"/>
+        <BarWidth value="46"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-marine-blackops.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-marine-blackops.dds"/>
+        </Wireframe>
+        <SoundArray index="Ready" value="Marine_Ready"/>
+        <SoundArray index="Help" value="Marine_Help"/>
+        <SoundArray index="What" value="Marine_What"/>
+        <SoundArray index="Yes" value="Marine_Yes"/>
+        <SoundArray index="Attack" value="Marine_Attack"/>
+        <SoundArray index="Pissed" value="Marine_Pissed"/>
+        <Scale value="1.200000"/>
+        <UnitIcon value="Assets\Icons\TrainBodyguard.dds"/>
+    </CActorUnit>
+    <CActorModel id="CommandCenterBuild">
+        <Inherits index="Opacity" value="0"/>
+    </CActorModel>
+    <CActorAction id="FerromagSMGAction" parent="GenericAttack" effectAttack="FerromagSMGDamage">
+        <LaunchAssets Model="FerromagSMGLaunchModel" Sound="FerromagSMGLaunchSound"/>
+        <Missile value="FerromagSMGWeaponMissile"/>
+        <ImpactMap index="None" Model="FerromagSMGImpactModel" Sound="FerromagSMGImpactSound"/>
+    </CActorAction>
+    <CActorSound id="MedivacTransportLoadSound">
+        <On Terms="AbilTransport.MakeshiftBunkerTransport.TransportLoad" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="MedivacTransportUnloadSound">
+        <On Terms="AbilTransport.MakeshiftBunkerTransport.TransportUnload" Send="Create"/>
+    </CActorSound>
+    <CActorUnit id="Militia" parent="GenericUnitStandard" unitName="Militia">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="MilitiaDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Marine_Death"/>
+        <PortraitModel value="MilitiaPortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="40"/>
+        <BarWidth value="35"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
+        </GroupIcon>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
+        </Wireframe>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
+    </CActorUnit>
+    <CActorUnit id="MsLazalis" parent="GenericUnitStandard" unitName="MsLazalis">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="MsLazalisDeath" VoiceLink="Nova_Death"/>
+        <PortraitModel value="MsLazalisPortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="40"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-nova.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-nova.dds"/>
+        </Wireframe>
+        <UnitIcon value="Assets\Textures\nova coop_powerupicon.dds"/>
+    </CActorUnit>
+    <CActorAction id="N11HandcannonAction" parent="GenericAttack" effectAttack="N11HandcannonDamage">
+        <LaunchAssets Model="N11HandcannonLaunchModel" Sound="N11HandcannonLaunchSound"/>
+        <Missile value="N11HandcannonWeaponMissile"/>
+        <ImpactMap index="None" Model="N11HandcannonImpactModel" Sound="N11HandcannonImpactSound"/>
+    </CActorAction>
+    <CActorAction id="OldReliableAction" parent="GenericAttack" effectAttack="OldReliableDamage">
+        <LaunchAssets Model="OldReliableLaunchModel" Sound="OldReliableLaunchSound"/>
+        <Missile value="OldReliableWeaponMissile"/>
+        <ImpactMap index="None" Model="OldReliableImpactModel" Sound="OldReliableImpactSound"/>
+    </CActorAction>
+    <CActorUnit id="UP1Headquarters" parent="GenericUnitStandard" unitName="UP1Headquarters">
+        <Aliases value="_CreepEngulfable"/>
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <Macros value="BuildAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="SnowVisualUnitMacroMP"/>
+        <Macros value="MacroTownhallDeco_Terran"/>
+        <Macros value="TerranCommandCenterPlayerDecalMacro"/>
+        <Macros value="SprayHelperMacro"/>
+        <AcceptedHostedPropTransfers index="Decal" value="0"/>
+        <EditorCategories value=""/>
+        <On Terms="UnitConstruction.UP1Headquarters.Start" Send="Create CommandCenterBuild"/>
+        <On Terms="UnitConstruction.UP1Headquarters.Start" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitConstruction.UP1Headquarters.Cancel" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.UP1Headquarters.Finish" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <On Terms="UnitConstruction.UP1Headquarters.Start" Send="QueryRadius 1.750000 BuildingCrushQueryResponse"/>
+        <On Terms="UnitBirth.UP1Headquarters.Normal" Send="Create BuildingTerrainFlatten"/>
+        <On Terms="UnitBirth.UP1Headquarters.Suppressed" Send="Create BuildingTerrainFlattenInstant"/>
+        <On Terms="UnitBirth.UP1Headquarters.EditorPlaced" Send="Create BuildingTerrainFlattenEditor"/>
+        <On Terms="UnitDeath.UP1Headquarters" Target="_BuildingTerrainFlatten" Send="Destroy"/>
+        <HostSiteOps Ops="SOpBankerUnitBuilding"/>
+        <ModelFlags index="OutlineOccluder" value="1"/>
+        <CreepHeightClass value="Default"/>
+        <CreepRateGrow value="Grow"/>
+        <CreepRateShrink value="Shrink"/>
+        <DeathArray index="Normal" ModelLink="UP1HeadquartersDeath" SoundLink="Terran_BuildingExplosion_large" VoiceLink=""/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="CommandCenter_Explode"/>
+        <PlacementSound value="Terran_BuildingPlacement"/>
+        <PortraitModel value="UnarianAdvisorPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.250000,0.500000"/>
+            <RangeDown value="5.000000"/>
+            <RangeDownFade value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive3"/>
+        </TerrainSquibs>
+        <BarOffset value="165"/>
+        <BarWidth value="200"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-up1headquarters.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-CommandCenter.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-buildingarmor.dds"/>
+        <NameOffset value="150"/>
+        <SoundArray index="Ready" value="CommandCenter_Ready"/>
+        <SoundArray index="What" value="CommandCenter_What"/>
+        <SoundArray index="Movement" value="CommandCenter_Movement2"/>
+        <SoundArray index="Construction" value="Terran_ConstructionWhat"/>
+        <StatusHarvesterData Text="UI/HarvesterCountMinerals" SearchFilters="HarvestableResource;Player,Ally,Enemy" SearchRadius="8"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-CommandCenter.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-up1headquarters.dds"/>
+        </Wireframe>
+        <BuildModel value="InvisibleBuild"/>
+    </CActorUnit>
+</Catalog>

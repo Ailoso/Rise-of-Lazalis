@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="Limitof3Bodyguards">
+        <NodeArray index="Use" Link="LT3702416715CountUnitCommentatorBot1QueuedOnly3"/>
+    </CRequirement>
+</Catalog>

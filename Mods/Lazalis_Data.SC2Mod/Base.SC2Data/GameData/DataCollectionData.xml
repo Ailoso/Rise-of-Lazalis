@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CDataCollectionUnit id="Bodyguard">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Campaign,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,Bodyguard"/>
+        <DataRecord Entry="Model,Bodyguard"/>
+        <DataRecord Entry="Model,BodyguardPortrait"/>
+        <DataRecord Entry="Model,BodyguardDeath"/>
+        <DataRecord Entry="Weapon,N11Handcannon"/>
+        <DataRecord Entry="Unit,Bodyguard"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="Militia">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Campaign,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,Militia"/>
+        <DataRecord Entry="Model,Militia"/>
+        <DataRecord Entry="Model,MilitiaDeath"/>
+        <DataRecord Entry="Model,MilitiaPortrait"/>
+        <DataRecord Entry="Unit,Militia"/>
+        <DataRecord Entry="Weapon,FerromagSMG"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="MsLazalis">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Campaign,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,MsLazalis"/>
+        <DataRecord Entry="Model,MsLazalis"/>
+        <DataRecord Entry="Model,MsLazalisDeath"/>
+        <DataRecord Entry="Model,MsLazalisPortrait"/>
+        <DataRecord Entry="Weapon,OldReliable"/>
+        <DataRecord Entry="Unit,MsLazalis"/>
+    </CDataCollectionUnit>
+    <CDataCollection id="N11Handcannon">
+        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Campaign,ObjectType:Other"/>
+        <DataRecord Entry="Weapon,N11Handcannon"/>
+        <DataRecord Entry="Sound,N11HandcannonLaunchSound"/>
+        <DataRecord Entry="Sound,N11HandcannonImpactSound"/>
+        <DataRecord Entry="Model,N11HandcannonLaunchModel"/>
+        <DataRecord Entry="Model,N11HandcannonImpactModel"/>
+        <DataRecord Entry="Effect,N11HandcannonDamage"/>
+        <DataRecord Entry="Actor,N11HandcannonAction"/>
+    </CDataCollection>
+    <CDataCollection id="OldReliable">
+        <EditorCategories value="DataGroup:Weapon,Race:Terran,DataFamily:Campaign,ObjectType:Other"/>
+        <DataRecord Entry="Weapon,OldReliable"/>
+        <DataRecord Entry="Sound,OldReliableLaunchSound"/>
+        <DataRecord Entry="Sound,OldReliableImpactSound"/>
+        <DataRecord Entry="Model,OldReliableLaunchModel"/>
+        <DataRecord Entry="Model,OldReliableImpactModel"/>
+        <DataRecord Entry="Effect,OldReliableDamage"/>
+        <DataRecord Entry="Actor,OldReliableAction"/>
+    </CDataCollection>
+</Catalog>

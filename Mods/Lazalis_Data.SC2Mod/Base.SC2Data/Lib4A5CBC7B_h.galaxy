@@ -1,0 +1,10 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Rise of Lazalis
+//--------------------------------------------------------------------------------------------------
+// Trigger Declarations
+trigger lib4A5CBC7B_gt_Init;
+trigger lib4A5CBC7B_gt_TooltipAppenderOn;
+trigger lib4A5CBC7B_gt_TooltipAppenderOff;
+

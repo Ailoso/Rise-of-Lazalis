@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CFootprint id="Footprint4x5">
+        <Layers index="Check" Area="-2,-2,3,2">
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+        </Layers>
+        <Layers index="Place" Area="-2,-2,3,2">
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+        </Layers>
+        <Shape>
+            <Radius value="3.2016"/>
+            <Offsets value="-2.5,-2;2.5,-2;-2.5,2;2.5,2"/>
+            <Borders value="0,2,2;1,0,2;2,3,2;3,1,2"/>
+        </Shape>
+    </CFootprint>
+    <CFootprint id="Footprint4x5Dropoff">
+        <Layers index="Check" Area="-2,-2,3,2">
+            <Sets index="0">
+                <Negative index="NearResources" value="1"/>
+            </Sets>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+        </Layers>
+        <Layers index="Place" Area="-2,-2,3,2">
+            <Sets index="0">
+                <Positive index="DropOff" value="1"/>
+            </Sets>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+            <Rows value="xxxxx"/>
+        </Layers>
+        <Shape>
+            <Radius value="3.2016"/>
+            <Offsets value="-2.5,-2;2.5,-2;-2.5,2;2.5,2"/>
+            <Borders value="0,2,2;1,0,2;2,3,2;3,1,2"/>
+        </Shape>
+    </CFootprint>
+</Catalog>

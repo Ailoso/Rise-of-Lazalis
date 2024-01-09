@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorCombine id="NoAppender">
+        <CombineArray value="NoUP1Appender"/>
+        <CombineArray value="NoMakeshiftAppender"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="NoMakeshiftAppender">
+        <Behavior value="MakeshiftBunkerAppender"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="UP1Appender">
+        <Value value="1"/>
+        <Behavior value="UP1Appender"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="NoUP1Appender">
+        <Behavior value="UP1Appender"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MakeshiftAppender">
+        <Value value="1"/>
+        <Behavior value="MakeshiftBunkerAppender"/>
+    </CValidatorUnitCompareBehaviorCount>
+</Catalog>

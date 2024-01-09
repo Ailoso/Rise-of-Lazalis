@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="BuildUP1Headquarters">
+        <TooltipAppender Validator="NoUP1Appender" Text="HoldAlt"/>
+        <TooltipAppender Validator="UP1Appender" Text="UP1HeadquartersAppender"/>
+        <Icon value="Assets\Icons\BuildUP1Headquarters.dds"/>
+        <AlertIcon value="Assets\Icons\BuildUP1Headquarters.dds"/>
+    </CButton>
+    <CButton id="BuildUnari">
+        <Icon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
+        <AlertIcon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
+    </CButton>
+    <CButton id="DedicatedProtectors">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Equipment">
+        <Icon value="Assets\Icons\equipment.dds"/>
+        <AlertIcon value="Assets\Icons\equipment.dds"/>
+    </CButton>
+    <CButton id="EquipmentEmergencyCover">
+        <TooltipAppender Validator="NoAppender" Text="HoldAlt"/>
+        <TooltipAppender Text="MakeshiftBunkerAppender"/>
+        <Icon value="Assets\Textures\btn-building-stukov-infestedbunkerform.dds"/>
+        <AlertIcon value="Assets\Textures\btn-building-stukov-infestedbunkerform.dds"/>
+    </CButton>
+    <CButton id="EquipmentRepairKit">
+        <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
+    </CButton>
+    <CButton id="EquipmentTShockMine">
+        <Icon value="Assets\Icons\staticshockmine.dds"/>
+        <AlertIcon value="Assets\Icons\staticshockmine.dds"/>
+    </CButton>
+    <CButton id="Inexperienced">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Ironclad">
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-neosteelfortifiedarmor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-engineeringbay-neosteelfortifiedarmor.dds"/>
+    </CButton>
+    <CButton id="SCVUnari">
+        <Icon value="Assets\Textures\btn-unit-terran-scv.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-scv.dds"/>
+        <EditorCategories value="Race:Terran"/>
+        <Universal value="1"/>
+        <ChargeText value="SCVCount"/>
+    </CButton>
+    <CButton id="TrainBodyguard">
+        <Icon value="Assets\Icons\TrainBodyguard.dds"/>
+        <AlertIcon value="Assets\Icons\TrainBodyguard.dds"/>
+        <ChargeText value="BodyguardCount"/>
+    </CButton>
+    <CButton id="TrainMilitia">
+        <Icon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
+        <ChargeText value="MilitiaCount"/>
+    </CButton>
+    <CButton id="Unwavering">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+</Catalog>

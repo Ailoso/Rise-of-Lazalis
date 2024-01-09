@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="Bodyguard">
+        <Model value="Assets\Units\Terran\Marine_CovertOps_Collection\Marine_CovertOps_Collection.m3"/>
+    </CModel>
+    <CModel id="BodyguardDeath">
+        <Model value="Assets\Units\Terran\MarineXPRewardDeath\MarineXPRewardDeath.m3"/>
+    </CModel>
+    <CModel id="BodyguardPortrait">
+        <Model value="Assets\Portraits\Terran\Marine_CovertOps_Collection_Portrait\Marine_CovertOps_Collection_Portrait.m3"/>
+    </CModel>
+    <CModel id="Daeus">
+        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank\SiegeTank_CovertOps_Collection_Tank.m3"/>
+    </CModel>
+    <CModel id="DaeusDeath">
+        <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank_Death\SiegeTank_CovertOps_Collection_Tank_Death.m3"/>
+    </CModel>
+    <CModel id="DaeusPortrait">
+        <Model value="Assets\Portraits\Terran\SiegeTank_Commando_Collection_Portrait\SiegeTank_Commando_Collection_Portrait.m3"/>
+    </CModel>
+    <CModel id="FerromagSMGImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="FerromagSMGLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="InvisibleBuild">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="MakeshiftBunker" parent="CocoonPortraitBase">
+        <Model value="Assets\Units\Zerg\InfestedBunker_Coop_Structure\InfestedBunker_Coop_Structure.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CModel id="MakeshiftBunkerDeath">
+        <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
+    </CModel>
+    <CModel id="Militia">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP\Trooper_Mengsk_COOP.m3"/>
+        <Radius value="0.370000"/>
+        <SelectionRadius value="0.370000"/>
+    </CModel>
+    <CModel id="MilitiaDeath">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Death\Trooper_Mengsk_COOP_Death.m3"/>
+    </CModel>
+    <CModel id="MilitiaPortrait">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Portrait\Trooper_Mengsk_COOP_Portrait.m3"/>
+    </CModel>
+    <CModel id="MsLazalis" parent="Unit">
+        <Model value="Assets\Units\Terran\Nova\Nova.m3"/>
+        <EditorCategories value=""/>
+        <Radius value="0.375000"/>
+        <SelectionRadius value="0.375000"/>
+    </CModel>
+    <CModel id="MsLazalisDeath" parent="UnitDeath">
+        <Model value="Assets\Units\Terran\NovaDeath\NovaDeath.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CModel id="MsLazalisPortrait" parent="CocoonPortraitBase">
+        <Model value="Assets\Portraits\Terran\NovaPortrait\NovaPortrait.m3"/>
+        <EditorCategories value=""/>
+    </CModel>
+    <CModel id="N11HandcannonImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="N11HandcannonLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\TankWeaponLaunch\TankWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="OldReliableImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponImpact\ReaperWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="OldReliableLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="UP1Headquarters">
+        <Model value="Assets\Doodads\BattleStation_CommandCenter\BattleStation_CommandCenter_03.m3"/>
+        <Radius value="4.500000"/>
+        <ScaleMax value="0.700000,0.700000,1.300000"/>
+        <ScaleMin value="0.700000,0.700000,1.300000"/>
+        <SelectionRadius value="4.500000"/>
+        <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="UP1HeadquartersDeath">
+        <Model value="Assets\Doodads\DOM_Explosion_Lg\DOM_Explosion_Lg.m3"/>
+    </CModel>
+    <CModel id="UnarianAdvisorPortrait">
+        <Model value="Assets\Portraits\Terran\FemaleDominionOfficer1Portrait\FemaleDominionOfficer1Portrait.m3"/>
+    </CModel>
+</Catalog>

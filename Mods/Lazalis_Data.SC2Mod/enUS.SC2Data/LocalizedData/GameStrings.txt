@@ -1,0 +1,69 @@
+﻿Abil/Name/MakeshiftBunkerTransport=Load-Unload (Bunker)
+Abil/Name/UP1HeadquartersRally=UP-1 Headquarters Rally
+Abil/Name/UP1HeadquartersTrain=UP-1 Headquarters Train
+Abil/Name/UnariBuild=Unari Build
+Alert/Text/MilitiaReady=Militia trained
+Alert/Tooltip/MilitiaReady=Militia trained
+BodyguardCount=x1
+Button/Name/BuildUP1Headquarters=Build UP-1 Headquarters
+Button/Name/BuildUnari=Build
+Button/Name/DedicatedProtectors=Dedicated Protectors
+Button/Name/Equipment=Equipment
+Button/Name/EquipmentEmergencyCover=Equipment: Emergency Cover
+Button/Name/EquipmentRepairKit=Equipment: Repair Kit
+Button/Name/EquipmentTShockMine=Equipment: T-Shock Mine
+Button/Name/Inexperienced=Inexperienced
+Button/Name/Ironclad=Ironclad
+Button/Name/SCVUnari=Train SCV
+Button/Name/TrainBodyguard=Train Bodyguard
+Button/Name/TrainMilitia=Train Militia
+Button/Name/Unwavering=Unwavering
+Button/Tooltip/Bodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/BuildUP1Headquarters=Primary structure. Used to receive gathered resources
+Button/Tooltip/BuildUnari=Opens a submenu to build structures.
+Button/Tooltip/Daeus=Heavy frontline tank. Can draw enemy fire.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/DedicatedProtectors=Ms. Lazalis comes escorted to the field by 3 Bodyguards. Bodyguards redirect a portion of the damage she takes to themselves, effectively making her invulnerable while all are alive and nearby.
+Button/Tooltip/Equipment=Opens this unit's equipment menu.
+Button/Tooltip/EquipmentEmergencyCover=Build a Makeshift Bunker over <c val="FFFFFF">11 </c>seconds. Makeshift Bunkers can load up to <c val="FFFFFF">3</c> units and cannot be repaired.
+Button/Tooltip/EquipmentRepairKit=Repair a mechanical unit or structure for <c val="FFFFFF">80 </c>life over <c val="FFFFFF">10 </c>seconds. Effect cannot stack.
+Button/Tooltip/EquipmentTShockMine=Place a landmine that activates after <c val="FFFFFF">3 </c>seconds. Once activated, it will detonate when an enemy mechanical unit comes near, dealing <c val="FFFFFF">100 </c>damage and stunning them for <c val="FFFFFF">5 </c>seconds.
+Button/Tooltip/Inexperienced=Militia have a significantly higher random attack delay than other units.
+Button/Tooltip/Ironclad=This unit takes 50% less damage from enemies in front of it.
+Button/Tooltip/MakeshiftBunker=Defensive structure. <n/>Infantry fights from inside.
+Button/Tooltip/Militia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/MsLazalis=Inspiring politician. Leader of the Unarian Peacekeepers.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/SCVUnari=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/TrainBodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainMilitia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/UP1Headquarters=Primary structure. Used to receive gathered resources.<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor
+Button/Tooltip/Unwavering=This unit is unaffected by low Spirit.
+DataCollection/Name/Bodyguard=Bodyguard
+DataCollection/Name/Militia=Militia
+DataCollection/Name/MsLazalis=Ms. Lazalis
+DataCollection/Name/N11Handcannon=N11 Handcannon
+DataCollection/Name/OldReliable=Old Reliable
+DocInfo/DescShort=Any
+DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/FerromagSMGDamage=FerromagSMGDamage
+Effect/Name/N11HandcannonDamage=N11HandcannonDamage
+Effect/Name/OldReliableDamage=OldReliableDamage
+HoldAlt=.<n/><s val="ABButtonText"><c val="C0C0C0">Hold Alt for more information.</c></s>
+MakeshiftBunkerAppender=<n/>Life: <c val="FFFFFF">300</c><n/>Armor:<c val="FFFFFF"> 0<n/></c>Cargo Capacity: <c val="FFFFFF">3</c><n/><c val="FFFFFF">Cannot be repaired.</c>
+MakeshiftDefenseAppender=<n/>
+MilitiaCount=x5
+Race/Name/Infi=Infirian IV
+Race/Name/Tyr=Tyriq Alliance
+Race/Name/Unar=Unarian Peacekeepers
+RequirementNode/Tooltip/LT3702416715CountUnitCommentatorBot1QueuedOnly3=Limit 3
+SCVCount=x1
+UP1HeadquartersAppender=<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor
+Unit/LifeArmorName/Unarmored=Unarmored
+Unit/Name/Bodyguard=Bodyguard
+Unit/Name/Daeus=Daeus
+Unit/Name/MakeshiftBunker=Makeshift Bunker
+Unit/Name/Militia=Militia
+Unit/Name/MsLazalis=Ms. Lazalis
+Unit/Name/UP1Headquarters=UP-1 Headquarters
+Weapon/Name/FerromagSMG=Ferromag SMG
+Weapon/Name/N11Handcannon=N11 Handcannon
+Weapon/Name/OldReliable=Old Reliable

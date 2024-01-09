@@ -1,0 +1,97 @@
+include "TriggerLibs/NativeLib"
+
+include "Lib4A5CBC7B_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: Rise of Lazalis
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void lib4A5CBC7B_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: Init
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_Init_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerSetRace(1, "Terr");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_Init_Init () {
+    lib4A5CBC7B_gt_Init = TriggerCreate("lib4A5CBC7B_gt_Init_Func");
+    TriggerAddEventMapInit(lib4A5CBC7B_gt_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Tooltip Appender On
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_TooltipAppenderOn_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorAdd(UnitGroupUnit(UnitGroupSelected(1), 1), "UP1Appender", UnitGroupUnit(UnitGroupSelected(1), 1), 1);
+    UnitBehaviorAdd(UnitGroupUnit(UnitGroupSelected(1), 1), "MakeshiftBunkerAppender", UnitGroupUnit(UnitGroupSelected(1), 1), 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_TooltipAppenderOn_Init () {
+    lib4A5CBC7B_gt_TooltipAppenderOn = TriggerCreate("lib4A5CBC7B_gt_TooltipAppenderOn_Func");
+    TriggerAddEventKeyPressed(lib4A5CBC7B_gt_TooltipAppenderOn, 1, c_keyAlt, true, c_keyModifierStateIgnore, c_keyModifierStateIgnore, c_keyModifierStateIgnore);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Tooltip Appender Off
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_TooltipAppenderOff_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitBehaviorRemove(UnitGroupUnit(UnitGroupSelected(1), 1), "UP1Appender", 1);
+    UnitBehaviorRemove(UnitGroupUnit(UnitGroupSelected(1), 1), "MakeshiftBunkerAppender", 1);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_TooltipAppenderOff_Init () {
+    lib4A5CBC7B_gt_TooltipAppenderOff = TriggerCreate("lib4A5CBC7B_gt_TooltipAppenderOff_Func");
+    TriggerAddEventKeyPressed(lib4A5CBC7B_gt_TooltipAppenderOff, c_playerAny, c_keyAlt, false, c_keyModifierStateExclude, c_keyModifierStateExclude, c_keyModifierStateIgnore);
+}
+
+void lib4A5CBC7B_InitTriggers () {
+    lib4A5CBC7B_gt_Init_Init();
+    lib4A5CBC7B_gt_TooltipAppenderOn_Init();
+    lib4A5CBC7B_gt_TooltipAppenderOff_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_InitLib_completed = false;
+
+void lib4A5CBC7B_InitLib () {
+    if (lib4A5CBC7B_InitLib_completed) {
+        return;
+    }
+
+    lib4A5CBC7B_InitLib_completed = true;
+
+    lib4A5CBC7B_InitLibraries();
+    lib4A5CBC7B_InitTriggers();
+}
+
