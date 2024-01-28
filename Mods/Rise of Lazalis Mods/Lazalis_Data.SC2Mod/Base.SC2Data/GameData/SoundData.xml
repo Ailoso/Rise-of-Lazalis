@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="DismantleSound">
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionStage1.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
     <CSound id="F2LongshotImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact0.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact1.wav" FacialGroup=""/>
@@ -134,6 +139,7 @@
         <AssetArray File="Assets\Sounds\Pioneer_Yes_03.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Pioneer_Yes_04.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Pioneer_Yes_05.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Dismantle_01.mp3" FacialGroup=""/>
         <Volume value="3.000000,3.000000"/>
     </CSound>
     <CSound id="Pioneer_Attack" parent="TerranAck">
@@ -145,6 +151,36 @@
         <EditorCategories value=""/>
         <AssetArray File="Assets\Sounds\Pioneer_Retreat_02.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Pioneer_Retreat_01.mp3" FacialGroup=""/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="Pioneer_Repair" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Repair_01.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Repair_02.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Repair_03.mp3" FacialGroup=""/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="Pioneer_Dismantle" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Dismantle_01.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Dismantle_02.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Dismantle_03.mp3" FacialGroup=""/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="Pioneer_Group_Repair" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Group_Repair_01.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Group_Repair_02.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Group_Repair_03.mp3" FacialGroup=""/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="Pioneer_Yes2" parent="TerranAck">
+        <EditorCategories value=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Yes_01.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Yes_02.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Yes_03.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Yes_04.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Yes_05.mp3" FacialGroup=""/>
         <Volume value="3.000000,3.000000"/>
     </CSound>
 </Catalog>

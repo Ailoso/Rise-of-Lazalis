@@ -405,6 +405,9 @@
         <AbilArray Link="stop"/>
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
+        <AbilArray Link="Dismantle"/>
+        <AbilArray Link="PioneerRepair"/>
+        <AbilArray Link="SCVHarvest"/>
         <WeaponArray Link="KeltarCarbine"/>
         <WeaponArray Link="KeltarCarbine"/>
         <CardLayouts>
@@ -421,15 +424,18 @@
                 <Row value="1"/>
                 <Column value="4"/>
             </LayoutButtons>
-            <LayoutButtons Face="Repair" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="Gather" Type="Passive" Row="1" Column="1"/>
-            <LayoutButtons Face="ReturnCargo" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="Gather" Type="AbilCmd" AbilCmd="SCVHarvest,Gather" Row="1" Column="0"/>
+            <LayoutButtons Face="ReturnCargo" Type="AbilCmd" AbilCmd="SCVHarvest,Return" Row="1" Column="0"/>
             <LayoutButtons Face="BuildUnari" Type="Passive" Row="2" Column="0"/>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepair,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Dismantle" Type="AbilCmd" AbilCmd="Dismantle,Execute" Row="1" Column="2"/>
+            <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="1" Column="3"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
             <LayoutButtons Face="Dismantle" Type="Passive" Row="0" Column="0"/>
             <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="0" Column="1"/>
+            <LayoutButtons Face="AO155Rifle" Type="Passive" Row="0" Column="2"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>

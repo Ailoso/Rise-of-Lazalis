@@ -73,10 +73,32 @@ void lib4A5CBC7B_gt_TooltipAppenderOff_Init () {
     TriggerAddEventKeyPressed(lib4A5CBC7B_gt_TooltipAppenderOff, c_playerAny, c_keyAlt, false, c_keyModifierStateExclude, c_keyModifierStateExclude, c_keyModifierStateIgnore);
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Dismantle Resources
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_DismantleResources_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerModifyPropertyFixed(EventPlayer(), c_playerPropMinerals, c_playerPropOperAdd, (UnitTypeGetCost(UnitGetType(EventPlayerEffectUsedUnitImpact()), c_unitCostMinerals) * 0.75));
+    PlayerModifyPropertyFixed(EventPlayer(), c_playerPropVespene, c_playerPropOperAdd, (UnitTypeGetCost(UnitGetType(EventPlayerEffectUsedUnitImpact()), c_unitCostVespene) * 0.75));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_DismantleResources_Init () {
+    lib4A5CBC7B_gt_DismantleResources = TriggerCreate("lib4A5CBC7B_gt_DismantleResources_Func");
+    TriggerAddEventPlayerEffectUsed(lib4A5CBC7B_gt_DismantleResources, c_playerAny, "Dismantle");
+}
+
 void lib4A5CBC7B_InitTriggers () {
     lib4A5CBC7B_gt_Init_Init();
     lib4A5CBC7B_gt_TooltipAppenderOn_Init();
     lib4A5CBC7B_gt_TooltipAppenderOff_Init();
+    lib4A5CBC7B_gt_DismantleResources_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

@@ -52,6 +52,16 @@
     <CActorModel id="CommandCenterBuild">
         <Inherits index="Opacity" value="0"/>
     </CActorModel>
+    <CActorModel id="Dismantle" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Abil.Dismantle.TargetPrepStart" Send="Create"/>
+        <On Terms="Abil.Dismantle.TargetPrepStop" Send="Destroy"/>
+    </CActorModel>
+    <CActorSound id="DismantleSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.Dismantle.SourcePrepStart" Send="Create"/>
+        <On Terms="Abil.Dismantle.SourcePrepStop" Send="Destroy"/>
+    </CActorSound>
     <CActorAction id="F2LongshotAction" parent="GenericAttack" effectImpact="F2LongshotDamage" effectLaunch="F2LongshotLaunchMissile">
         <LaunchAssets Model="F2LongshotLaunchModel" Sound="F2LongshotLaunchSound"/>
         <Missile value="F2LongshotWeaponMissile"/>
@@ -201,6 +211,8 @@
             <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
         </Wireframe>
         <Aliases value="_UnitSmall"/>
+        <AbilSoundArray AbilCmd="PioneerRepair,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
+        <AbilSoundArray AbilCmd="Dismantle,Execute" Sound="Pioneer_Dismantle"/>
     </CActorUnit>
     <CActorUnit id="UP1Headquarters" parent="GenericUnitStandard" unitName="UP1Headquarters">
         <Aliases value="_CreepEngulfable"/>

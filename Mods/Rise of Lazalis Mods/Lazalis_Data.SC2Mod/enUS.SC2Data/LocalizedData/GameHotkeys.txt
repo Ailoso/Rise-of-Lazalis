@@ -1,4 +1,5 @@
-﻿Button/Hotkey/BuildUnari=B
+﻿Button/Hotkey/AO155Rifle=R
+Button/Hotkey/BuildUnari=B
 Button/Hotkey/CStaticSmoke=C
 Button/Hotkey/Dismantle=D
 Button/Hotkey/EmergencyShelter=D

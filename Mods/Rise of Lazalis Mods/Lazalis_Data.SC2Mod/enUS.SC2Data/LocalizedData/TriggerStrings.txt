@@ -1,4 +1,5 @@
 ﻿Library/Name/4A5CBC7B=Rise of Lazalis
+Trigger/Name/lib_4A5CBC7B_683298E4=Dismantle Resources
 Trigger/Name/lib_4A5CBC7B_89739288=Tooltip Appender Off
 Trigger/Name/lib_4A5CBC7B_CB5728F6=Tooltip Appender On
 Trigger/Name/lib_4A5CBC7B_FC033F3E=Init

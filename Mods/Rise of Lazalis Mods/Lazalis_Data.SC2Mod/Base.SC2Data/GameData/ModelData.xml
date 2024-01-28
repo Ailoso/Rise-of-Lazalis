@@ -29,6 +29,11 @@
     <CModel id="DaeusPortrait">
         <Model value="Assets\Portraits\Terran\SiegeTank_Commando_Collection_Portrait\SiegeTank_Commando_Collection_Portrait.m3"/>
     </CModel>
+    <CModelFoliage id="Dismantle">
+        <Model value="Assets\Buildings\Terran\TerranBuild\TerranBuild.m3"/>
+        <ScaleMax value="1.000000,1.000000,1.500000"/>
+        <ScaleMin value="1.000000,1.000000,1.500000"/>
+    </CModelFoliage>
     <CModel id="F2LongshotImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModel>

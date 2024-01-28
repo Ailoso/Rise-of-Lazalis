@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="Dismantle">
+        <EditorCategories value=""/>
+        <VitalFractionCurrent index="Life" value="1"/>
+        <VitalFractionCurrent index="Shields" value="1"/>
+        <ImpactLocation Value="TargetUnit"/>
+    </CEffectDamage>
     <CEffectDamage id="F2LongshotDamage" parent="DU_WEAP">
         <AttributeBonus index="Light" value="10"/>
         <Amount value="15"/>
@@ -29,4 +35,18 @@
         <Amount value="6"/>
         <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectCreateHealer id="PioneerRepair">
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="NotVortexd"/>
+        <ValidatorArray value="NotStasis"/>
+        <EditorCategories value="Race:Terran"/>
+        <DrainResourceCostFactor index="Minerals" value="0.25"/>
+        <DrainResourceCostFactor index="Vespene" value="0.25"/>
+        <DrainResourceCostFactor index="Terrazine" value="0.25"/>
+        <DrainResourceCostFactor index="Custom" value="0.25"/>
+        <RechargeVitalRate value="1"/>
+        <TimeFactor value="1"/>
+    </CEffectCreateHealer>
 </Catalog>
