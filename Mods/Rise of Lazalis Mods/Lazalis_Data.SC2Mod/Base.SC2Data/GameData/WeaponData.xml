@@ -8,6 +8,13 @@
         <Effect value="FerromagSMGDamage"/>
         <RandomDelayMax value="0.525"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="KeltarCarbine">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="KeltarCarbineDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="1.02"/>
+        <Effect value="KeltarCarbineDamage"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="N11Handcannon">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="N11HandcannonDamage"/>

@@ -16,7 +16,6 @@
         <DataRecord Entry="Model,MilitiaDeath"/>
         <DataRecord Entry="Model,MilitiaPortrait"/>
         <DataRecord Entry="Unit,Militia"/>
-        <DataRecord Entry="Weapon,FerromagSMG"/>
     </CDataCollectionUnit>
     <CDataCollectionUnit id="MsLazalis">
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Campaign,ObjectType:Unit"/>
@@ -47,4 +46,13 @@
         <DataRecord Entry="Effect,OldReliableDamage"/>
         <DataRecord Entry="Actor,OldReliableAction"/>
     </CDataCollection>
+    <CDataCollectionUnit id="Pioneer">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Campaign,ObjectType:Unit"/>
+        <DataRecord Entry="Actor,Pioneer"/>
+        <DataRecord Entry="Model,Pioneer"/>
+        <DataRecord Entry="Model,PioneerDeath"/>
+        <DataRecord Entry="Model,PioneerPortrait"/>
+        <DataRecord Entry="Unit,Pioneer"/>
+        <DataRecord Entry="Weapon,KeltarCarbine"/>
+    </CDataCollectionUnit>
 </Catalog>

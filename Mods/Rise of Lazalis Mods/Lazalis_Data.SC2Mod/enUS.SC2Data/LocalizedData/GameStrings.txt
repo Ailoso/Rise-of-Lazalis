@@ -1,40 +1,54 @@
 ﻿Abil/Name/MakeshiftBunkerTransport=Load-Unload (Bunker)
-Abil/Name/UP1HeadquartersRally=UP-1 Headquarters Rally
-Abil/Name/UP1HeadquartersTrain=UP-1 Headquarters Train
-Abil/Name/UnariBuild=Unari Build
+Abil/Name/UnariBarracksTrain=Barracks Train
 Alert/Text/MilitiaReady=Militia trained
 Alert/Tooltip/MilitiaReady=Militia trained
 BodyguardCount=x1
-Button/Name/BuildUP1Headquarters=Build UP-1 Headquarters
 Button/Name/BuildUnari=Build
+Button/Name/CStaticSmoke=C-Static Smoke
+Button/Name/CombinedArms=Combined Arms
 Button/Name/DedicatedProtectors=Dedicated Protectors
+Button/Name/Dismantle=Dismantle
+Button/Name/EmergencyShelter=Emergency Shelter
 Button/Name/Equipment=Equipment
-Button/Name/EquipmentEmergencyCover=Equipment: Emergency Cover
-Button/Name/EquipmentRepairKit=Equipment: Repair Kit
-Button/Name/EquipmentTShockMine=Equipment: T-Shock Mine
 Button/Name/Inexperienced=Inexperienced
 Button/Name/Ironclad=Ironclad
+Button/Name/Rank1Pioneer=Rank 1
+Button/Name/Rank2Pioneer=Rank 2
+Button/Name/Rank3Pioneer=Rank 3
+Button/Name/RepairKit=Repair Kit
+Button/Name/Retreat=Retreat
 Button/Name/SCVUnari=Train SCV
+Button/Name/SS6Mine=SS-6 Mine
+Button/Name/Sprint=Sprint
 Button/Name/TrainBodyguard=Train Bodyguard
 Button/Name/TrainMilitia=Train Militia
+Button/Name/TrainPioneer=Train Pioneer
 Button/Name/Unwavering=Unwavering
+Button/Tooltip/BarracksUnari=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
 Button/Tooltip/Bodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
-Button/Tooltip/BuildUP1Headquarters=Primary structure. Used to receive gathered resources
 Button/Tooltip/BuildUnari=Opens a submenu to build structures.
-Button/Tooltip/Daeus=Heavy frontline tank. Can draw enemy fire.<n/><n/><c val="FFFF8A">Can attack ground units.</c>
+Button/Tooltip/CStaticSmoke=Nearby vehicles increase the attack speed and repair rate of the Iron Pioneer by 2% per supply, up to 30%.
+Button/Tooltip/CombinedArms=Nearby vehicles increase the attack speed and repair rate of the Iron Pioneer by 2% per supply, up to 30%.
 Button/Tooltip/DedicatedProtectors=Ms. Lazalis comes escorted to the field by 3 Bodyguards. Bodyguards redirect a portion of the damage she takes to themselves, effectively making her invulnerable while all are alive and nearby.
+Button/Tooltip/Dismantle=Channel on one of your structures for 25 seconds. Once finished, the structure is destroyed, and 75% of its resource cost is refunded to you.
+Button/Tooltip/EmergencyShelter=Build a Makeshift Bunker over 4 seconds. Makeshift Bunkers cannot be repaired, give no range bonus, and have less life, but are free and take up less space than real Bunkers.
 Button/Tooltip/Equipment=Opens this unit's equipment menu.
-Button/Tooltip/EquipmentEmergencyCover=Build a Makeshift Bunker over <c val="FFFFFF">11 </c>seconds. Makeshift Bunkers can load up to <c val="FFFFFF">3</c> units and cannot be repaired.
-Button/Tooltip/EquipmentRepairKit=Repair a mechanical unit or structure for <c val="FFFFFF">80 </c>life over <c val="FFFFFF">10 </c>seconds. Effect cannot stack.
-Button/Tooltip/EquipmentTShockMine=Place a landmine that activates after <c val="FFFFFF">3 </c>seconds. Once activated, it will detonate when an enemy mechanical unit comes near, dealing <c val="FFFFFF">100 </c>damage and stunning them for <c val="FFFFFF">5 </c>seconds.
 Button/Tooltip/Inexperienced=Militia have a significantly higher random attack delay than other units.
 Button/Tooltip/Ironclad=This unit takes 50% less damage from enemies in front of it.
-Button/Tooltip/MakeshiftBunker=Defensive structure. <n/>Infantry fights from inside.
 Button/Tooltip/Militia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/MsLazalis=Inspiring politician. Leader of the Unarian Peacekeepers.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Pioneer=Combat engineer. Can build structures and gather resources.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/Rank1Pioneer=Combat experience increases the Pioneer's awareness and allows him to wear stronger protection with ease.
+Button/Tooltip/Rank2Pioneer=Technical expertise increases the Pioneer's repair rate and allows him to utilize ranged repairing equipment.
+Button/Tooltip/Rank3Pioneer=Extensive battlefield experience allows the Pioneer to repair more efficiently and move faster out of combat.
+Button/Tooltip/RepairKit=Repair a mechanical unit or structure for <c val="FFFFFF">80 </c>life over <c val="FFFFFF">10 </c>seconds. Effect cannot stack.
+Button/Tooltip/Retreat=Order this unit to retreat back to the nearest Command Center, gaining movement speed and becoming uncommandable until they reach it.
 Button/Tooltip/SCVUnari=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/SS6Mine=Place a landmine that activates after <c val="FFFFFF">5 </c>seconds. Once activated, it will detonate when an enemy mechanical unit comes near, dealing <c val="FFFFFF">250 </c>damage and stunning them for <c val="FFFFFF">3 </c>seconds.
+Button/Tooltip/Sprint=This unit moves 30% faster while out of combat.
 Button/Tooltip/TrainBodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TrainMilitia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainPioneer=Combat engineer. Can build structures and gather resources.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/UP1Headquarters=Primary structure. Used to receive gathered resources.<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor
 Button/Tooltip/Unwavering=This unit is unaffected by low Spirit.
 DataCollection/Name/Bodyguard=Bodyguard
@@ -42,13 +56,15 @@ DataCollection/Name/Militia=Militia
 DataCollection/Name/MsLazalis=Ms. Lazalis
 DataCollection/Name/N11Handcannon=N11 Handcannon
 DataCollection/Name/OldReliable=Old Reliable
+DataCollection/Name/Pioneer=Pioneer
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
 Effect/Name/FerromagSMGDamage=FerromagSMGDamage
+Effect/Name/KeltarCarbineDamage=KeltarCarbineDamage
 Effect/Name/N11HandcannonDamage=N11HandcannonDamage
 Effect/Name/OldReliableDamage=OldReliableDamage
-HoldAlt=.<n/><s val="ABButtonText"><c val="C0C0C0">Hold Alt for more information.</c></s>
-MakeshiftBunkerAppender=<n/>Life: <c val="FFFFFF">300</c><n/>Armor:<c val="FFFFFF"> 0<n/></c>Cargo Capacity: <c val="FFFFFF">3</c><n/><c val="FFFFFF">Cannot be repaired.</c>
+HoldAlt=<n/><s val="ABButtonText"><c val="C0C0C0">Hold Alt for more information.</c></s>
+MakeshiftBunkerAppender=<n/>Life: <c val="FFFFFF">300</c><n/>Armor:<c val="FFFFFF"> 0<n/></c>Cargo Capacity: <c val="FFFFFF">4</c><n/><c val="FFFFFF">Cannot be repaired.<n/>No range buff.</c>
 MakeshiftDefenseAppender=<n/>
 MilitiaCount=x5
 Race/Name/Infi=Infirian IV
@@ -58,12 +74,14 @@ RequirementNode/Tooltip/LT3702416715CountUnitCommentatorBot1QueuedOnly3=Limit 3
 SCVCount=x1
 UP1HeadquartersAppender=<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor
 Unit/LifeArmorName/Unarmored=Unarmored
+Unit/Name/BarracksUnari=Barracks
 Unit/Name/Bodyguard=Bodyguard
-Unit/Name/Daeus=Daeus
-Unit/Name/MakeshiftBunker=Makeshift Bunker
 Unit/Name/Militia=Militia
 Unit/Name/MsLazalis=Ms. Lazalis
+Unit/Name/Pioneer=Pioneer
 Unit/Name/UP1Headquarters=UP-1 Headquarters
+Upgrade/Name/GeovitzPioneer=Geovitz Pioneer
 Weapon/Name/FerromagSMG=Ferromag SMG
+Weapon/Name/KeltarCarbine=Keltar Carbine
 Weapon/Name/N11Handcannon=N11 Handcannon
 Weapon/Name/OldReliable=Old Reliable

@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorUnit id="BarracksUnari" parent="TerranBuildingFlyerEx" unitName="BarracksUnari">
+        <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationBarracks"/>
+        <On Terms="UnitDeathCustomize.BarracksFlying" Send="DeathCustomize Flying"/>
+        <Model value="Barracks2"/>
+        <BuildModel value="Barracks2"/>
+        <DeathArray index="Normal" ModelLink="BarracksDeath2"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranLargeBuildingDeath" SoundLink="Barracks_Explode"/>
+        <DeathCustoms index="5" ModelLink="BarracksFlyDeath" SoundLink="Barracks_Explode" Name="Flying"/>
+        <PlacementModel value="BarracksPlacement"/>
+        <PortraitModel value="BarracksPortrait2"/>
+        <BarOffset value="155"/>
+        <BarWidth value="160"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Barracks.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Barracks.dds"/>
+        <NameOffset value="110"/>
+        <SoundArray index="Ready" value="Barracks_Ready"/>
+        <SoundArray index="What" value="Barracks_What"/>
+        <SoundArray index="Movement" value="Barracks_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Barracks.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Barracks.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="Bodyguard" parent="GenericUnitStandard" unitName="Bodyguard">
         <EditorCategories value=""/>
         <DeathArray index="Normal" ModelLink="BodyguardDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Marine_Death"/>
@@ -31,6 +56,11 @@
         <Missile value="FerromagSMGWeaponMissile"/>
         <ImpactMap index="None" Model="FerromagSMGImpactModel" Sound="FerromagSMGImpactSound"/>
     </CActorAction>
+    <CActorAction id="KeltarCarbineAction" parent="GenericAttack" effectAttack="KeltarCarbineDamage">
+        <LaunchAssets Model="KeltarCarbineLaunchModel" Sound="KeltarCarbineLaunchSound"/>
+        <Missile value="KeltarCarbineWeaponMissile"/>
+        <ImpactMap index="None" Model="KeltarCarbineImpactModel" Sound="KeltarCarbineImpactSound"/>
+    </CActorAction>
     <CActorSound id="MedivacTransportLoadSound">
         <On Terms="AbilTransport.MakeshiftBunkerTransport.TransportLoad" Send="Create"/>
     </CActorSound>
@@ -51,6 +81,7 @@
             <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
         </Wireframe>
         <UnitIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
     </CActorUnit>
     <CActorUnit id="MsLazalis" parent="GenericUnitStandard" unitName="MsLazalis">
         <EditorCategories value=""/>
@@ -78,6 +109,22 @@
         <Missile value="OldReliableWeaponMissile"/>
         <ImpactMap index="None" Model="OldReliableImpactModel" Sound="OldReliableImpactSound"/>
     </CActorAction>
+    <CActorUnit id="Pioneer" parent="GenericUnitStandard" unitName="Pioneer">
+        <EditorCategories value=""/>
+        <DeathArray index="Normal" ModelLink="PioneerDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Marine_Death"/>
+        <PortraitModel value="PioneerPortrait"/>
+        <WalkAnimMoveSpeed value="2.25"/>
+        <BarOffset value="40"/>
+        <BarWidth value="35"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
+        </GroupIcon>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorUnit id="UP1Headquarters" parent="GenericUnitStandard" unitName="UP1Headquarters">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>

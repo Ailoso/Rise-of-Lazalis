@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
-    <CButton id="BuildUP1Headquarters">
-        <TooltipAppender Validator="NoUP1Appender" Text="HoldAlt"/>
-        <TooltipAppender Validator="UP1Appender" Text="UP1HeadquartersAppender"/>
-        <Icon value="Assets\Icons\BuildUP1Headquarters.dds"/>
-        <AlertIcon value="Assets\Icons\BuildUP1Headquarters.dds"/>
-    </CButton>
     <CButton id="BuildUnari">
         <Icon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
         <AlertIcon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
     </CButton>
+    <CButton id="CStaticSmoke">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="CombinedArms">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="DedicatedProtectors">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Dismantle">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
@@ -18,17 +24,24 @@
         <Icon value="Assets\Icons\equipment.dds"/>
         <AlertIcon value="Assets\Icons\equipment.dds"/>
     </CButton>
-    <CButton id="EquipmentEmergencyCover">
+    <CButton id="EmergencyShelter">
         <TooltipAppender Validator="NoAppender" Text="HoldAlt"/>
-        <TooltipAppender Text="MakeshiftBunkerAppender"/>
+        <TooltipAppender Validator="MakeshiftAppender" Text="MakeshiftBunkerAppender"/>
         <Icon value="Assets\Textures\btn-building-stukov-infestedbunkerform.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-stukov-infestedbunkerform.dds"/>
     </CButton>
-    <CButton id="EquipmentRepairKit">
+    <CButton id="Rank1Pioneer"/>
+    <CButton id="Rank2Pioneer"/>
+    <CButton id="Rank3Pioneer"/>
+    <CButton id="RepairKit">
         <Icon value="Assets\Textures\btn-ability-terran-repair.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-terran-repair.dds"/>
     </CButton>
-    <CButton id="EquipmentTShockMine">
+    <CButton id="Retreat">
+        <Icon value="Assets\Textures\command_retreat_ac.dds"/>
+        <AlertIcon value="Assets\Textures\command_retreat_ac.dds"/>
+    </CButton>
+    <CButton id="SS6Mine">
         <Icon value="Assets\Icons\staticshockmine.dds"/>
         <AlertIcon value="Assets\Icons\staticshockmine.dds"/>
     </CButton>
@@ -47,6 +60,10 @@
         <Universal value="1"/>
         <ChargeText value="SCVCount"/>
     </CButton>
+    <CButton id="Sprint">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="TrainBodyguard">
         <Icon value="Assets\Icons\TrainBodyguard.dds"/>
         <AlertIcon value="Assets\Icons\TrainBodyguard.dds"/>
@@ -56,6 +73,10 @@
         <Icon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
         <ChargeText value="MilitiaCount"/>
+    </CButton>
+    <CButton id="TrainPioneer">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="Unwavering">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>

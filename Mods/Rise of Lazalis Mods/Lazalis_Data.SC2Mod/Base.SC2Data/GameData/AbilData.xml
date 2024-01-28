@@ -17,54 +17,22 @@
             <Flags index="Hidden" value="1"/>
         </CmdButtonArray>
         <Range value="0"/>
-        <MaxCargoCount value="3"/>
+        <MaxCargoCount value="4"/>
         <MaxCargoSize value="2"/>
-        <TotalCargoSpace value="3"/>
+        <TotalCargoSpace value="4"/>
         <LoadCargoBehavior value="BunkerWeaponRangeBonus"/>
         <TargetFilters value="Biological,Visible;Ally,Neutral,Enemy,Dead,Hidden"/>
         <LoadValidatorArray value="RequiresTerran"/>
         <LoadValidatorArray value="NotWidowMineTarget"/>
         <LoadValidatorArray value="IsNotHellionTank"/>
     </CAbilTransport>
-    <CAbilRally id="UP1HeadquartersRally">
-        <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
-        <CmdButtonArray index="Rally2" DefaultButtonFace="RallyEgg"/>
-        <InfoArray index="0">
-            <SetValidators value="NotResourcesOrEnemyTargetType"/>
-        </InfoArray>
-        <InfoArray SetOnGround="0">
-            <UseValidators value="IsSCV"/>
-        </InfoArray>
-        <InfoArray/>
-    </CAbilRally>
-    <CAbilTrain id="UP1HeadquartersTrain">
+    <CAbilTrain id="UnariBarracksTrain">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <InfoArray index="Train1" Time="17">
-            <Button DefaultButtonFace="SCV"/>
-            <Unit value="SCV"/>
-            <Unit value="SCV"/>
-            <Unit value="SCV"/>
-            <Unit value="SCV"/>
-        </InfoArray>
-        <InfoArray index="Train2" Time="24" Alert="MilitiaReady">
-            <Button DefaultButtonFace="TrainMilitia"/>
-            <Unit value="Militia"/>
-            <Unit value="Militia"/>
-            <Unit value="Militia"/>
-            <Unit value="Militia"/>
-            <Unit value="Militia"/>
-        </InfoArray>
-        <InfoArray index="Train3" Time="33">
-            <Button DefaultButtonFace="TrainBodyguard" Requirements="Limitof3Bodyguards"/>
-            <Unit value="Bodyguard"/>
+        <InfoArray index="Train1" Time="1">
+            <Button DefaultButtonFace="TrainPioneer"/>
+            <Unit value="Pioneer"/>
+            <Unit value="Pioneer"/>
+            <Unit value="Pioneer"/>
         </InfoArray>
     </CAbilTrain>
-    <CAbilBuild id="UnariBuild">
-        <EditorCategories value="AbilityorEffectType:Units"/>
-        <InfoArray index="Build1" Unit="UP1Headquarters" Time="100">
-            <Button DefaultButtonFace="BuildUP1Headquarters"/>
-        </InfoArray>
-        <Range value="1000"/>
-        <FlagArray index="PeonMaintained" value="0"/>
-    </CAbilBuild>
 </Catalog>

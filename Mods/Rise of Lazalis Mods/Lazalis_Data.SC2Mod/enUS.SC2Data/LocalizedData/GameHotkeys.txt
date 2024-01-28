@@ -1,8 +1,12 @@
-﻿Button/Hotkey/BuildUP1Headquarters=H
-Button/Hotkey/BuildUnari=B
-Button/Hotkey/EquipmentEmergencyCover=D
-Button/Hotkey/EquipmentRepairKit=R
-Button/Hotkey/EquipmentTShockMine=T
+﻿Button/Hotkey/BuildUnari=B
+Button/Hotkey/CStaticSmoke=C
+Button/Hotkey/Dismantle=D
+Button/Hotkey/EmergencyShelter=D
+Button/Hotkey/RepairKit=R
 Button/Hotkey/SCVUnari=S
+Button/Hotkey/SS6Mine=T
 Button/Hotkey/TrainBodyguard=B
 Button/Hotkey/TrainMilitia=T
+Button/Hotkey/TrainPioneer=R
+Button/Hotkey/Retreat=Control+R
+Button/Hotkey/Equipment=Control+G

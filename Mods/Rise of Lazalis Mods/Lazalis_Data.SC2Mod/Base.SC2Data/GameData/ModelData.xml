@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="Barracks2" parent="BarracksBase">
+        <Model value="Assets\Buildings\Terran\Barracks\Barracks.m3"/>
+    </CModel>
+    <CModel id="BarracksDeath2" parent="BarracksDeathBase">
+        <Model value="Assets\Buildings\Terran\BarracksDeathEx1\BarracksDeathEx1.m3"/>
+    </CModel>
+    <CModel id="BarracksPortrait2" parent="TerranBuildingPortraitBase">
+        <Model value="Assets\Portraits\Terran\AdjutantPortrait\AdjutantPortrait.m3"/>
+        <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
+        <Lighting value="AdjutantPortrait"/>
+    </CModel>
     <CModel id="Bodyguard">
         <Model value="Assets\Units\Terran\Marine_CovertOps_Collection\Marine_CovertOps_Collection.m3"/>
     </CModel>
@@ -27,6 +38,12 @@
     <CModel id="InvisibleBuild">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
         <SelectionLayer value="2"/>
+    </CModel>
+    <CModel id="KeltarCarbineImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponImpact\ReaperWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="KeltarCarbineLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
     </CModel>
     <CModel id="MakeshiftBunker" parent="CocoonPortraitBase">
         <Model value="Assets\Units\Zerg\InfestedBunker_Coop_Structure\InfestedBunker_Coop_Structure.m3"/>
@@ -71,6 +88,17 @@
     </CModel>
     <CModel id="OldReliableLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="Pioneer">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP\Trooper_Mengsk_COOP.m3"/>
+        <Radius value="0.370000"/>
+        <SelectionRadius value="0.370000"/>
+    </CModel>
+    <CModel id="PioneerDeath">
+        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP_Death\Trooper_Mengsk_COOP_Death.m3"/>
+    </CModel>
+    <CModel id="PioneerPortrait">
+        <Model value="Assets\Pioneer\Models\Trooper_Police_Portrait.m3"/>
     </CModel>
     <CModel id="UP1Headquarters">
         <Model value="Assets\Doodads\BattleStation_CommandCenter\BattleStation_CommandCenter_03.m3"/>
