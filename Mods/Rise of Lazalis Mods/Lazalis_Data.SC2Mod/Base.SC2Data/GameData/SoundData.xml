@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CSound id="F2LongshotImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact5.wav" FacialGroup=""/>
+    </CSound>
+    <CSound id="F2LongshotLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch01.wav"/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch04.wav" FacialGroup=""/>
+    </CSound>
     <CSound id="FerromagSMGImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact1.wav"/>

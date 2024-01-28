@@ -8,4 +8,51 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorVeterancy id="VeterancyPioneer">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <ShareFilters index="DamageDealt" value="-;Player,Ally,Neutral,Enemy,Hallucination"/>
+        <XPFraction index="DamageDealt" value="0.5"/>
+        <XPFraction index="Kills" value="0"/>
+        <VeterancyLevelArray/>
+        <VeterancyLevelArray MinVeterancyXP="100">
+            <Modification>
+                <DamageDealtFraction index="Spell" value="0.05"/>
+                <DamageDealtFraction index="Melee" value="0.05"/>
+                <DamageDealtFraction index="Ranged" value="0.05"/>
+                <DamageDealtFraction index="Splash" value="0.05"/>
+                <DamageDealtFraction index="NoProc" value="0.05"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <VitalMaxAdditiveMultiplierArray index="Life" value="0.1"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="225">
+            <Modification>
+                <DamageDealtFraction index="Spell" value="0.05"/>
+                <DamageDealtFraction index="Melee" value="0.05"/>
+                <DamageDealtFraction index="Ranged" value="0.05"/>
+                <DamageDealtFraction index="Splash" value="0.05"/>
+                <DamageDealtFraction index="NoProc" value="0.05"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <VitalMaxAdditiveMultiplierArray index="Life" value="0.1"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <VeterancyLevelArray MinVeterancyXP="350">
+            <Modification>
+                <DamageDealtFraction index="Spell" value="0.05"/>
+                <DamageDealtFraction index="Melee" value="0.05"/>
+                <DamageDealtFraction index="Ranged" value="0.05"/>
+                <DamageDealtFraction index="Splash" value="0.05"/>
+                <DamageDealtFraction index="NoProc" value="0.05"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Life" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Shields" value="0"/>
+                <VitalMaxIncreaseAffectsCurrentArray index="Energy" value="0"/>
+                <VitalMaxAdditiveMultiplierArray index="Life" value="0.1"/>
+            </Modification>
+        </VeterancyLevelArray>
+        <Levels value="3"/>
+    </CBehaviorVeterancy>
 </Catalog>

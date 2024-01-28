@@ -47,15 +47,89 @@
         <SoundArray index="Pissed" value="Marine_Pissed"/>
         <Scale value="1.200000"/>
         <UnitIcon value="Assets\Icons\TrainBodyguard.dds"/>
+        <Aliases value="_UnitSmall"/>
     </CActorUnit>
     <CActorModel id="CommandCenterBuild">
         <Inherits index="Opacity" value="0"/>
     </CActorModel>
+    <CActorAction id="F2LongshotAction" parent="GenericAttack" effectImpact="F2LongshotDamage" effectLaunch="F2LongshotLaunchMissile">
+        <LaunchAssets Model="F2LongshotLaunchModel" Sound="F2LongshotLaunchSound"/>
+        <Missile value="F2LongshotWeaponMissile"/>
+        <ImpactMap index="None" Model="F2LongshotImpactModel" Sound="F2LongshotImpactSound"/>
+    </CActorAction>
+    <CActorMissile id="F2LongshotWeaponMissile" parent="GenericAttackMissile" unitName="F2LongshotWeapon">
+        <On Terms="ActorCreation" Send="SetTintColor {255,247,183 10.000000}"/>
+        <Model value="F2LongshotMissileModel"/>
+    </CActorMissile>
     <CActorAction id="FerromagSMGAction" parent="GenericAttack" effectAttack="FerromagSMGDamage">
         <LaunchAssets Model="FerromagSMGLaunchModel" Sound="FerromagSMGLaunchSound"/>
         <Missile value="FerromagSMGWeaponMissile"/>
         <ImpactMap index="None" Model="FerromagSMGImpactModel" Sound="FerromagSMGImpactSound"/>
     </CActorAction>
+    <CActorUnit id="Frontiersman" parent="GenericUnitBase" unitName="Frontiersman">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <AnimBlendTime value="-0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="FrontiersmanDeath" SoundLink="Ghost_Explode"/>
+        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathCustoms ActorModel="UnitDeathRagdollBloodPrevent" ModelLink="GhostDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="GhostDeathRagdoll" Name="RagdollSpineCrawlerHurl">
+            <BodySquibs Name="None"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms ModelLink="GhostDeathFire" Name="Variation17"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowSmall"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="FrontiersmanPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.400000"/>
+            <RangeDown value="0.400000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.379"/>
+        <BarOffset value="50"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Ghost.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-ghost.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SelectAbilCmd value="EMP,Execute"/>
+        <SoundArray index="Ready" value="Ghost_Ready"/>
+        <SoundArray index="Help" value="Ghost_Help"/>
+        <SoundArray index="What" value="Ghost_What"/>
+        <SoundArray index="Yes" value="Ghost_Yes"/>
+        <SoundArray index="Attack" value="Ghost_Attack"/>
+        <SoundArray index="Pissed" value="Ghost_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-ghost.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Ghost.dds"/>
+        </Wireframe>
+    </CActorUnit>
     <CActorAction id="KeltarCarbineAction" parent="GenericAttack" effectAttack="KeltarCarbineDamage">
         <LaunchAssets Model="KeltarCarbineLaunchModel" Sound="KeltarCarbineLaunchSound"/>
         <Missile value="KeltarCarbineWeaponMissile"/>
@@ -82,6 +156,7 @@
         </Wireframe>
         <UnitIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <Aliases value="_UnitSmall"/>
     </CActorUnit>
     <CActorUnit id="MsLazalis" parent="GenericUnitStandard" unitName="MsLazalis">
         <EditorCategories value=""/>
@@ -98,6 +173,7 @@
             <Image value="Assets\Textures\wireframe-terran-nova.dds"/>
         </Wireframe>
         <UnitIcon value="Assets\Textures\nova coop_powerupicon.dds"/>
+        <Aliases value="_UnitSmall"/>
     </CActorUnit>
     <CActorAction id="N11HandcannonAction" parent="GenericAttack" effectAttack="N11HandcannonDamage">
         <LaunchAssets Model="N11HandcannonLaunchModel" Sound="N11HandcannonLaunchSound"/>
@@ -124,6 +200,7 @@
         <Wireframe>
             <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
         </Wireframe>
+        <Aliases value="_UnitSmall"/>
     </CActorUnit>
     <CActorUnit id="UP1Headquarters" parent="GenericUnitStandard" unitName="UP1Headquarters">
         <Aliases value="_CreepEngulfable"/>

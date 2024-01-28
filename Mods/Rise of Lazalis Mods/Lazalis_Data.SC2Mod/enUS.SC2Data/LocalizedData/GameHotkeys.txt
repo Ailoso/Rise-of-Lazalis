@@ -7,6 +7,7 @@ Button/Hotkey/RepairKit=R
 Button/Hotkey/Retreat=Control+R
 Button/Hotkey/SCVUnari=S
 Button/Hotkey/SS6Mine=T
+Button/Hotkey/SetupEncampment=E
 Button/Hotkey/TrainBodyguard=B
 Button/Hotkey/TrainFrontiersmen=F
 Button/Hotkey/TrainMilitia=T

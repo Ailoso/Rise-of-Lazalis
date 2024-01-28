@@ -30,6 +30,22 @@
         <Icon value="Assets\Textures\btn-building-stukov-infestedbunkerform.dds"/>
         <AlertIcon value="Assets\Textures\btn-building-stukov-infestedbunkerform.dds"/>
     </CButton>
+    <CButton id="FrontierSupplies">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="GuerillaFighter">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="MedicalStation">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Patience">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="Rank1Pioneer"/>
     <CButton id="Rank2Pioneer"/>
     <CButton id="Rank3Pioneer"/>
@@ -59,6 +75,10 @@
         <EditorCategories value="Race:Terran"/>
         <Universal value="1"/>
         <ChargeText value="SCVCount"/>
+    </CButton>
+    <CButton id="SetupEncampment">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="Sprint">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>

@@ -29,11 +29,37 @@
     <CModel id="DaeusPortrait">
         <Model value="Assets\Portraits\Terran\SiegeTank_Commando_Collection_Portrait\SiegeTank_Commando_Collection_Portrait.m3"/>
     </CModel>
+    <CModel id="F2LongshotImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="F2LongshotLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponLaunch\GhostWeaponLaunch.m3"/>
+        <ScaleMax value="1.000000,2.000000,1.000000"/>
+        <ScaleMin value="1.000000,2.000000,1.000000"/>
+    </CModel>
+    <CModel id="F2LongshotMissileModel" parent="MissileFX">
+        <Model value="Assets\Models\Bullet_Unari.m3"/>
+        <ScaleMax value="0.050000,0.500000,0.050000"/>
+        <ScaleMin value="0.050000,0.500000,0.050000"/>
+    </CModel>
     <CModel id="FerromagSMGImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
     </CModel>
     <CModel id="FerromagSMGLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="Frontiersman" parent="GhostBase">
+        <Model value="Assets\Models\Spectre_Junker.m3"/>
+    </CModel>
+    <CModel id="FrontiersmanDeath" parent="GhostDeathBase">
+        <Model value="Assets\Models\Spectre_Junker_Death.m3"/>
+    </CModel>
+    <CModel id="FrontiersmanPortrait" parent="GhostPortraitBase">
+        <Model value="Assets\Portraits\Terran\GhostPortraitEx3\GhostPortraitEx3.m3"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
+        <Lighting value="GhostPortrait"/>
     </CModel>
     <CModel id="InvisibleBuild">
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>

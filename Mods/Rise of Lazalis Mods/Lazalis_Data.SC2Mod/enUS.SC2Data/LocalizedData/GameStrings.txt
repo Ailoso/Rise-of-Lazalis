@@ -2,6 +2,7 @@
 Abil/Name/UnariBarracksTrain=Barracks Train
 Alert/Text/MilitiaReady=Militia trained
 Alert/Tooltip/MilitiaReady=Militia trained
+Behavior/Name/VeterancyPioneer=Veterancy: Pioneer
 BodyguardCount=x1
 Button/Name/BuildUnari=Build
 Button/Name/CStaticSmoke=C-Static Smoke
@@ -10,8 +11,12 @@ Button/Name/DedicatedProtectors=Dedicated Protectors
 Button/Name/Dismantle=Dismantle
 Button/Name/EmergencyShelter=Emergency Shelter
 Button/Name/Equipment=Equipment
+Button/Name/FrontierSupplies=Frontier Supplies
+Button/Name/GuerillaFighter=Guerilla Fighter
 Button/Name/Inexperienced=Inexperienced
 Button/Name/Ironclad=Ironclad
+Button/Name/MedicalStation=Medical Station
+Button/Name/Patience=Patience
 Button/Name/Rank1Pioneer=Rank 1
 Button/Name/Rank2Pioneer=Rank 2
 Button/Name/Rank3Pioneer=Rank 3
@@ -19,6 +24,7 @@ Button/Name/RepairKit=Repair Kit
 Button/Name/Retreat=Retreat
 Button/Name/SCVUnari=Train SCV
 Button/Name/SS6Mine=SS-6 Mine
+Button/Name/SetupEncampment=Setup Encampment
 Button/Name/Sprint=Sprint
 Button/Name/TrainBodyguard=Train Bodyguard
 Button/Name/TrainFrontiersmen=Train Frontiersmen
@@ -34,10 +40,15 @@ Button/Tooltip/DedicatedProtectors=Ms. Lazalis comes escorted to the field by 3 
 Button/Tooltip/Dismantle=Channel on one of your structures for 25 seconds. Once finished, the structure is destroyed, and 75% of its resource cost is refunded to you.
 Button/Tooltip/EmergencyShelter=Build a Makeshift Bunker over 4 seconds. Makeshift Bunkers cannot be repaired, give no range bonus, and have less life, but are free and take up less space than real Bunkers.
 Button/Tooltip/Equipment=Opens this unit's equipment menu.
+Button/Tooltip/FrontierSupplies=While nearby, Frontiersmen equipment costs 25% less and place significantly faster.
+Button/Tooltip/Frontiersman=Sniper. Can use Snipe, EMP Round, and be upgraded to use Cloak. Can call down Tactical Nukes built at the Ghost Academy.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/GuerillaFighter=Become Cloaked while near any structure for 3 seconds. Attacks from Cloak have additional range and will remove Cloak.
 Button/Tooltip/Inexperienced=Militia have a significantly higher random attack delay than other units.
 Button/Tooltip/Ironclad=This unit takes 50% less damage from enemies in front of it.
+Button/Tooltip/MedicalStation=Heals nearby biological units for 3 life per second at the cost of 1 energy while out of combat.<n/><n/><c val="FFFF80">Encampments do not regenerate energy.</c>
 Button/Tooltip/Militia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/MsLazalis=Inspiring politician. Leader of the Unarian Peacekeepers.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Patience=After 20 seconds of not attacking, the next attack will instantly kill the target if they are biological.
 Button/Tooltip/Pioneer=Combat engineer. Can build structures and gather resources.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Rank1Pioneer=Combat experience increases the Pioneer's awareness and allows him to wear stronger protection with ease.
 Button/Tooltip/Rank2Pioneer=Technical expertise increases the Pioneer's repair rate and allows him to utilize ranged repairing equipment.
@@ -45,7 +56,8 @@ Button/Tooltip/Rank3Pioneer=Extensive battlefield experience allows the Pioneer 
 Button/Tooltip/RepairKit=Repair a mechanical unit or structure for <c val="FFFFFF">80 </c>life over <c val="FFFFFF">10 </c>seconds. Effect cannot stack.
 Button/Tooltip/Retreat=Order this unit to retreat back to the nearest Command Center, gaining movement speed and becoming uncommandable until they reach it.
 Button/Tooltip/SCVUnari=Basic worker unit. Can gather resources, build Terran structures, and repair.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
-Button/Tooltip/SS6Mine=Place a landmine that activates after <c val="FFFFFF">5 </c>seconds. Once activated, it will detonate when an enemy mechanical unit comes near, dealing <c val="FFFFFF">250 </c>damage and stunning them for <c val="FFFFFF">3 </c>seconds.
+Button/Tooltip/SS6Mine=Lay a landmine over 8 seconds. It will detonate when an enemy mechanical unit comes near, dealing 250 damage to it and stunning it for 3 seconds.
+Button/Tooltip/SetupEncampment=Build an Encampment over 20 seconds. Encampments are scrappy, fragile buildings that provide life regeneration to biological units and extra firepower to Frontiersman.
 Button/Tooltip/Sprint=This unit moves 30% faster while out of combat.
 Button/Tooltip/TrainBodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TrainFrontiersmen=Guerilla specialist.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
@@ -61,6 +73,8 @@ DataCollection/Name/OldReliable=Old Reliable
 DataCollection/Name/Pioneer=Pioneer
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/F2LongshotDamage=F2LongshotDamage
+Effect/Name/F2LongshotLaunchMissile=F2LongshotLaunchMissile
 Effect/Name/FerromagSMGDamage=FerromagSMGDamage
 Effect/Name/KeltarCarbineDamage=KeltarCarbineDamage
 Effect/Name/N11HandcannonDamage=N11HandcannonDamage
@@ -78,11 +92,14 @@ UP1HeadquartersAppender=<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- 
 Unit/LifeArmorName/Unarmored=Unarmored
 Unit/Name/BarracksUnari=Barracks
 Unit/Name/Bodyguard=Bodyguard
+Unit/Name/F2LongshotWeapon=F2 Longshot Projectile
+Unit/Name/Frontiersman=Frontiersman
 Unit/Name/Militia=Militia
 Unit/Name/MsLazalis=Ms. Lazalis
 Unit/Name/Pioneer=Pioneer
 Unit/Name/UP1Headquarters=UP-1 Headquarters
 Upgrade/Name/GeovitzPioneer=Geovitz Pioneer
+Weapon/Name/F2Longshot=F2 Longshot
 Weapon/Name/FerromagSMG=Ferromag SMG
 Weapon/Name/KeltarCarbine=Keltar Carbine
 Weapon/Name/N11Handcannon=N11 Handcannon

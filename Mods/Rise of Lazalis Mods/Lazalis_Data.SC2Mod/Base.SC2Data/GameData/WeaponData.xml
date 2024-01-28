@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CWeaponLegacy id="F2Longshot">
+        <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
+        <DisplayEffect value="F2LongshotDamage"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="1.84"/>
+        <Effect value="F2LongshotLaunchMissile"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="FerromagSMG">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="FerromagSMGDamage"/>
@@ -14,6 +22,7 @@
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="1.02"/>
         <Effect value="KeltarCarbineDamage"/>
+        <DamagePoint value="0.05"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="N11Handcannon">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>

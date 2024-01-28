@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="F2LongshotDamage" parent="DU_WEAP">
+        <AttributeBonus index="Light" value="10"/>
+        <Amount value="15"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="F2LongshotLaunchMissile">
+        <ImpactEffect value="F2LongshotDamage"/>
+        <AmmoUnit value="F2LongshotWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="FerromagSMGDamage" parent="DU_WEAP">
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
