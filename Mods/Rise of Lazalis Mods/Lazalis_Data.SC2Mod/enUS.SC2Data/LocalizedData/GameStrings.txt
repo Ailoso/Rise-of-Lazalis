@@ -21,6 +21,7 @@ Button/Name/SCVUnari=Train SCV
 Button/Name/SS6Mine=SS-6 Mine
 Button/Name/Sprint=Sprint
 Button/Name/TrainBodyguard=Train Bodyguard
+Button/Name/TrainFrontiersmen=Train Frontiersmen
 Button/Name/TrainMilitia=Train Militia
 Button/Name/TrainPioneer=Train Pioneer
 Button/Name/Unwavering=Unwavering
@@ -47,6 +48,7 @@ Button/Tooltip/SCVUnari=Basic worker unit. Can gather resources, build Terran st
 Button/Tooltip/SS6Mine=Place a landmine that activates after <c val="FFFFFF">5 </c>seconds. Once activated, it will detonate when an enemy mechanical unit comes near, dealing <c val="FFFFFF">250 </c>damage and stunning them for <c val="FFFFFF">3 </c>seconds.
 Button/Tooltip/Sprint=This unit moves 30% faster while out of combat.
 Button/Tooltip/TrainBodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainFrontiersmen=Guerilla specialist.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/TrainMilitia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/TrainPioneer=Combat engineer. Can build structures and gather resources.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/UP1Headquarters=Primary structure. Used to receive gathered resources.<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor

@@ -69,6 +69,10 @@
         <AlertIcon value="Assets\Icons\TrainBodyguard.dds"/>
         <ChargeText value="BodyguardCount"/>
     </CButton>
+    <CButton id="TrainFrontiersmen">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
     <CButton id="TrainMilitia">
         <Icon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>

@@ -2,11 +2,12 @@
 Button/Hotkey/CStaticSmoke=C
 Button/Hotkey/Dismantle=D
 Button/Hotkey/EmergencyShelter=D
+Button/Hotkey/Equipment=Control+G
 Button/Hotkey/RepairKit=R
+Button/Hotkey/Retreat=Control+R
 Button/Hotkey/SCVUnari=S
 Button/Hotkey/SS6Mine=T
 Button/Hotkey/TrainBodyguard=B
+Button/Hotkey/TrainFrontiersmen=F
 Button/Hotkey/TrainMilitia=T
 Button/Hotkey/TrainPioneer=R
-Button/Hotkey/Retreat=Control+R
-Button/Hotkey/Equipment=Control+G
