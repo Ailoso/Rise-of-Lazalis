@@ -1,6 +1,8 @@
 ﻿Abil/Name/Dismantle=Dismantle
 Abil/Name/MakeshiftBunkerTransport=Load-Unload (Bunker)
 Abil/Name/PioneerRepair=Pioneer Repair
+Abil/Name/PioneerRepairRank2=Pioneer Repair (Rank 2)
+Abil/Name/PioneerRepairRank3=Pioneer Repair (Rank 3)
 Abil/Name/UnariBarracksTrain=Barracks Train
 Alert/Text/MilitiaReady=Militia trained
 Alert/Tooltip/MilitiaReady=Militia trained
@@ -79,6 +81,7 @@ DataCollection/Name/OldReliable=Old Reliable
 DataCollection/Name/Pioneer=Pioneer
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/AO155RifleDamage=AO155RifleDamage
 Effect/Name/Dismantle=Dismantle
 Effect/Name/F2LongshotDamage=F2LongshotDamage
 Effect/Name/F2LongshotLaunchMissile=F2LongshotLaunchMissile
@@ -87,6 +90,8 @@ Effect/Name/KeltarCarbineDamage=KeltarCarbineDamage
 Effect/Name/N11HandcannonDamage=N11HandcannonDamage
 Effect/Name/OldReliableDamage=OldReliableDamage
 Effect/Name/PioneerRepair=Pioneer Repair
+Effect/Name/PioneerRepairRank2=Pioneer Repair Rank 2
+Effect/Name/PioneerRepairRank3=Pioneer Repair Rank 3
 HoldAlt=<n/><s val="ABButtonText"><c val="C0C0C0">Hold Alt for more information.</c></s>
 MakeshiftBunkerAppender=<n/>Life: <c val="FFFFFF">300</c><n/>Armor:<c val="FFFFFF"> 0<n/></c>Cargo Capacity: <c val="FFFFFF">4</c><n/><c val="FFFFFF">Cannot be repaired.<n/>No range buff.</c>
 MakeshiftDefenseAppender=<n/>
@@ -107,6 +112,7 @@ Unit/Name/MsLazalis=Ms. Lazalis
 Unit/Name/Pioneer=Pioneer
 Unit/Name/UP1Headquarters=UP-1 Headquarters
 Upgrade/Name/GeovitzPioneer=Geovitz Pioneer
+Weapon/Name/AO155Rifle=AO-155 Rifle
 Weapon/Name/F2Longshot=F2 Longshot
 Weapon/Name/FerromagSMG=Ferromag SMG
 Weapon/Name/KeltarCarbine=Keltar Carbine

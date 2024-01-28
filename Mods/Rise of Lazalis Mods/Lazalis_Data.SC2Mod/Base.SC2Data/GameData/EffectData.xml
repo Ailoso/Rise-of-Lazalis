@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="AO155RifleDamage" parent="DU_WEAP">
+        <AttributeBonus index="Light" value="2"/>
+        <Amount value="6"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectDamage id="Dismantle">
         <EditorCategories value=""/>
         <VitalFractionCurrent index="Life" value="1"/>
@@ -48,5 +53,33 @@
         <DrainResourceCostFactor index="Custom" value="0.25"/>
         <RechargeVitalRate value="1"/>
         <TimeFactor value="1"/>
+    </CEffectCreateHealer>
+    <CEffectCreateHealer id="PioneerRepairRank2">
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="NotVortexd"/>
+        <ValidatorArray value="NotStasis"/>
+        <EditorCategories value="Race:Terran"/>
+        <DrainResourceCostFactor index="Minerals" value="0.25"/>
+        <DrainResourceCostFactor index="Vespene" value="0.25"/>
+        <DrainResourceCostFactor index="Terrazine" value="0.25"/>
+        <DrainResourceCostFactor index="Custom" value="0.25"/>
+        <RechargeVitalRate value="1"/>
+        <TimeFactor value="0.5"/>
+    </CEffectCreateHealer>
+    <CEffectCreateHealer id="PioneerRepairRank3">
+        <ValidatorArray value="NotWarpingIn"/>
+        <ValidatorArray value="HiddenCompareBA"/>
+        <ValidatorArray value="HiddenCompareAB"/>
+        <ValidatorArray value="NotVortexd"/>
+        <ValidatorArray value="NotStasis"/>
+        <EditorCategories value="Race:Terran"/>
+        <DrainResourceCostFactor index="Minerals" value="0.0625"/>
+        <DrainResourceCostFactor index="Vespene" value="0.0625"/>
+        <DrainResourceCostFactor index="Terrazine" value="0.0625"/>
+        <DrainResourceCostFactor index="Custom" value="0.0625"/>
+        <RechargeVitalRate value="1"/>
+        <TimeFactor value="0.375"/>
     </CEffectCreateHealer>
 </Catalog>

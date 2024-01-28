@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="AO155RifleAction" parent="GenericAttack" effectAttack="AO155RifleDamage">
+        <LaunchAssets Model="AO155RifleLaunchModel" Sound="AO155RifleLaunchSound"/>
+        <Missile value="AO155RifleWeaponMissile"/>
+        <ImpactMap index="None" Model="AO155RifleImpactModel" Sound="AO155RifleImpactSound"/>
+    </CActorAction>
     <CActorUnit id="BarracksUnari" parent="TerranBuildingFlyerEx" unitName="BarracksUnari">
         <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationBarracks"/>
         <On Terms="UnitDeathCustomize.BarracksFlying" Send="DeathCustomize Flying"/>

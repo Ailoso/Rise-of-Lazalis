@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CButton id="AO155Rifle">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Icons\ao155rifle.dds"/>
+        <AlertIcon value="Assets\Icons\ao155rifle.dds"/>
     </CButton>
     <CButton id="BuildUnari">
         <Icon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>

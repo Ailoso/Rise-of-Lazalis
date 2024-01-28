@@ -2,6 +2,7 @@
 <Catalog>
     <CGame id="Dflt">
         <TriggerLibs Id="4A5CBC7B"/>
+        <VeterancySearchRadius value="0"/>
         <!-- Test Builds -->
         <!-- <AIBuilds index="213" Enabled="0"/>
              <AIBuilds index="214" Enabled="0"/>

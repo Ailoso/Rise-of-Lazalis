@@ -406,10 +406,13 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="Dismantle"/>
-        <AbilArray Link="PioneerRepair"/>
+        <AbilArray Link="PioneerRepairRank3"/>
         <AbilArray Link="SCVHarvest"/>
+        <AbilArray Link="PioneerRepair"/>
+        <AbilArray Link="PioneerRepairRank2"/>
         <WeaponArray Link="KeltarCarbine"/>
         <WeaponArray Link="KeltarCarbine"/>
+        <WeaponArray Link="AO155Rifle"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>

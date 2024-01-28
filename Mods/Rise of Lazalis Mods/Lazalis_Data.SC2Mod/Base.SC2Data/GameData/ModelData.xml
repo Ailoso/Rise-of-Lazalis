@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="AO155RifleImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="AO155RifleLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
+    </CModel>
     <CModel id="Barracks2" parent="BarracksBase">
         <Model value="Assets\Buildings\Terran\Barracks\Barracks.m3"/>
     </CModel>
