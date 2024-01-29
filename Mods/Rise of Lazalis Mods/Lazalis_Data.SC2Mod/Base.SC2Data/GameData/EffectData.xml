@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="AO155RifleAB">
+        <EditorCategories value=""/>
+        <WhichUnit Value="Caster"/>
+        <Behavior value="AO155Rifle"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="AO155RifleDamage" parent="DU_WEAP">
         <AttributeBonus index="Light" value="2"/>
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="BearclawFlamethrowerCP">
+        <EditorCategories value=""/>
+        <WhichLocation Value="SourcePoint"/>
+        <OffsetVectorStartLocation Value="SourcePoint"/>
+        <ExpireDelay value="0.5"/>
+        <PeriodCount value="12"/>
+        <PeriodicEffectArray value="BearclawFlamethrowerSA"/>
+        <PeriodicOffsetArray value="0,-0.5,0"/>
+        <PeriodicOffsetArray value="0,-1,0"/>
+        <PeriodicOffsetArray value="0,-1.5,0"/>
+        <PeriodicOffsetArray value="0,-2,0"/>
+        <PeriodicOffsetArray value="0,-2.5,0"/>
+        <PeriodicOffsetArray value="0,-3,0"/>
+        <PeriodicOffsetArray value="0,-3.5,0"/>
+        <PeriodicOffsetArray value="0,-4,0"/>
+        <PeriodicOffsetArray value="0,-4.5,0"/>
+        <PeriodicOffsetArray value="0,-5,0"/>
+        <PeriodicOffsetArray value="0,-5.5,0"/>
+        <PeriodicPeriodArray value="0.05"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="BearclawFlamethrowerDamage" parent="DU_WEAP">
+        <ValidatorArray value="noMarkers"/>
+        <AttributeBonus index="Biological" value="17"/>
+        <AttributeBonus index="Structure" value="17"/>
+        <Kind value="Splash"/>
+        <Amount value="7"/>
+        <Death value="Fire"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="BearclawFlamethrowerSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Player,Ally,Missile,Item,Stasis,Dead,Invulnerable,Benign"/>
+        <AreaArray Radius="0.7" Effect="BearclawFlamethrowerDamage"/>
+    </CEffectEnumArea>
+    <CEffectSet id="BearclawFlamethrowerSet">
+        <EditorCategories value=""/>
+        <EffectArray value="BearclawFlamethrowerCP"/>
+        <EffectArray value="BearclawFlamethrowerDamage"/>
+    </CEffectSet>
     <CEffectDamage id="Dismantle">
         <EditorCategories value=""/>
         <VitalFractionCurrent index="Life" value="1"/>
@@ -28,6 +72,10 @@
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectModifyUnit id="MakeshiftBunkerMU">
+        <EditorCategories value=""/>
+        <Cost Abil="BuildMakeshiftBunker,Build1" ChargeCountUse="-1"/>
+    </CEffectModifyUnit>
     <CEffectDamage id="N11HandcannonDamage" parent="DU_WEAP">
         <Kind value="Splash"/>
         <Amount value="11"/>
@@ -82,4 +130,17 @@
         <RechargeVitalRate value="1"/>
         <TimeFactor value="0.375"/>
     </CEffectCreateHealer>
+    <CEffectEnumArea id="RemoveRetreatSA">
+        <EditorCategories value=""/>
+        <SearchFilters value="-;Ally,Neutral,Enemy,Missile,Stasis,Dead"/>
+        <AreaArray Radius="5.5" Effect="RetreatRB"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="RetreatAB">
+        <EditorCategories value=""/>
+        <Behavior value="Retreating"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="RetreatRB">
+        <EditorCategories value=""/>
+        <BehaviorLink value="Retreating"/>
+    </CEffectRemoveBehavior>
 </Catalog>

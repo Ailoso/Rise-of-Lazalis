@@ -30,6 +30,25 @@
             <Image value="Assets\Textures\Wireframe-Terran-Barracks.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorAction id="BearclawFlamethrowerAction" parent="GenericAttack" effectImpact="BearclawFlamethrowerDamage" effectLaunch="BearclawFlamethrowerCP">
+        <EditorCategories value=""/>
+        <LaunchAssets Model="BearclawFlamethrowerImpactModel" Sound="BearclawFlamethrowerImpactSound"/>
+        <ImpactMap index="None" Sound="BearclawFlamethrowerImpactSound"/>
+    </CActorAction>
+    <CActorBeamSimple id="BearclawFlamethrowerCPBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.BearclawFlamethrowerCP.Start" Send="Create"/>
+        <On Terms="Effect.BearclawFlamethrowerCP.Stop" Send="Destroy"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorSiteMover id="BearclawFlamethrowerDamageSite">
+        <Sharing value="PerEffectTree"/>
+        <On Terms="Effect.BearclawFlamethrowerDamage.Start" Send="Create"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow"/>
+    </CActorSiteMover>
     <CActorUnit id="Bodyguard" parent="GenericUnitStandard" unitName="Bodyguard">
         <EditorCategories value=""/>
         <DeathArray index="Normal" ModelLink="BodyguardDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Marine_Death"/>
@@ -53,6 +72,64 @@
         <Scale value="1.200000"/>
         <UnitIcon value="Assets\Icons\TrainBodyguard.dds"/>
         <Aliases value="_UnitSmall"/>
+    </CActorUnit>
+    <CActorUnit id="MakeshiftBunker" parent="TerranBuildingEx" unitName="MakeshiftBunker">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="BunkerTransportAnim"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit BunkerIsEmpty" Send="DeathCustomize Empty"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit NeosteelFramePurchasedNoConstruction" Send="DeathCustomize Upgrade"/>
+        <On Terms="Upgrade.NeosteelFrame.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="UnitBirth.MakeshiftBunker; ValidateUnit NeosteelFramePurchased" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="Upgrade.NeosteelFrame.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="UnitBirth.MakeshiftBunker" Send="StatusSet BunkerBuilt 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="StatusSet ShrikeTurret 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="Create ShrikeTurret"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Send="Create ShrikeTurretPlaceholder"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Target="ShrikeTurret" Send="Signal TurretHide"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurret" Send="Signal TurretDeath"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurretPlaceholder" Send="Signal TurretDeath"/>
+        <On Terms="UnitBirth.MakeshiftBunker" Target="ShrikeTurretPlaceholder" Send="Destroy"/>
+        <On Terms="UnitBirth.MakeshiftBunker" Target="ShrikeTurret" Send="Signal TurretShow"/>
+        <On Terms="Upgrade.TerranBuildingArmor.Add; ValidateUnit HasCargo" Send="AnimGroupApply Stand,Work Stand,Work,Start Stand,Work,End"/>
+        <On Terms="Upgrade.TerranBuildingArmor.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap BunkerUpgrade"/>
+        <On Terms="UnitBirth.MakeshiftBunker" Send="StatusSet BunkerBuilt 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="StatusSet ShrikeTurret 1"/>
+        <On Terms="Behavior.ShrikeTurret.On" Send="Create ShrikeTurret"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Send="Create ShrikeTurretPlaceholder"/>
+        <On Terms="Behavior.ShrikeTurret.On; IsStatus BunkerBuilt 0" Target="ShrikeTurret" Send="Signal TurretHide"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurret" Send="Signal TurretDeath"/>
+        <On Terms="UnitDeathCustomize; IsStatus ShrikeTurret 1" Target="ShrikeTurretPlaceholder" Send="Signal TurretDeath"/>
+        <On Terms="UnitBirth.MakeshiftBunker" Target="ShrikeTurretPlaceholder" Send="Destroy"/>
+        <On Terms="UnitBirth.MakeshiftBunker" Target="ShrikeTurret" Send="Signal TurretShow"/>
+        <On Terms="Upgrade.NeoSteelFrame.Add; ValidateUnit NotDeadOrConstruction" Send="ModelSwap JumboBunker"/>
+        <On Terms="UnitBirth.MakeshiftBunker; ValidatePlayer JumboBunkerResearched" Send="ModelSwap JumboBunker"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit JumboBunkerResearched" Send="DeathCustomize Upgrade"/>
+        <On Terms="ActorCreation" Send="SetTintColor 255,247,230"/>
+        <CreepHeightClass value="Small"/>
+        <DeathArray index="Normal" ModelLink="MakeshiftBunkerDeath2"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="Bunker_Explode"/>
+        <DeathCustoms ModelLink="BunkerUpgradeDeath" Name="Upgrade"/>
+        <DeathCustoms ModelLink="MakeshiftBunkerDeathEmpty" Name="Empty"/>
+        <PlacementModel value="BunkerPlacement"/>
+        <PlacementActorModel value="BunkerPlacementModel"/>
+        <PlaceholderActorModel value="BunkerPlaceholderModel"/>
+        <PortraitModel value="BunkerPortrait"/>
+        <RandomScaleRange value="0.900000,1.050000"/>
+        <BarOffset value="80"/>
+        <BarWidth value="85"/>
+        <GlossaryAnim value="Stand,Work"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-Bunker.dds"/>
+        <NameOffset value="70"/>
+        <SoundArray index="Ready" value="Bunker_Ready"/>
+        <SoundArray index="What" value="Bunker_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-Bunker.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Bunker.dds"/>
+        </Wireframe>
     </CActorUnit>
     <CActorModel id="CommandCenterBuild">
         <Inherits index="Opacity" value="0"/>
@@ -195,6 +272,12 @@
         <Missile value="N11HandcannonWeaponMissile"/>
         <ImpactMap index="None" Model="N11HandcannonImpactModel" Sound="N11HandcannonImpactSound"/>
     </CActorAction>
+    <CActorSound id="NanoRepairSoundRev1">
+        <On Terms="Effect.PioneerRepairRank2.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.PioneerRepairRank2.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="Effect.PioneerRepairRank3.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.PioneerRepairRank3.TargetStop; At Target" Send="Destroy"/>
+    </CActorSound>
     <CActorAction id="OldReliableAction" parent="GenericAttack" effectAttack="OldReliableDamage">
         <LaunchAssets Model="OldReliableLaunchModel" Sound="OldReliableLaunchSound"/>
         <Missile value="OldReliableWeaponMissile"/>
@@ -208,17 +291,36 @@
         <BarOffset value="40"/>
         <BarWidth value="35"/>
         <GroupIcon>
-            <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
+            <Image value="Assets\Textures\wireframe-terran-trooper-police.dds"/>
         </GroupIcon>
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <UnitIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
         <Wireframe>
-            <Image value="Assets\Textures\wireframe-terran-troopermengsk.dds"/>
+            <Image value="Assets\Textures\wireframe-terran-trooper-police.dds"/>
         </Wireframe>
         <Aliases value="_UnitSmall"/>
         <AbilSoundArray AbilCmd="PioneerRepair,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
         <AbilSoundArray AbilCmd="Dismantle,Execute" Sound="Pioneer_Dismantle"/>
+        <AbilSoundArray AbilCmd="PioneerEquipment,Specialize3" Sound="Pioneer_Weapon"/>
+        <On Terms="ActorCreation" Send="AttachModel {} KeltarCarbine {Upgrade 0}"/>
     </CActorUnit>
+    <CActorBeamSimple id="PioneerRepairRank2Beam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.PioneerRepairRank2.TargetStart" Send="Create"/>
+        <On Terms="Effect.PioneerRepairRank2.TargetStop" Send="Destroy"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorBeamSimple id="PioneerRepairRank3Beam" parent="BeamSimpleAnimationStyleContinuous">
+        <On Terms="Effect.PioneerRepairRank3.TargetStart" Send="Create"/>
+        <On Terms="Effect.PioneerRepairRank3.TargetStop" Send="Destroy"/>
+        <Model value="PioneerRepairRank2Beam"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
     <CActorUnit id="UP1Headquarters" parent="GenericUnitStandard" unitName="UP1Headquarters">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>

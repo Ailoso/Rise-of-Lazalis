@@ -3,9 +3,18 @@ include "TriggerLibs/natives"
 //--------------------------------------------------------------------------------------------------
 // Library: Rise of Lazalis
 //--------------------------------------------------------------------------------------------------
+// Variable Declarations
+string lib4A5CBC7B_gv_retreatingUnitType;
+
 // Trigger Declarations
 trigger lib4A5CBC7B_gt_Init;
 trigger lib4A5CBC7B_gt_TooltipAppenderOn;
 trigger lib4A5CBC7B_gt_TooltipAppenderOff;
 trigger lib4A5CBC7B_gt_DismantleResources;
+trigger lib4A5CBC7B_gt_Retreat;
+trigger lib4A5CBC7B_gt_RetreatReOrder;
+trigger lib4A5CBC7B_gt_PioneerWR;
+
+// Library Initialization
+void lib4A5CBC7B_InitVariables ();
 

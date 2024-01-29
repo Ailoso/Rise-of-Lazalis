@@ -10,6 +10,18 @@ void lib4A5CBC7B_InitLibraries () {
     libNtve_InitVariables();
 }
 
+// Variable Initialization
+bool lib4A5CBC7B_InitVariables_completed = false;
+
+void lib4A5CBC7B_InitVariables () {
+    if (lib4A5CBC7B_InitVariables_completed) {
+        return;
+    }
+
+    lib4A5CBC7B_InitVariables_completed = true;
+
+}
+
 // Triggers
 //--------------------------------------------------------------------------------------------------
 // Trigger: Init
@@ -94,11 +106,106 @@ void lib4A5CBC7B_gt_DismantleResources_Init () {
     TriggerAddEventPlayerEffectUsed(lib4A5CBC7B_gt_DismantleResources, c_playerAny, "Dismantle");
 }
 
+//--------------------------------------------------------------------------------------------------
+// Trigger: Retreat!
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_Retreat_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    string lv_unitType;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_unitType = UnitGetType(EventUnit());
+    UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("move", 0), UnitGroupClosestToPoint(UnitGroup("CommandCenter", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), UnitGetPosition(EventUnit()))), c_orderQueueReplace);
+    if ((lib4A5CBC7B_gv_retreatingUnitType == UnitGetType(EventUnit()))) {
+    }
+    else {
+        SoundPlayOnUnitForPlayer(SoundLink(((StringSub(CatalogFieldValueGet(c_gameCatalogUnit, UnitGetType(EventUnit()), "Name", c_playerAny), 11, 99) + "_Retreat")), c_soundIndexAny), EventPlayer(), PlayerGroupAll(), EventUnit(), 0.0, 100.0, 0.0);
+    }
+    lib4A5CBC7B_gv_retreatingUnitType = UnitGetType(EventUnit());
+    Wait(5.0, c_timeGame);
+    if ((lv_unitType == lib4A5CBC7B_gv_retreatingUnitType)) {
+        lib4A5CBC7B_gv_retreatingUnitType = "";
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_Retreat_Init () {
+    lib4A5CBC7B_gt_Retreat = TriggerCreate("lib4A5CBC7B_gt_Retreat_Func");
+    TriggerAddEventUnitAbility(lib4A5CBC7B_gt_Retreat, null, AbilityCommand("Retreat", 0), c_unitAbilStageExecute, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Retreat! Re-Order
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_RetreatReOrder_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitHasBehavior2(EventUnit(), "Retreating") == true))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("move", 0), UnitGroupClosestToPoint(UnitGroup("CommandCenter", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), UnitGetPosition(EventUnit()))), c_orderQueueReplace);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_RetreatReOrder_Init () {
+    lib4A5CBC7B_gt_RetreatReOrder = TriggerCreate("lib4A5CBC7B_gt_RetreatReOrder_Func");
+    TriggerAddEventUnitBecomesIdle(lib4A5CBC7B_gt_RetreatReOrder, null, true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Pioneer WR
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_PioneerWR_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "Pioneer"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UnitWeaponRemove(EventUnit(), "KeltarCarbine");
+    UnitWeaponAdd(EventUnit(), "AO155Rifle", null);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_PioneerWR_Init () {
+    lib4A5CBC7B_gt_PioneerWR = TriggerCreate("lib4A5CBC7B_gt_PioneerWR_Func");
+    TriggerAddEventUnitBehaviorChange(lib4A5CBC7B_gt_PioneerWR, null, "AO155Rifle", c_unitBehaviorChangeCreate);
+}
+
 void lib4A5CBC7B_InitTriggers () {
     lib4A5CBC7B_gt_Init_Init();
     lib4A5CBC7B_gt_TooltipAppenderOn_Init();
     lib4A5CBC7B_gt_TooltipAppenderOff_Init();
     lib4A5CBC7B_gt_DismantleResources_Init();
+    lib4A5CBC7B_gt_Retreat_Init();
+    lib4A5CBC7B_gt_RetreatReOrder_Init();
+    lib4A5CBC7B_gt_PioneerWR_Init();
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -114,6 +221,7 @@ void lib4A5CBC7B_InitLib () {
     lib4A5CBC7B_InitLib_completed = true;
 
     lib4A5CBC7B_InitLibraries();
+    lib4A5CBC7B_InitVariables();
     lib4A5CBC7B_InitTriggers();
 }
 

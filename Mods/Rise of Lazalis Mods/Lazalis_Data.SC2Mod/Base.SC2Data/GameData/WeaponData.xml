@@ -7,6 +7,16 @@
         <Period value="0.918"/>
         <Effect value="AO155RifleDamage"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="BearclawFlamethrower">
+        <Icon value="Assets\Icons\infantryweaponsupgraded-level0.dds"/>
+        <DisplayEffect value="BearclawFlamethrowerDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Marker>
+            <MatchFlags index="Id" value="1"/>
+        </Marker>
+        <Period value="2.4"/>
+        <Effect value="BearclawFlamethrowerCP"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="F2Longshot">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="F2LongshotDamage"/>
@@ -19,7 +29,7 @@
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="FerromagSMGDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
-        <Period value="0.86"/>
+        <Period value="0.96"/>
         <Effect value="FerromagSMGDamage"/>
         <RandomDelayMax value="0.525"/>
     </CWeaponLegacy>

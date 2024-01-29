@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CBehaviorBuff id="AO155Rifle">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="MakeshiftBunkerAppender">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RemoveRetreat">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Period value="0.25"/>
+        <PeriodicEffect value="RemoveRetreatSA"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Retreating">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Modification MoveSpeedMultiplier="1.2">
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+        </Modification>
     </CBehaviorBuff>
     <CBehaviorBuff id="Sprint">
         <Alignment value="Positive"/>
@@ -23,8 +40,14 @@
         <XPFraction index="Kills" value="0"/>
         <VeterancyLevelArray MinVeterancyXP="100">
             <Modification SightBonus="2">
+                <DamageDealtFraction index="Spell" value="0.05"/>
+                <DamageDealtFraction index="Melee" value="0.05"/>
+                <DamageDealtFraction index="Ranged" value="0.05"/>
+                <DamageDealtFraction index="Splash" value="0.05"/>
+                <DamageDealtFraction index="NoProc" value="0.05"/>
                 <LifeArmorBonus value="1"/>
                 <VitalMaxArray index="Life" value="10"/>
+                <AbilLinkEnableArray value="PioneerRepair"/>
                 <AbilLinkDisableArray value="PioneerRepairRank2"/>
                 <AbilLinkDisableArray value="PioneerRepairRank3"/>
             </Modification>

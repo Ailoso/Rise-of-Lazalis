@@ -17,6 +17,12 @@
         <Image value="Assets\Textures\AdjutantPortrait_Static.dds"/>
         <Lighting value="AdjutantPortrait"/>
     </CModel>
+    <CModel id="BearclawFlamethrowerCPBeam">
+        <Model value="Assets\Effects\Terran\Xanthos_Flamethrower_Beam\Xanthos_Flamethrower_Beam.m3"/>
+    </CModel>
+    <CModel id="BearclawFlamethrowerImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
+    </CModel>
     <CModel id="Bodyguard">
         <Model value="Assets\Units\Terran\Marine_CovertOps_Collection\Marine_CovertOps_Collection.m3"/>
     </CModel>
@@ -25,6 +31,15 @@
     </CModel>
     <CModel id="BodyguardPortrait">
         <Model value="Assets\Portraits\Terran\Marine_CovertOps_Collection_Portrait\Marine_CovertOps_Collection_Portrait.m3"/>
+    </CModel>
+    <CModel id="Bunker2" parent="BunkerBase">
+        <Model value="Assets\Buildings\Terran\BunkerEx1\BunkerEx1.m3"/>
+    </CModel>
+    <CModel id="MakeshiftBunkerDeath2" parent="BunkerDeathBase">
+        <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
+    </CModel>
+    <CModel id="MakeshiftBunkerDeathEmpty" parent="BunkerEmptyDeathBase">
+        <Model value="Assets\Buildings\Terran\BunkerEmptyDeathEx1\BunkerEmptyDeathEx1.m3"/>
     </CModel>
     <CModel id="Daeus">
         <Model value="Assets\Units\Terran\SiegeTank_CovertOps_Collection_Tank\SiegeTank_CovertOps_Collection_Tank.m3"/>
@@ -50,8 +65,8 @@
     </CModel>
     <CModel id="F2LongshotMissileModel" parent="MissileFX">
         <Model value="Assets\Models\Bullet_Unari.m3"/>
-        <ScaleMax value="0.050000,0.500000,0.050000"/>
-        <ScaleMin value="0.050000,0.500000,0.050000"/>
+        <ScaleMax value="0.050000,1.000000,0.050000"/>
+        <ScaleMin value="0.050000,1.000000,0.050000"/>
     </CModel>
     <CModel id="FerromagSMGImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
@@ -76,6 +91,9 @@
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
         <SelectionLayer value="2"/>
     </CModel>
+    <CModel id="KeltarCarbine">
+        <Model value="Assets\Models\KeltarCarbine.m3"/>
+    </CModel>
     <CModel id="KeltarCarbineImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\ReaperWeaponImpact\ReaperWeaponImpact.m3"/>
     </CModel>
@@ -85,6 +103,7 @@
     <CModel id="MakeshiftBunker" parent="CocoonPortraitBase">
         <Model value="Assets\Units\Zerg\InfestedBunker_Coop_Structure\InfestedBunker_Coop_Structure.m3"/>
         <EditorCategories value=""/>
+        <SelectionLayer value="2"/>
     </CModel>
     <CModel id="MakeshiftBunkerDeath">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
@@ -127,7 +146,7 @@
         <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
     </CModel>
     <CModel id="Pioneer">
-        <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP\Trooper_Mengsk_COOP.m3"/>
+        <Model value="Assets\Models\Pioneer_Unarmed.m3"/>
         <Radius value="0.370000"/>
         <SelectionRadius value="0.370000"/>
     </CModel>
@@ -136,6 +155,9 @@
     </CModel>
     <CModel id="PioneerPortrait">
         <Model value="Assets\Pioneer\Models\Trooper_Police_Portrait.m3"/>
+    </CModel>
+    <CModel id="PioneerRepairRank2Beam">
+        <Model value="Assets\Effects\Terran\NanoRepairBeam\NanoRepairBeam.m3"/>
     </CModel>
     <CModel id="UP1Headquarters">
         <Model value="Assets\Doodads\BattleStation_CommandCenter\BattleStation_CommandCenter_03.m3"/>

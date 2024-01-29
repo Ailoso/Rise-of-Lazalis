@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CAbilBuild id="BuildMakeshiftBunker">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Build1" Unit="MakeshiftBunker" Time="4">
+            <Charge CountMax="99" CountUse="1"/>
+            <Button DefaultButtonFace="EmergencyShelter"/>
+        </InfoArray>
+    </CAbilBuild>
     <CAbilEffectTarget id="Dismantle">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <TargetFilters value="Ground,Structure;Ally,Neutral,Enemy,RawResource,Missile,Item,Stasis,UnderConstruction,Dead,Invulnerable,Summoned"/>
@@ -26,12 +33,21 @@
         <MaxCargoCount value="4"/>
         <MaxCargoSize value="2"/>
         <TotalCargoSpace value="4"/>
-        <LoadCargoBehavior value="BunkerWeaponRangeBonus"/>
         <TargetFilters value="Biological,Visible;Ally,Neutral,Enemy,Dead,Hidden"/>
-        <LoadValidatorArray value="RequiresTerran"/>
-        <LoadValidatorArray value="NotWidowMineTarget"/>
-        <LoadValidatorArray value="IsNotHellionTank"/>
     </CAbilTransport>
+    <CAbilSpecialize id="PioneerEquipment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Specialize1">
+            <Button DefaultButtonFace="Dismantle"/>
+        </InfoArray>
+        <InfoArray index="Specialize2" Effect="MakeshiftBunkerMU">
+            <Button DefaultButtonFace="EmergencyShelter"/>
+        </InfoArray>
+        <InfoArray index="Specialize3" Effect="AO155RifleAB">
+            <Button DefaultButtonFace="AO155Rifle" Requirements="NoAO155Rifle"/>
+        </InfoArray>
+        <Flags index="BestUnit" value="0"/>
+    </CAbilSpecialize>
     <CAbilEffectTarget id="PioneerRepair">
         <Alignment value="Positive"/>
         <AbilSetId value="Repair"/>
@@ -127,6 +143,11 @@
             <Flags index="ToSelection" value="1"/>
         </CmdButtonArray>
     </CAbilEffectTarget>
+    <CAbilEffectInstant id="Retreat">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="RetreatAB"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Retreat"/>
+    </CAbilEffectInstant>
     <CAbilTrain id="UnariBarracksTrain">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Train1" Time="1">

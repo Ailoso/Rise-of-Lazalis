@@ -16,11 +16,19 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
-    <CButton id="DedicatedProtectors">
+    <CButton id="DedicatedProtector">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="DetoniteCharge">
+        <Icon value="Assets\Icons\detonitecharge.dds"/>
+        <AlertIcon value="Assets\Icons\detonitecharge.dds"/>
+    </CButton>
     <CButton id="Dismantle">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="DisplacementGrenade">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
@@ -39,6 +47,14 @@
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="GuerillaFighter">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Hardened">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="InfiltrationPulse">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
@@ -96,6 +112,7 @@
     <CButton id="TrainFrontiersmen">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <ChargeText value="FrontiersmanCharges"/>
     </CButton>
     <CButton id="TrainMilitia">
         <Icon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
@@ -103,11 +120,24 @@
         <ChargeText value="MilitiaCount"/>
     </CButton>
     <CButton id="TrainPioneer">
-        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
-        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <Icon value="Assets\Textures\btn-unit-terran-trooper-police.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-trooper-police.dds"/>
+        <ChargeText value="PioneerCharges"/>
     </CButton>
     <CButton id="Unwavering">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="V1Emitter">
+        <Icon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-tychus-marauder-deployrevitalizer.dds"/>
+    </CButton>
+    <CButton id="V1Implant">
+        <Icon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadhealth.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadhealth.dds"/>
+    </CButton>
+    <CButton id="YouCanToo">
+        <Icon value="Assets\Icons\youcantoo.dds"/>
+        <AlertIcon value="Assets\Icons\youcantoo.dds"/>
     </CButton>
 </Catalog>

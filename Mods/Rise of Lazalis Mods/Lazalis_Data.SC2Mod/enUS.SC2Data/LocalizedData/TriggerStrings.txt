@@ -1,5 +1,11 @@
-﻿Library/Name/4A5CBC7B=Rise of Lazalis
+﻿Category/Name/lib_4A5CBC7B_C7DABF81=Weapon Replaces
+Library/Name/4A5CBC7B=Rise of Lazalis
+Trigger/Name/lib_4A5CBC7B_0A5EA4F1=Retreat!
 Trigger/Name/lib_4A5CBC7B_683298E4=Dismantle Resources
+Trigger/Name/lib_4A5CBC7B_7A84AAD3=Retreat! Re-Order
+Trigger/Name/lib_4A5CBC7B_7E639196=Pioneer WR
 Trigger/Name/lib_4A5CBC7B_89739288=Tooltip Appender Off
 Trigger/Name/lib_4A5CBC7B_CB5728F6=Tooltip Appender On
 Trigger/Name/lib_4A5CBC7B_FC033F3E=Init
+Variable/Name/lib_4A5CBC7B_F3B5A32F=Retreating Unit Type
+Variable/Name/lib_4A5CBC7B_FA8A5017=Unit Type

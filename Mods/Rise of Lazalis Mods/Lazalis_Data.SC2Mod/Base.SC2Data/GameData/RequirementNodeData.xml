@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CRequirementConst id="3"/>
-    <CRequirementCountUnit id="CountUnitCommentatorBot1QueuedOnly">
+    <CRequirementCountBehavior id="CountBehaviorAO155RifleQueuedOrBetterAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="AO155Rifle" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitCommentatorBot1QueuedOnly">
+        <Flags index="TechTreeCheat" value="0"/>
         <Count Link="CommentatorBot1"/>
     </CRequirementCountUnit>
     <CRequirementLT id="LT3702416715CountUnitCommentatorBot1QueuedOnly3">
         <OperandArray index="0" value="CountUnitCommentatorBot1QueuedOnly"/>
         <OperandArray index="1" value="3"/>
     </CRequirementLT>
+    <CRequirementNot id="NotCountBehaviorAO155RifleQueuedOrBetterAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountBehaviorAO155RifleQueuedOrBetterAtUnit"/>
+    </CRequirementNot>
 </Catalog>
