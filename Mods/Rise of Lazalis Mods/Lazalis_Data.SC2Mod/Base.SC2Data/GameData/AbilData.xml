@@ -148,6 +148,16 @@
         <Effect index="0" value="RetreatAB"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Retreat"/>
     </CAbilEffectInstant>
+    <CAbilMorph id="SiegeMode">
+        <InfoArray index="0">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="5.5417"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="5.5417"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
     <CAbilTrain id="UnariBarracksTrain">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Train1" Time="1">
@@ -157,4 +167,14 @@
             <Unit value="Pioneer"/>
         </InfoArray>
     </CAbilTrain>
+    <CAbilMorph id="Unsiege">
+        <InfoArray index="0">
+            <SectionArray index="Actor">
+                <DurationArray index="Duration" value="5.5417"/>
+            </SectionArray>
+            <SectionArray index="Stats">
+                <DurationArray index="Duration" value="5.5417"/>
+            </SectionArray>
+        </InfoArray>
+    </CAbilMorph>
 </Catalog>

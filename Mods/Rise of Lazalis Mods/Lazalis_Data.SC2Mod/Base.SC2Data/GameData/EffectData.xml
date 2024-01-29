@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectDamage id="76APRifleDamage" parent="DU_WEAP">
+        <AttributeBonus index="Armored" value="24"/>
+        <Amount value="18"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="76APRifleLaunchMissile">
+        <ImpactEffect value="76APRifleDamage"/>
+        <AmmoUnit value="76APRifleWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectDamage id="90mmCannons">
+        <AttributeBonus index="Armored" value="0"/>
+        <Amount value="45"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="AO155RifleAB">
         <EditorCategories value=""/>
         <WhichUnit Value="Caster"/>
@@ -49,6 +62,18 @@
         <EffectArray value="BearclawFlamethrowerCP"/>
         <EffectArray value="BearclawFlamethrowerDamage"/>
     </CEffectSet>
+    <CEffectDamage id="CrucioShockCannonBlast">
+        <AttributeBonus index="Armored" value="30"/>
+        <Amount value="60"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonDirected">
+        <AttributeBonus index="Armored" value="30"/>
+        <Amount value="60"/>
+    </CEffectDamage>
+    <CEffectDamage id="CrucioShockCannonDummy">
+        <AttributeBonus index="Armored" value="30"/>
+        <Amount value="60"/>
+    </CEffectDamage>
     <CEffectDamage id="Dismantle">
         <EditorCategories value=""/>
         <VitalFractionCurrent index="Life" value="1"/>
@@ -64,13 +89,28 @@
         <ImpactEffect value="F2LongshotDamage"/>
         <AmmoUnit value="F2LongshotWeapon"/>
     </CEffectLaunchMissile>
+    <CEffectDamage id="F5LongshotDamage" parent="DU_WEAP">
+        <AttributeBonus index="Light" value="5"/>
+        <Amount value="20"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="F5LongshotLaunchMissile">
+        <ImpactEffect value="F5LongshotDamage"/>
+        <AmmoUnit value="F5LongshotWeapon"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="FerromagSMGDamage" parent="DU_WEAP">
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectDamage id="GoliathG">
+        <Amount value="24"/>
+    </CEffectDamage>
     <CEffectDamage id="KeltarCarbineDamage" parent="DU_WEAP">
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectDamage id="LanceMissileLaunchersDamage">
+        <Amount value="80"/>
     </CEffectDamage>
     <CEffectModifyUnit id="MakeshiftBunkerMU">
         <EditorCategories value=""/>
@@ -143,4 +183,13 @@
         <EditorCategories value=""/>
         <BehaviorLink value="Retreating"/>
     </CEffectRemoveBehavior>
+    <!-- New sieged siege tank setup, as there is no friendly splash, simplifying the setup -->
+    <CEffectSet id="SiegeTankSiegedVoid">
+        <EffectArray index="2" removed="1"/>
+    </CEffectSet>
+    <CEffectDamage id="ThorsHammerDamage">
+        <AttributeBonus index="Armored" value="20"/>
+        <Amount value="40"/>
+        <AreaArray Radius="1" Fraction="0.25"/>
+    </CEffectDamage>
 </Catalog>

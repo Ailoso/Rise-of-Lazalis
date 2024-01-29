@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CActorAction id="76APRifleAction" parent="GenericAttack" effectImpact="76APRifleDamage" effectLaunch="76APRifleLaunchMissile">
+        <On Terms="ActorCreation" Send="SetTintColor {255,128,0 3.000000}"/>
+        <LaunchAssets Model="76APRifleLaunchModel" Sound="76APRifleLaunchSound"/>
+        <Missile value="76APRifleWeaponMissile"/>
+        <ImpactMap index="None" Model="76APRifleImpactModel" Sound="76APRifleImpactSound"/>
+    </CActorAction>
+    <CActorMissile id="76APRifleWeaponMissile" parent="GenericAttackMissile" unitName="76APRifleWeapon">
+        <On Terms="ActorCreation" Send="SetTintColor {255,169,140 3.000000}"/>
+        <Model value="76APRifleMissileModel"/>
+    </CActorMissile>
     <CActorAction id="AO155RifleAction" parent="GenericAttack" effectAttack="AO155RifleDamage">
         <LaunchAssets Model="AO155RifleLaunchModel" Sound="AO155RifleLaunchSound"/>
         <Missile value="AO155RifleWeaponMissile"/>
@@ -72,6 +82,18 @@
         <Scale value="1.200000"/>
         <UnitIcon value="Assets\Icons\TrainBodyguard.dds"/>
         <Aliases value="_UnitSmall"/>
+    </CActorUnit>
+    <CActorAction id="F5LongshotAction" parent="GenericAttack" effectImpact="F5LongshotDamage" effectLaunch="F5LongshotLaunchMissile">
+        <LaunchAssets Model="F5LongshotLaunchModel" Sound="F5LongshotLaunchSound"/>
+        <Missile value="F5LongshotWeaponMissile"/>
+        <ImpactMap index="None" Model="F5LongshotImpactModel" Sound="F5LongshotImpactSound"/>
+    </CActorAction>
+    <CActorMissile id="F5LongshotWeaponMissile" parent="GenericAttackMissile" unitName="F5LongshotWeapon">
+        <Model value="F5LongshotMissileModel"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,247,183 10.000000}"/>
+    </CActorMissile>
+    <CActorUnit id="Goliath">
+        <Scale value="1.200000"/>
     </CActorUnit>
     <CActorUnit id="MakeshiftBunker" parent="TerranBuildingEx" unitName="MakeshiftBunker">
         <Aliases value="_UnitHuge"/>
@@ -302,7 +324,6 @@
         <AbilSoundArray AbilCmd="PioneerRepair,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
         <AbilSoundArray AbilCmd="Dismantle,Execute" Sound="Pioneer_Dismantle"/>
         <AbilSoundArray AbilCmd="PioneerEquipment,Specialize3" Sound="Pioneer_Weapon"/>
-        <On Terms="ActorCreation" Send="AttachModel {} KeltarCarbine {Upgrade 0}"/>
     </CActorUnit>
     <CActorBeamSimple id="PioneerRepairRank2Beam" parent="BeamSimpleAnimationStyleContinuous">
         <On Terms="Effect.PioneerRepairRank2.TargetStart" Send="Create"/>
@@ -321,6 +342,15 @@
         <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
     </CActorBeamSimple>
+    <CActorUnit id="SiegeTank">
+        <Scale value="1.300000"/>
+    </CActorUnit>
+    <CActorUnit id="SiegeTankSieged">
+        <Scale value="1.300000"/>
+    </CActorUnit>
+    <CActorUnit id="Thor">
+        <Scale value="2.000000"/>
+    </CActorUnit>
     <CActorUnit id="UP1Headquarters" parent="GenericUnitStandard" unitName="UP1Headquarters">
         <Aliases value="_CreepEngulfable"/>
         <Aliases value="_UnitHuge"/>

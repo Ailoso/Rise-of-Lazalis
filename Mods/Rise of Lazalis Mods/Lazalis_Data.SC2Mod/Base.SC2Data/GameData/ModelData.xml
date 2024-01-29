@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CModel id="76APRifleImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="76APRifleLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponLaunch\GhostWeaponLaunch.m3"/>
+        <ScaleMax value="1.000000,2.000000,1.000000"/>
+        <ScaleMin value="1.000000,2.000000,1.000000"/>
+    </CModel>
+    <CModel id="76APRifleMissileModel" parent="MissileFX">
+        <Model value="Assets\Models\Bullet_Unari.m3"/>
+        <ScaleMax value="0.050000,2.000000,0.050000"/>
+        <ScaleMin value="0.050000,2.000000,0.050000"/>
+    </CModel>
     <CModel id="AO155RifleImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
     </CModel>
@@ -34,6 +47,17 @@
     </CModel>
     <CModel id="Bunker2" parent="BunkerBase">
         <Model value="Assets\Buildings\Terran\BunkerEx1\BunkerEx1.m3"/>
+    </CModel>
+    <CModel id="F5LongshotImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="F5LongshotLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\GhostWeaponLaunch\GhostWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="F5LongshotMissileModel" parent="MissileFX">
+        <Model value="Assets\Models\Bullet_Unari.m3"/>
+        <ScaleMax value="0.050000,1.000000,0.050000"/>
+        <ScaleMin value="0.050000,1.000000,0.050000"/>
     </CModel>
     <CModel id="MakeshiftBunkerDeath2" parent="BunkerDeathBase">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
@@ -91,9 +115,6 @@
         <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
         <SelectionLayer value="2"/>
     </CModel>
-    <CModel id="KeltarCarbine">
-        <Model value="Assets\Models\KeltarCarbine.m3"/>
-    </CModel>
     <CModel id="KeltarCarbineImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\ReaperWeaponImpact\ReaperWeaponImpact.m3"/>
     </CModel>
@@ -146,7 +167,7 @@
         <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
     </CModel>
     <CModel id="Pioneer">
-        <Model value="Assets\Models\Pioneer_Unarmed.m3"/>
+        <Model value="Assets\Models\StormTrooper.m3"/>
         <Radius value="0.370000"/>
         <SelectionRadius value="0.370000"/>
     </CModel>
@@ -158,6 +179,10 @@
     </CModel>
     <CModel id="PioneerRepairRank2Beam">
         <Model value="Assets\Effects\Terran\NanoRepairBeam\NanoRepairBeam.m3"/>
+    </CModel>
+    <CModel id="ThorHandGunAttackImpact">
+        <ScaleMax value="2.000000,2.000000,2.000000"/>
+        <ScaleMin value="2.000000,2.000000,2.000000"/>
     </CModel>
     <CModel id="UP1Headquarters">
         <Model value="Assets\Doodads\BattleStation_CommandCenter\BattleStation_CommandCenter_03.m3"/>

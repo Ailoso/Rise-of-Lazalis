@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CUnit id="76APRifleWeapon" parent="MISSILE">
+        <Mover value="76APRifleMissile"/>
+    </CUnit>
     <CUnit id="BarracksUnari">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
@@ -142,6 +145,15 @@
     <CUnit id="CommandCenter">
         <BehaviorArray Link="RemoveRetreat"/>
     </CUnit>
+    <CUnit id="F5LongshotWeapon" parent="MISSILE">
+        <Mover value="F5LongshotMissile"/>
+    </CUnit>
+    <CUnit id="Goliath">
+        <LifeStart value="240"/>
+        <LifeMax value="240"/>
+        <LifeArmor value="8"/>
+        <Radius value="0.8125"/>
+    </CUnit>
     <CUnit id="MakeshiftBunker">
         <DeathRevealRadius value="3"/>
         <Facing value="315"/>
@@ -257,7 +269,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
-        <WeaponArray Link="F2Longshot"/>
+        <WeaponArray Link="76APRifle"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -265,7 +277,7 @@
             <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
             <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
             <LayoutButtons Face="GuerillaFighter" Type="Passive" Row="1" Column="0"/>
-            <LayoutButtons Face="Retreat" Type="AbilCmd" AbilCmd="Retreat,255" Row="1" Column="3"/>
+            <LayoutButtons Face="Retreat" Type="AbilCmd" AbilCmd="Retreat,Execute" Row="1" Column="3"/>
             <LayoutButtons>
                 <Face value="Equipment"/>
                 <Type value="Submenu"/>
@@ -277,6 +289,7 @@
             <LayoutButtons Face="SetupEncampment" Type="Passive" Row="2" Column="0"/>
             <LayoutButtons Face="Patience" Type="Passive" Row="2" Column="1"/>
             <LayoutButtons Face="Sprint" Type="Passive" Row="2" Column="2"/>
+            <LayoutButtons Face="SS6Mine" Type="Passive" Row="1" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="SS6Mine" Type="Passive" Row="0" Column="0"/>
@@ -565,6 +578,27 @@
         <TauntDuration index="Cheer" value="5"/>
         <TauntDuration index="Dance" value="5"/>
         <BehaviorArray Link="VeterancyPioneer"/>
+    </CUnit>
+    <CUnit id="SiegeTank">
+        <LifeStart value="330"/>
+        <LifeMax value="330"/>
+        <LifeArmor value="15"/>
+        <Radius value="1.125"/>
+        <InnerRadius value="1.125"/>
+    </CUnit>
+    <CUnit id="SiegeTankSieged">
+        <LifeStart value="330"/>
+        <LifeMax value="330"/>
+        <LifeArmor value="15"/>
+        <Radius value="1.125"/>
+        <InnerRadius value="1.125"/>
+    </CUnit>
+    <CUnit id="ThorAP">
+        <LifeStart value="900"/>
+        <LifeMax value="900"/>
+        <LifeArmor value="20"/>
+        <Speed value="1.4765"/>
+        <Radius value="2"/>
     </CUnit>
     <CUnit id="UP1Headquarters">
         <DeathRevealRadius value="3"/>
