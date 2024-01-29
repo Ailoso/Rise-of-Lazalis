@@ -342,11 +342,69 @@
         <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
     </CActorBeamSimple>
+    <CActorSound id="SS6Detonate" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SS6Set.Start" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="SS6DetonateAdd" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SS6Set.Start" Send="Create"/>
+    </CActorSound>
+    <CActorModelMaterial id="SS6Glaze" parent="BehaviorGlaze" buff="Disabled">
+        <EditorCategories value=""/>
+    </CActorModelMaterial>
     <CActorUnit id="SiegeTank">
         <Scale value="1.300000"/>
     </CActorUnit>
     <CActorUnit id="SiegeTankSieged">
         <Scale value="1.300000"/>
+    </CActorUnit>
+    <CActorUnit id="SS6Mine" parent="GenericUnitStandard" unitName="SpiderMine">
+        <Aliases value="_UnitSmall"/>
+        <On Terms="UnitBirth.SS6Mine" Send="Create"/>
+        <On Terms="UnitBirth.SS6Mine" Send="AnimPlay Burrow Burrow PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMineBurrowed" Send="AnimPlay Burrow Burrow PlayForever,NonLooping"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMineBurrowed" Send="AnimClear Unburrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMine" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Start; MorphTo SpiderMine" Send="AnimPlay Unburrow Unburrow"/>
+        <On Terms="AbilMorph.VultureSpiderMineBurrow.Start" Send="Create VultureSpiderMineBurrowSound"/>
+        <On Terms="Abil.attack.ReadyStart" Send="Create VultureSpiderMineSeekSound"/>
+        <On Terms="ActorCreation; ValidateUnit HasCerberusMines" Send="ModelSwap CerberusMine"/>
+        <Model value="SS6Mine"/>
+        <Scale value="3.000000,3.000000,1.000000"/>
+        <BuildModel value="SS6Mine"/>
+        <DeathArray index="Normal" ModelLink="SS6MineExplosion" SoundLink=""/>
+        <PlacementModel value="SpiderMinePlacement"/>
+        <PortraitModel value="AdjutantPortrait"/>
+        <BarOffset value="10"/>
+        <BarWidth value="36"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-SpiderMine.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="Birth" value="SpiderMineBirth"/>
+        <GroupSoundArray index="Ready" value="SpiderMineReady"/>
+        <GroupSoundArray index="Help" value="SpiderMineHelp"/>
+        <GroupSoundArray index="What" value="SpiderMineWhat"/>
+        <GroupSoundArray index="Yes" value="SpiderMineYes"/>
+        <GroupSoundArray index="Attack" value="SpiderMineYes"/>
+        <GroupSoundArray index="Pissed" value="SpiderMinePissed"/>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Terran-SpiderMine.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <NameOffset value="10"/>
+        <SoundArray index="Birth" value="SpiderMineBirth"/>
+        <SoundArray index="Ready" value="SpiderMineReady"/>
+        <SoundArray index="Help" value="SpiderMineHelp"/>
+        <SoundArray index="What" value="SpiderMineWhat"/>
+        <SoundArray index="Yes" value="SpiderMineYes"/>
+        <SoundArray index="Attack" value="SpiderMineYes"/>
+        <SoundArray index="Pissed" value="SpiderMinePissed"/>
+        <SoundArray index="Movement" value="SpiderMineMovement"/>
+        <SoundArray index="Turning" value="SpiderMineTurning"/>
+        <SoundArray index="Board" value="SpiderMineBoard"/>
+        <UnitIcon value="Assets\Textures\BTN-Unit-Terran-SpiderMine.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-SpiderMine.dds"/>
+        </Wireframe>
     </CActorUnit>
     <CActorUnit id="Thor">
         <Scale value="2.000000"/>

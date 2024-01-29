@@ -183,6 +183,22 @@
         <EditorCategories value=""/>
         <BehaviorLink value="Retreating"/>
     </CEffectRemoveBehavior>
+    <CEffectApplyBehavior id="SS6AB">
+        <EditorCategories value=""/>
+        <Behavior value="Disabled"/>
+    </CEffectApplyBehavior>
+    <CEffectDamage id="SS6Damage">
+        <EditorCategories value=""/>
+        <DebugTrace value="1"/>
+        <Amount value="250"/>
+        <SearchFilters value="-;Missile,Stasis,Dead,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectSet id="SS6Set">
+        <EditorCategories value=""/>
+        <EffectArray value="SS6Damage"/>
+        <EffectArray value="SS6AB"/>
+        <EffectArray value="Suicide"/>
+    </CEffectSet>
     <!-- New sieged siege tank setup, as there is no friendly splash, simplifying the setup -->
     <CEffectSet id="SiegeTankSiegedVoid">
         <EffectArray index="2" removed="1"/>

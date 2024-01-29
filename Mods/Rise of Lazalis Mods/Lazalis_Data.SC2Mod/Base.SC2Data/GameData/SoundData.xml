@@ -241,4 +241,34 @@
         <AssetArray File="Assets\Sounds\Pioneer_Group_Repair_03.mp3" FacialGroup=""/>
         <Volume value="3.000000,3.000000"/>
     </CSound>
+    <CSound id="SS6Detonate">
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_1a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_2a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_3a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_4a.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SentryBot_DeathExplosion_5a.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="3.000000,3.000000"/>
+    </CSound>
+    <CSound id="SS6DetonateAdd">
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SeigeTank_Explosion_Add_05.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SiegeTank_Explosion_Add_01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SiegeTank_Explosion_Add_02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SiegeTank_Explosion_Add_03.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SiegeTank_Explosion_Add_04.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\SiegeTank_Explosion_Add_05.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-2.000000,-2.000000"/>
+    </CSound>
 </Catalog>

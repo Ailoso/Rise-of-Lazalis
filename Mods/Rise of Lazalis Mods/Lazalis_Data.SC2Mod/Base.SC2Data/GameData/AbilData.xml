@@ -148,6 +148,18 @@
         <Effect index="0" value="RetreatAB"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Retreat"/>
     </CAbilEffectInstant>
+    <CAbilEffectTarget id="SS6Explode">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SS6Set"/>
+        <Flags index="AutoCast" value="1"/>
+        <Flags index="AutoCastOn" value="1"/>
+        <Flags index="BestUnit" value="0"/>
+        <Range value="2"/>
+        <AutoCastFilters value="Ground,Mechanical;Player,Ally,Air,Item,Stasis,Dead,Invulnerable"/>
+        <AutoCastRange value="1000"/>
+        <AutoCastValidatorArray value="SS6Search"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0058_01"/>
+    </CAbilEffectTarget>
     <CAbilMorph id="SiegeMode">
         <InfoArray index="0">
             <SectionArray index="Actor">
