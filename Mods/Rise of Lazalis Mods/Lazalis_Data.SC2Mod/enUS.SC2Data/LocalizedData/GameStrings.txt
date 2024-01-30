@@ -1,6 +1,8 @@
 ﻿Abil/Name/BuildMakeshiftBunker=Build Makeshift Bunker
+Abil/Name/DetoniteCharge=Detonite Charge
 Abil/Name/Dismantle=Dismantle
 Abil/Name/MakeshiftBunkerTransport=Load-Unload (Bunker)
+Abil/Name/MilitiaEquipment=Militia Equipment
 Abil/Name/PioneerEquipment=Pioneer Equipment
 Abil/Name/PioneerRepair=Pioneer Repair
 Abil/Name/PioneerRepairRank2=Pioneer Repair (Rank 2)
@@ -45,18 +47,20 @@ Button/Name/SS6Mine=SS-6 Mine
 Button/Name/SetupEncampment=Setup Encampment
 Button/Name/Sprint=Sprint
 Button/Name/TrainBodyguard=Train Bodyguard
+Button/Name/TrainBypassers=Train Bypassers
 Button/Name/TrainFrontiersmen=Train Frontiersmen
 Button/Name/TrainMilitia=Train Militia
-Button/Name/TrainPioneer=Train Pioneer
+Button/Name/TrainPioneers=Train Pioneers
 Button/Name/Unwavering=Unwavering
 Button/Name/V1Emitter=V-1 Emitter
 Button/Name/V1Implant=V-1 Implant
 Button/Name/YouCanToo=You Can Too
 Button/Tooltip/76APRifle=A slow, heavy-hitting anti-armor weapon.
-Button/Tooltip/AO155Rifle=Gain +2 damage vs Light and 10% faster attack speed.
+Button/Tooltip/AO155Rifle=Equip a stronger weapon that deals bonus damage to Light and fires faster.
 Button/Tooltip/BarracksUnari=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
 Button/Tooltip/Bodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildUnari=Opens a submenu to build structures.
+Button/Tooltip/Bypasser=Hacking specialist. Can use Lockdown, Infiltrate Network, and Withdrawal. Subpar combatant.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/CStaticSmoke=Nearby vehicles increase the attack speed and repair rate of the Iron Pioneer by 2% per supply, up to 30%.
 Button/Tooltip/CombinedArms=Nearby vehicles increase the attack speed and repair rate of the Iron Pioneer by 2% per supply, up to 30%.
 Button/Tooltip/DedicatedProtector=Bodyguards redirect a portion of the damage a nearby heroic unit takes to themselves. While at least 3 are protecting them, they are effectively invulnerable.<n/>Bodyguards move 50% slower while not near a heroic unit.
@@ -88,15 +92,18 @@ Button/Tooltip/SS6Mine=Lay a landmine over 8 seconds. It will detonate when an e
 Button/Tooltip/SetupEncampment=Build an Encampment over 20 seconds. Encampments are scrappy, fragile buildings that provide life regeneration to biological units and extra firepower to Frontiersman.
 Button/Tooltip/Sprint=This unit moves 30% faster while out of combat.
 Button/Tooltip/TrainBodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainBypassers=Hacking specialist. Can use Lockdown, Infiltrate Network, and Withdrawal. Subpar combatant.<n/><n/><c val="FFFF80">Can attack ground units.</c>
 Button/Tooltip/TrainFrontiersmen=Guerilla specialist.<n/><n/><c val="FFFF80">Can attack ground and air units.</c>
 Button/Tooltip/TrainMilitia=Inexperienced infantry. Subpar combatant, but versatile uses.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
-Button/Tooltip/TrainPioneer=Combat engineer. Can build structures and gather resources.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
+Button/Tooltip/TrainPioneers=Combat engineer. Can build structures and gather resources.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/UP1Headquarters=Primary structure. Used to receive gathered resources.<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor
 Button/Tooltip/Unwavering=This unit is unaffected by low Spirit.
 Button/Tooltip/V1Emitter=Place a device that heals biological units inside an area for 1 life per second, increased to 5 on out of combat units. Lasts for 20 seconds.
 Button/Tooltip/V1Implant=Place a device on a biological unit that heals them for 5 life per second for 10 seconds, increased to 10 life while out of combat.
 Button/Tooltip/YouCanToo=Nearby Militia gain 20% attack speed and gain experience 15% faster. Does not stack.
 DataCollection/Name/Bodyguard=Bodyguard
+DataCollection/Name/Bypasser=Bypasser
+DataCollection/Name/Frontiersman=Frontiersman
 DataCollection/Name/Militia=Militia
 DataCollection/Name/MsLazalis=Ms. Lazalis
 DataCollection/Name/N11Handcannon=N11 Handcannon
@@ -108,10 +115,14 @@ Effect/Name/76APRifleDamage=76APRifleDamage
 Effect/Name/76APRifleLaunchMissile=76APRifleLaunchMissile
 Effect/Name/AO155RifleAB=AO-155 Rifle AB
 Effect/Name/AO155RifleDamage=AO155RifleDamage
+Effect/Name/AlivyseHandgunDamage=AlivyseHandgunDamage
 Effect/Name/BearclawFlamethrowerCP=Bearclaw Flamethrower CP
 Effect/Name/BearclawFlamethrowerDamage=BearclawFlamethrowerDamage
 Effect/Name/BearclawFlamethrowerSA=Bearclaw Flamethrower SA
 Effect/Name/BearclawFlamethrowerSet=Bearclaw Flamethrower Set
+Effect/Name/DetoniteChargeCP=Detonite Charge CP
+Effect/Name/DetoniteChargeDamage=Detonite Charge Damage
+Effect/Name/DetoniteChargeLaunchMissile=Detonite Charge Launch Missile
 Effect/Name/Dismantle=Dismantle
 Effect/Name/F2LongshotDamage=F2LongshotDamage
 Effect/Name/F2LongshotLaunchMissile=F2LongshotLaunchMissile
@@ -140,11 +151,14 @@ PioneerCharges=x3
 RequirementNode/Tooltip/LT3702416715CountUnitCommentatorBot1QueuedOnly3=Limit 3
 SCVCount=x1
 UI/ResourceName2=Munitions
+UI/TeamColor15=Pink
 UP1HeadquartersAppender=<n/><c val="FFFFFF">Units Available:</c><n/>- SCVs<n/>- Militia<n/>- Bodyguards<n/><c val="FFFFFF">Upgrades Available:</c><n/>- Radar Installation<n/>- Infantry Level 1 Weapons & Armor
 Unit/LifeArmorName/Unarmored=Unarmored
 Unit/Name/76APRifleWeapon=76 AP Rifle Projectile
 Unit/Name/BarracksUnari=Barracks
 Unit/Name/Bodyguard=Bodyguard
+Unit/Name/Bypasser=Bypasser
+Unit/Name/DetoniteChargeMissile=Detonite Charge Missile
 Unit/Name/F2LongshotWeapon=F2 Longshot Projectile
 Unit/Name/F5LongshotWeapon=F5 Longshot Projectile
 Unit/Name/Frontiersman=Frontiersman
@@ -157,6 +171,7 @@ Unit/Name/UP1Headquarters=UP-1 Headquarters
 Upgrade/Name/GeovitzPioneer=Geovitz Pioneer
 Weapon/Name/76APRifle=76 AP Rifle
 Weapon/Name/AO155Rifle=AO-155 Rifle
+Weapon/Name/AlivyseHandgun=Alivyse Handgun
 Weapon/Name/BearclawFlamethrower=Bearclaw Flamethrower
 Weapon/Name/F2Longshot=F2 Longshot
 Weapon/Name/F5Longshot=F5 Longshot

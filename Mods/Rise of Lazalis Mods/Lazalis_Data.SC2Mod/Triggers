@@ -4,6 +4,7 @@
         <LibraryShareToMods/>
         <Root>
             <Item Type="Trigger" Library="4A5CBC7B" Id="FC033F3E"/>
+            <Item Type="Trigger" Library="4A5CBC7B" Id="7D1ECAFC"/>
             <Item Type="Trigger" Library="4A5CBC7B" Id="CB5728F6"/>
             <Item Type="Trigger" Library="4A5CBC7B" Id="89739288"/>
             <Item Type="Trigger" Library="4A5CBC7B" Id="683298E4"/>
@@ -34,6 +35,33 @@
             <Value>Terr</Value>
             <ValueType Type="gamelink"/>
             <ValueGameType Type="Race"/>
+        </Element>
+        <Element Type="Trigger" Id="7D1ECAFC">
+            <Event Type="FunctionCall" Library="4A5CBC7B" Id="BA72884C"/>
+            <Action Type="FunctionCall" Library="4A5CBC7B" Id="CE44A738"/>
+        </Element>
+        <Element Type="FunctionCall" Id="BA72884C">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="00000120"/>
+        </Element>
+        <Element Type="FunctionCall" Id="CE44A738">
+            <FunctionDef Type="FunctionDef" Library="Ntve" Id="69EDDFF6"/>
+            <Parameter Type="Param" Library="4A5CBC7B" Id="165EDD2E"/>
+            <Parameter Type="Param" Library="4A5CBC7B" Id="44D69F20"/>
+            <Parameter Type="Param" Library="4A5CBC7B" Id="003ADD3B"/>
+        </Element>
+        <Element Type="Param" Id="165EDD2E">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="FC6A1530"/>
+            <Value>1</Value>
+            <ValueType Type="int"/>
+        </Element>
+        <Element Type="Param" Id="44D69F20">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="5A3E7833"/>
+            <ValueType Type="playercolor"/>
+            <ValueId Id="15"/>
+        </Element>
+        <Element Type="Param" Id="003ADD3B">
+            <ParameterDef Type="ParamDef" Library="Ntve" Id="6C335833"/>
+            <Preset Type="PresetValue" Library="Ntve" Id="E5424C71"/>
         </Element>
         <Element Type="Trigger" Id="CB5728F6">
             <Event Type="FunctionCall" Library="4A5CBC7B" Id="4B3898D5"/>

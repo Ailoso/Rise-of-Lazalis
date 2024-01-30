@@ -9,6 +9,22 @@
         <DataRecord Entry="Weapon,N11Handcannon"/>
         <DataRecord Entry="Unit,Bodyguard"/>
     </CDataCollectionUnit>
+    <CDataCollectionUnit id="Bypasser">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,ObjectType:Unit"/>
+        <DataRecord Entry="Model,BypasserPortrait"/>
+        <DataRecord Entry="Unit,Bypasser"/>
+        <DataRecord Entry="Actor,Bypasser"/>
+        <DataRecord Entry="Model,Bypasser"/>
+        <DataRecord Entry="Model,BypasserDeath"/>
+    </CDataCollectionUnit>
+    <CDataCollectionUnit id="Frontiersman">
+        <EditorCategories value="DataGroup:Unit,Race:Terran,ObjectType:Unit"/>
+        <DataRecord Entry="Model,FrontiersmanPortrait"/>
+        <DataRecord Entry="Unit,Frontiersman"/>
+        <DataRecord Entry="Actor,Frontiersman"/>
+        <DataRecord Entry="Model,Frontiersman"/>
+        <DataRecord Entry="Model,FrontiersmanDeath"/>
+    </CDataCollectionUnit>
     <CDataCollectionUnit id="Militia">
         <EditorCategories value="DataGroup:Unit,Race:Terran,DataFamily:Campaign,ObjectType:Unit"/>
         <DataRecord Entry="Actor,Militia"/>

@@ -23,6 +23,10 @@
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectDamage id="AlivyseHandgunDamage" parent="DU_WEAP">
+        <Amount value="7"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectCreatePersistent id="BearclawFlamethrowerCP">
         <EditorCategories value=""/>
         <WhichLocation Value="SourcePoint"/>
@@ -74,6 +78,23 @@
         <AttributeBonus index="Armored" value="30"/>
         <Amount value="60"/>
     </CEffectDamage>
+    <CEffectCreatePersistent id="DetoniteChargeCP">
+        <EditorCategories value=""/>
+        <InitialDelay value="5"/>
+        <FinalEffect value="DetoniteChargeDamage"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="DetoniteChargeDamage">
+        <AttributeBonus index="Structure" value="375"/>
+        <Amount value="125"/>
+        <AreaArray Radius="0.5" Fraction="1"/>
+        <AreaArray Radius="1.6" Fraction="0.25"/>
+        <SearchFilters value="Ground;Ally,Missile,Stasis,Dead,Invulnerable,Benign"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="DetoniteChargeLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="DetoniteChargeCP"/>
+        <AmmoUnit value="DetoniteChargeMissile"/>
+    </CEffectLaunchMissile>
     <CEffectDamage id="Dismantle">
         <EditorCategories value=""/>
         <VitalFractionCurrent index="Life" value="1"/>

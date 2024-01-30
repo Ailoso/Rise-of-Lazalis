@@ -7,6 +7,17 @@
             <Button DefaultButtonFace="EmergencyShelter"/>
         </InfoArray>
     </CAbilBuild>
+    <CAbilEffectTarget id="DetoniteCharge">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="DetoniteChargeLaunchMissile"/>
+        <Cost>
+            <Charge CountMax="99" CountStart="99" CountUse="1"/>
+            <Cooldown TimeUse="5"/>
+        </Cost>
+        <Range value="7"/>
+        <CursorEffect value="DetoniteChargeDamage"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="DetoniteCharge"/>
+    </CAbilEffectTarget>
     <CAbilEffectTarget id="Dismantle">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <TargetFilters value="Ground,Structure;Ally,Neutral,Enemy,RawResource,Missile,Item,Stasis,UnderConstruction,Dead,Invulnerable,Summoned"/>
@@ -35,6 +46,18 @@
         <TotalCargoSpace value="4"/>
         <TargetFilters value="Biological,Visible;Ally,Neutral,Enemy,Dead,Hidden"/>
     </CAbilTransport>
+    <CAbilSpecialize id="MilitiaEquipment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Specialize1">
+            <Button DefaultButtonFace="DetoniteCharge"/>
+        </InfoArray>
+        <InfoArray index="Specialize2">
+            <Button DefaultButtonFace="EmergencyShelter"/>
+        </InfoArray>
+        <InfoArray index="Specialize3">
+            <Button DefaultButtonFace="V1Implant"/>
+        </InfoArray>
+    </CAbilSpecialize>
     <CAbilSpecialize id="PioneerEquipment">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Specialize1">
@@ -173,7 +196,7 @@
     <CAbilTrain id="UnariBarracksTrain">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Train1" Time="1">
-            <Button DefaultButtonFace="TrainPioneer"/>
+            <Button DefaultButtonFace="TrainPioneers"/>
             <Unit value="Pioneer"/>
             <Unit value="Pioneer"/>
             <Unit value="Pioneer"/>

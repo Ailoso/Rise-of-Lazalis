@@ -3,6 +3,11 @@
     <CGame id="Dflt">
         <TriggerLibs Id="4A5CBC7B"/>
         <VeterancySearchRadius value="0"/>
+        <TeamColors index="15">
+            <Value index="Diffuse" value="0.569200,0.278900,0.678200,0.500000"/>
+            <Value index="Emissive" value="0.569200,0.278900,0.678200,0.500000"/>
+            <Value index="Selected" value="0.569200,0.278900,0.678200,0.500000"/>
+        </TeamColors>
         <!-- Test Builds -->
         <!-- <AIBuilds index="213" Enabled="0"/>
              <AIBuilds index="214" Enabled="0"/>

@@ -19,6 +19,12 @@
     <CModel id="AO155RifleLaunchModel" parent="LaunchFX">
         <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
     </CModel>
+    <CModel id="AlivyseHandgunImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponImpact\ReaperWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="AlivyseHandgunLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
+    </CModel>
     <CModel id="Barracks2" parent="BarracksBase">
         <Model value="Assets\Buildings\Terran\Barracks\Barracks.m3"/>
     </CModel>
@@ -47,6 +53,29 @@
     </CModel>
     <CModel id="Bunker2" parent="BunkerBase">
         <Model value="Assets\Buildings\Terran\BunkerEx1\BunkerEx1.m3"/>
+    </CModel>
+    <CModel id="Bypasser" parent="GhostBase">
+        <Model value="Assets\Units\Terran\GhostFemale\GhostFemale.m3"/>
+        <RequiredAnims index="0" value="Assets\Units\Terran\GhostFemale_RequiredAnims\GhostFemale_RequiredAnims.m3a"/>
+    </CModel>
+    <CModel id="BypasserDeath" parent="GhostDeathBase">
+        <Model value="Assets\Models\Spectre_Junker_Death.m3"/>
+    </CModel>
+    <CModel id="BypasserPortrait" parent="GhostPortraitBase">
+        <Model value="Assets\Portraits\Terran\GhostFemale_Portrait\GhostFemale_Portrait.m3"/>
+        <Flags index="Download" value="1"/>
+        <Flags index="VariationFallback" value="0"/>
+        <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
+        <Lighting value="GhostPortrait"/>
+    </CModel>
+    <CModel id="DetoniteChargeCursorSplat">
+        <Model value="Assets\UI\Cursors\TerranAOECursor\TerranAOECursor.m3"/>
+    </CModel>
+    <CModelFoliage id="DetoniteChargeExplode">
+        <Model value="Assets\Effects\Terran\Mutator_MissileMadness_Explosion\Mutator_MissileMadness_Explosion.m3"/>
+    </CModelFoliage>
+    <CModel id="DetoniteChargeMissile">
+        <Model value="Assets\Units\Terran\Griffin_BombRun_COOP\Griffin_BombRun_COOP.m3"/>
     </CModel>
     <CModel id="F5LongshotImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
@@ -167,7 +196,7 @@
         <Model value="Assets\Effects\Terran\ReaperWeaponLaunch\ReaperWeaponLaunch.m3"/>
     </CModel>
     <CModel id="Pioneer">
-        <Model value="Assets\Models\StormTrooper.m3"/>
+        <Model value="Assets\Models\Pioneer.m3"/>
         <Radius value="0.370000"/>
         <SelectionRadius value="0.370000"/>
     </CModel>

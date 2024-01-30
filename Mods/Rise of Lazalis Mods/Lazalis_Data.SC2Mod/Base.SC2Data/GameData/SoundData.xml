@@ -7,6 +7,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact3.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact4.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact5.wav" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="76APRifleLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Uni\Units\Warbot\Warbot_GatlingGunAttackLaunch1.wav" FacialGroup=""/>
@@ -17,6 +18,7 @@
         <AssetArray File="Assets\Sounds\Warbot_GatlingGunAttackLaunch2.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Warbot_GatlingGunAttackLaunch3.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Warbot_GatlingGunAttackLaunch4.wav" FacialGroup=""/>
+        <Volume value="-9.000000,-9.000000"/>
     </CSound>
     <CSound id="AO155RifleImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact0.wav"/>
@@ -24,6 +26,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact2.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact4.wav"/>
+        <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="AO155RifleLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch0.wav"/>
@@ -35,6 +38,22 @@
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch6.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch7.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch8.wav"/>
+        <Volume value="-12.000000,-10.000000"/>
+    </CSound>
+    <CSound id="AlivyseHandgunImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact3.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact4.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact5.wav"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="AlivyseHandgunLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_AttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_AttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_AttackLaunch2.wav"/>
+        <Volume value="-10.000000,-9.000000"/>
     </CSound>
     <CSound id="BearclawFlamethrowerImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact0.wav"/>
@@ -50,6 +69,28 @@
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch4.wav"/>
     </CSound>
+    <CSound id="DetoniteChargeExplodeSound">
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium2.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium3.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium5.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium9.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+    </CSound>
+    <CSound id="DetoniteChargeThrow">
+        <AssetArray File="Assets\Sounds\GrenadePulse_Activate01.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Activate02.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\GrenadePulse_Activate03.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="-4.000000,-4.000000"/>
+    </CSound>
     <CSound id="DismantleSound">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\Construction\Terran_ConstructionStage1.wav" FacialGroup=""/>
         <Category value="Combat"/>
@@ -62,12 +103,14 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact3.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact4.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact5.wav" FacialGroup=""/>
+        <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="F2LongshotLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch01.wav"/>
         <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch03.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Nova_SniperRifle_Cloaked_AttackLaunch04.wav" FacialGroup=""/>
+        <Volume value="-12.000000,-10.500000"/>
     </CSound>
     <CSound id="F5LongshotImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Ghost\Ghost_SnipeImpact0.wav"/>
@@ -86,6 +129,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact4.wav"/>
         <DupeMaximumMethod value="Replace"/>
+        <Volume value="-6.000000,-6.000000"/>
     </CSound>
     <CSound id="FerromagSMGLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch0.wav"/>
@@ -98,6 +142,7 @@
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch7.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch8.wav"/>
         <DupeMaximumMethod value="Replace"/>
+        <Volume value="-12.000000,-10.000000"/>
     </CSound>
     <CSound id="KeltarCarbineImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact0.wav"/>
@@ -106,7 +151,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact4.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact5.wav"/>
-        <Volume value="-4.000000,-4.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
     </CSound>
     <CSound id="KeltarCarbineLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch0.wav"/>
@@ -115,7 +160,7 @@
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch4.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch5.wav"/>
-        <Volume value="-5.000000,-5.000000"/>
+        <Volume value="-9.000000,-6.000000"/>
     </CSound>
     <CSound id="MilitiaReady">
         <AssetArray File="Assets\Sounds\Advisor2\Militia_Ready01.mp3" FacialGroup=""/>

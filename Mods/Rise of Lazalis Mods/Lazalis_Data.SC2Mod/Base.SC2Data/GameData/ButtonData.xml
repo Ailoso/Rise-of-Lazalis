@@ -113,6 +113,10 @@
         <AlertIcon value="Assets\Icons\TrainBodyguard.dds"/>
         <ChargeText value="BodyguardCount"/>
     </CButton>
+    <CButton id="TrainBypassers">
+        <Icon value="Assets\Textures\btn-unit-terran-dom-femaleghost.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-terran-dom-femaleghost.dds"/>
+    </CButton>
     <CButton id="TrainFrontiersmen">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -123,7 +127,7 @@
         <AlertIcon value="Assets\Textures\btn-unit-terran-troopermengsk.dds"/>
         <ChargeText value="MilitiaCount"/>
     </CButton>
-    <CButton id="TrainPioneer">
+    <CButton id="TrainPioneers">
         <Icon value="Assets\Textures\btn-unit-terran-trooper-police.dds"/>
         <AlertIcon value="Assets\Textures\btn-unit-terran-trooper-police.dds"/>
         <ChargeText value="PioneerCharges"/>

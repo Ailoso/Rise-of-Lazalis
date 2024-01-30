@@ -15,6 +15,11 @@
         <Missile value="AO155RifleWeaponMissile"/>
         <ImpactMap index="None" Model="AO155RifleImpactModel" Sound="AO155RifleImpactSound"/>
     </CActorAction>
+    <CActorAction id="AlivyseHandgunAction" parent="GenericAttack" effectAttack="AlivyseHandgunDamage">
+        <LaunchAssets Model="AlivyseHandgunLaunchModel" Sound="AlivyseHandgunLaunchSound"/>
+        <Missile value="AlivyseHandgunWeaponMissile"/>
+        <ImpactMap index="None" Model="AlivyseHandgunImpactModel" Sound="AlivyseHandgunImpactSound"/>
+    </CActorAction>
     <CActorUnit id="BarracksUnari" parent="TerranBuildingFlyerEx" unitName="BarracksUnari">
         <On Terms="Behavior.ColonyInfestation.On" Send="Create InfestationBarracks"/>
         <On Terms="UnitDeathCustomize.BarracksFlying" Send="DeathCustomize Flying"/>
@@ -83,6 +88,95 @@
         <UnitIcon value="Assets\Icons\TrainBodyguard.dds"/>
         <Aliases value="_UnitSmall"/>
     </CActorUnit>
+    <CActorUnit id="Bypasser" parent="GenericUnitBase" unitName="Bypasser">
+        <Aliases value="_UnitSmall"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="ActorCreation" Send="AnimGroupApply Cover"/>
+        <On Terms="ActorCreation" Send="AnimPlay MorphStart Cover,Start"/>
+        <On Terms="ActorCreation" Send="AnimClear MorphEnd"/>
+        <AnimBlendTime value="-0.800000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="BypasserDeath" SoundLink="Ghost_Explode"/>
+        <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowSmall"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="UnitDeathModelWithDeathMotionGround"/>
+        <PortraitModel value="BypasserPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.400000"/>
+            <RangeDown value="0.400000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleSmall"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="2.379"/>
+        <BarOffset value="50"/>
+        <BarWidth value="42"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-Ghost.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-ghost.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
+        <SelectAbilCmd value="EMP,Execute"/>
+        <SoundArray index="Ready" value="GhostAlternate_Ready"/>
+        <SoundArray index="Help" value="GhostAlternate_Help"/>
+        <SoundArray index="What" value="GhostAlternate_What"/>
+        <SoundArray index="Yes" value="GhostAlternate_Yes"/>
+        <SoundArray index="Attack" value="GhostAlternate_Attack"/>
+        <SoundArray index="Pissed" value="GhostAlternate_Pissed"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-ghost.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-Ghost.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="DetoniteCharge" parent="GenericAttack" effectLaunch="DetoniteChargeLaunchMissile">
+        <LaunchAttachQuery Methods="Weapon 0"/>
+    </CActorAction>
+    <CActorSplat id="DetoniteChargeCursorSplat" parent="CursorSplat" abil="DetoniteCharge"/>
+    <CActorModel id="DetoniteChargeExplode" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DetoniteChargeCP.Stop" Send="Create"/>
+        <Scale value="2.000000"/>
+    </CActorModel>
+    <CActorSound id="DetoniteChargeExplodeSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DetoniteChargeCP.Stop" Send="Create"/>
+    </CActorSound>
+    <CActorMissile id="DetoniteChargeMissile" parent="GenericAttackMissile" unitName="DetoniteChargeMissile"/>
+    <CActorModel id="DetoniteChargeModel" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DetoniteChargeCP.Start" Send="Create"/>
+        <On Terms="Effect.DetoniteChargeCP.Stop" Send="Destroy"/>
+        <Model value="DetoniteChargeMissile"/>
+        <Scale value="1.500000"/>
+    </CActorModel>
+    <CActorRange id="DetoniteChargeRange" parent="RangeAbil" abil="DetoniteCharge">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorSound id="DetoniteChargeThrow" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.DetoniteChargeLaunchMissile.Start; At Caster" Send="Create"/>
+    </CActorSound>
     <CActorAction id="F5LongshotAction" parent="GenericAttack" effectImpact="F5LongshotDamage" effectLaunch="F5LongshotLaunchMissile">
         <LaunchAssets Model="F5LongshotLaunchModel" Sound="F5LongshotLaunchSound"/>
         <Missile value="F5LongshotWeaponMissile"/>
@@ -193,21 +287,14 @@
         <ModelFlags index="OutlineEmitter" value="1"/>
         <DeathArray index="Normal" ModelLink="FrontiersmanDeath" SoundLink="Ghost_Explode"/>
         <DeathCustoms ModelLink="TerranSmallBiologicalUnitDeathLow" Name="AntiGravTerran"/>
-        <DeathCustoms ActorModel="UnitDeathRagdollBloodPrevent" ModelLink="GhostDeathRagdoll" Name="RagdollBasic">
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
         <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
             <BodySquibs Name="Fire"/>
         </DeathCustoms>
         <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ActorModel="SpineCrawlerHurlDeathRagdollBloodPrevent" ModelLink="GhostDeathRagdoll" Name="RagdollSpineCrawlerHurl">
-            <BodySquibs Name="None"/>
-        </DeathCustoms>
         <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
         <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
-        <DeathCustoms ModelLink="GhostDeathFire" Name="Variation17"/>
         <DeathCustoms>
             <ModelLink value="DeathVoidShadowSmall"/>
             <SoundLink value="ShadowUnit_DeathFX"/>
@@ -324,6 +411,7 @@
         <AbilSoundArray AbilCmd="PioneerRepair,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
         <AbilSoundArray AbilCmd="Dismantle,Execute" Sound="Pioneer_Dismantle"/>
         <AbilSoundArray AbilCmd="PioneerEquipment,Specialize3" Sound="Pioneer_Weapon"/>
+        <Scale value="0.900000,0.900000,0.850000"/>
     </CActorUnit>
     <CActorBeamSimple id="PioneerRepairRank2Beam" parent="BeamSimpleAnimationStyleContinuous">
         <On Terms="Effect.PioneerRepairRank2.TargetStart" Send="Create"/>

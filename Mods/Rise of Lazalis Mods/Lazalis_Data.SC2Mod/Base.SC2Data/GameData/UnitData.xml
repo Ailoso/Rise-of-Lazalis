@@ -47,11 +47,12 @@
         <BehaviorArray Link="ReactorQueue"/>
         <BehaviorArray Link="FireSuppressionSystem"/>
         <CardLayouts>
-            <LayoutButtons Face="TrainPioneer" Type="AbilCmd" AbilCmd="UnariBarracksTrain,Train1" Row="0" Column="0"/>
+            <LayoutButtons Face="TrainPioneers" Type="AbilCmd" AbilCmd="UnariBarracksTrain,Train1" Row="0" Column="0"/>
             <LayoutButtons Face="TrainMilitia" Type="Passive" Row="0" Column="1"/>
             <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
             <LayoutButtons Face="TrainFrontiersmen" Type="Passive" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainBypassers" Type="Passive" Row="0" Column="3"/>
         </CardLayouts>
         <Radius value="1.75"/>
         <SeparationRadius value="1.75"/>
@@ -142,9 +143,95 @@
         <CostResource index="Minerals" value="250"/>
         <CostResource index="Vespene" value="125"/>
     </CUnit>
+    <CUnit id="Bypasser">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Biological" value="1"/>
+        <LifeStart value="115"/>
+        <LifeMax value="115"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
+        <Speed value="2.379"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="46.0625"/>
+        <StationaryTurningRate value="999.8437"/>
+        <TurningRate value="999.8437"/>
+        <Sight value="11"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="75"/>
+        <CostResource index="Vespene" value="175"/>
+        <RepairTime value="40"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="30"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <AbilArray Link="Retreat"/>
+        <WeaponArray/>
+        <WeaponArray Link="AlivyseHandgun"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+            <LayoutButtons Face="AttackGhost" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="Retreat" Type="AbilCmd" AbilCmd="Retreat,Execute" Row="1" Column="3"/>
+            <LayoutButtons>
+                <Face value="Equipment"/>
+                <Type value="Submenu"/>
+                <SubmenuCardId value="0002"/>
+                <SubmenuIsSticky value="1"/>
+                <Row value="1"/>
+                <Column value="4"/>
+            </LayoutButtons>
+        </CardLayouts>
+        <CardLayouts CardId="0002">
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+        </CardLayouts>
+        <Radius value="0.375"/>
+        <SeparationRadius value="0.375"/>
+        <InnerRadius value="0.375"/>
+        <CargoSize value="2"/>
+        <ScoreMake value="300"/>
+        <ScoreKill value="300"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="19"/>
+        <MinimapRadius value="0.375"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="Ghost"/>
+        <TacticalAIThink value="AIThinkGhost"/>
+        <AIEvalFactor value="1.2"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="70"/>
+        <GlossaryStrongArray value="Raven"/>
+        <GlossaryStrongArray value="Infestor"/>
+        <GlossaryStrongArray value="HighTemplar"/>
+        <GlossaryWeakArray value="Marauder"/>
+        <GlossaryWeakArray value="Zergling"/>
+        <GlossaryWeakArray value="Stalker"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
+    </CUnit>
     <CUnit id="CommandCenter">
         <BehaviorArray Link="RemoveRetreat"/>
     </CUnit>
+    <CUnit id="DetoniteChargeMissile" parent="MISSILE"/>
     <CUnit id="F5LongshotWeapon" parent="MISSILE">
         <Mover value="F5LongshotMissile"/>
     </CUnit>
@@ -269,7 +356,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
-        <WeaponArray Link="76APRifle"/>
+        <WeaponArray Link="F2Longshot"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -358,6 +445,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
+        <AbilArray Link="DetoniteCharge"/>
         <WeaponArray Link="FerromagSMG"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -370,8 +458,8 @@
             <LayoutButtons Face="Retreat" Type="AbilCmd" AbilCmd="Retreat,Execute" Row="1" Column="3"/>
             <LayoutButtons Face="Equipment" Type="Submenu" SubmenuCardId="0002" Row="1" Column="4"/>
             <LayoutButtons Face="V1Implant" Type="Passive" Row="2" Column="2"/>
-            <LayoutButtons Face="DetoniteCharge" Type="Passive" Row="2" Column="0"/>
-            <LayoutButtons Face="EmergencyShelter" Row="2" Column="1"/>
+            <LayoutButtons Face="DetoniteCharge" Type="AbilCmd" AbilCmd="DetoniteCharge,Execute" Row="2" Column="0"/>
+            <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="2" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="DetoniteCharge" Type="Passive" Row="0" Column="0"/>
