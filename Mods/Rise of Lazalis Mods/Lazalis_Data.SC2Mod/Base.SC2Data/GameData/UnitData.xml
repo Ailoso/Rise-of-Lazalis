@@ -196,6 +196,11 @@
                 <Row value="1"/>
                 <Column value="4"/>
             </LayoutButtons>
+            <LayoutButtons Face="ShockCharge" Type="Passive" Row="1" Column="0"/>
+            <LayoutButtons Face="X12MobileComputer" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="Lockdown" Type="Passive" Row="2" Column="0"/>
+            <LayoutButtons Face="InfiltrateNetwork" Type="Passive" Row="2" Column="1"/>
+            <LayoutButtons Face="Withdrawal" Type="Passive" Row="2" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>

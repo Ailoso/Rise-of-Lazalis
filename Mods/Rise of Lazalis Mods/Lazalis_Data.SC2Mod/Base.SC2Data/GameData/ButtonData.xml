@@ -58,9 +58,17 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="InfiltrateNetwork">
+        <Icon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+    </CButton>
     <CButton id="InfiltrationPulse">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
+    </CButton>
+    <CButton id="Lockdown">
+        <Icon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
     </CButton>
     <CButton id="MedicalStation">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -104,6 +112,10 @@
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
+    <CButton id="ShockCharge">
+        <Icon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
+    </CButton>
     <CButton id="Sprint">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -143,6 +155,14 @@
     <CButton id="V1Implant">
         <Icon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadhealth.dds"/>
         <AlertIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadhealth.dds"/>
+    </CButton>
+    <CButton id="Withdrawal">
+        <Icon value="Assets\Textures\btn-tips-credit.dds"/>
+        <AlertIcon value="Assets\Textures\btn-tips-credit.dds"/>
+    </CButton>
+    <CButton id="X12MobileComputer">
+        <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
+        <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="YouCanToo">
         <Icon value="Assets\Icons\youcantoo.dds"/>
