@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CValidatorUnitCompareDamageTakenTime id="V1ImplanntOutofCombat">
+        <Compare value="GE"/>
+        <Value value="5"/>
+    </CValidatorUnitCompareDamageTakenTime>
     <CValidatorLocationEnumArea id="SS6Search">
         <AreaArray Compare="GT" Count="0" Radius="2"/>
         <SearchFilters value="Ground,Mechanical;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>

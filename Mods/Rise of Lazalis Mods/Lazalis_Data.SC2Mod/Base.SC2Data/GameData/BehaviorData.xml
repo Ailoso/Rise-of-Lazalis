@@ -4,7 +4,7 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
-    <CBehaviorBuff id="Disabled">
+    <CBehaviorBuff id="SS6Disabled">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>
         <BehaviorCategories index="Stun" value="1"/>
@@ -31,6 +31,27 @@
             <StateFlags index="Unselectable" value="1"/>
         </Modification>
     </CBehaviorBuff>
+    <CBehaviorBuff id="LockdownDisabled">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Icons\lockdown.dds"/>
+        <BehaviorCategories index="Stun" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="18"/>
+        <Modification SightMaximum="0">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <ModifyFlags index="SuppressTurning" value="1"/>
+            <StateFlags index="Stun" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressDetection" value="1"/>
+            <StateFlags index="SuppressRadar" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
     <CBehaviorBuff id="Sprint">
         <Alignment value="Positive"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -42,6 +63,14 @@
     <CBehaviorBuff id="UP1Appender">
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="V1Implant">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-ability-stetmann-stetelliteoverloadhealth.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Duration value="10"/>
+        <Period value="0.5"/>
+        <PeriodicEffect value="V1ImplantSet"/>
     </CBehaviorBuff>
     <CBehaviorVeterancy id="VeterancyPioneer">
         <EditorCategories value="AbilityorEffectType:Units"/>

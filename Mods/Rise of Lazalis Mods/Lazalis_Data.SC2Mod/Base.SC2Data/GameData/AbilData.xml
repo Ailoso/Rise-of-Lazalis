@@ -24,6 +24,15 @@
         <PrepTime value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Dismantle"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="Lockdown">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="LockdownAB"/>
+        <Range value="10"/>
+        <PrepTime value="5"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <ProgressButtonArray index="Prep" value="Lockdown"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="Lockdown"/>
+    </CAbilEffectTarget>
     <CAbilTransport id="MakeshiftBunkerTransport">
         <AbilSetId value="ULdS"/>
         <EditorCategories value="Race:Terran,AbilityorEffectType:Structures"/>
@@ -212,4 +221,13 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilEffectTarget id="V1Implant">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="V1ImplantAB"/>
+        <Cost>
+            <Charge CountMax="99" CountStart="99" CountUse="1"/>
+            <Cooldown TimeUse="3"/>
+        </Cost>
+        <CmdButtonArray index="Execute" DefaultButtonFace="V1Implant"/>
+    </CAbilEffectTarget>
 </Catalog>

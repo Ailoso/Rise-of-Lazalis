@@ -67,8 +67,8 @@
         <AlertIcon value="Assets\Textures\btn-missing-kaeo.dds"/>
     </CButton>
     <CButton id="Lockdown">
-        <Icon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
-        <AlertIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
+        <Icon value="Assets\Icons\lockdown.dds"/>
+        <AlertIcon value="Assets\Icons\lockdown.dds"/>
     </CButton>
     <CButton id="MedicalStation">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>
@@ -126,8 +126,8 @@
         <ChargeText value="BodyguardCount"/>
     </CButton>
     <CButton id="TrainBypassers">
-        <Icon value="Assets\Textures\btn-unit-terran-dom-femaleghost.dds"/>
-        <AlertIcon value="Assets\Textures\btn-unit-terran-dom-femaleghost.dds"/>
+        <Icon value="Assets\Icons\train-bypasser.dds"/>
+        <AlertIcon value="Assets\Icons\train-bypasser.dds"/>
     </CButton>
     <CButton id="TrainFrontiersmen">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>

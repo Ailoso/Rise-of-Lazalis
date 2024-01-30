@@ -143,13 +143,14 @@ bool lib4A5CBC7B_gt_Retreat_Func (bool testConds, bool runActions) {
 
     lv_unitType = UnitGetType(EventUnit());
     UnitIssueOrder(EventUnit(), OrderTargetingUnit(AbilityCommand("move", 0), UnitGroupClosestToPoint(UnitGroup("CommandCenter", EventPlayer(), RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0), UnitGetPosition(EventUnit()))), c_orderQueueReplace);
+    UnitSelect(EventUnit(), EventPlayer(), false);
     if ((lib4A5CBC7B_gv_retreatingUnitType == UnitGetType(EventUnit()))) {
     }
     else {
         SoundPlayOnUnitForPlayer(SoundLink(((StringSub(CatalogFieldValueGet(c_gameCatalogUnit, UnitGetType(EventUnit()), "Name", c_playerAny), 11, 99) + "_Retreat")), c_soundIndexAny), EventPlayer(), PlayerGroupAll(), EventUnit(), 0.0, 100.0, 0.0);
     }
     lib4A5CBC7B_gv_retreatingUnitType = UnitGetType(EventUnit());
-    Wait(5.0, c_timeGame);
+    Wait(8.0, c_timeGame);
     if ((lv_unitType == lib4A5CBC7B_gv_retreatingUnitType)) {
         lib4A5CBC7B_gv_retreatingUnitType = "";
     }

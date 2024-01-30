@@ -179,6 +179,7 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
+        <AbilArray Link="Lockdown"/>
         <WeaponArray/>
         <WeaponArray Link="AlivyseHandgun"/>
         <CardLayouts>
@@ -198,12 +199,14 @@
             </LayoutButtons>
             <LayoutButtons Face="ShockCharge" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="X12MobileComputer" Type="Passive" Row="1" Column="1"/>
-            <LayoutButtons Face="Lockdown" Type="Passive" Row="2" Column="0"/>
+            <LayoutButtons Face="Lockdown" Type="AbilCmd" AbilCmd="Lockdown,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="InfiltrateNetwork" Type="Passive" Row="2" Column="1"/>
             <LayoutButtons Face="Withdrawal" Type="Passive" Row="2" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="ShockCharge" Type="Passive" Row="0" Column="0"/>
+            <LayoutButtons Face="X12MobileComputer" Type="Passive" Row="0" Column="1"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -451,6 +454,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
         <AbilArray Link="DetoniteCharge"/>
+        <AbilArray Link="V1Implant"/>
         <WeaponArray Link="FerromagSMG"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -462,7 +466,7 @@
             <LayoutButtons Face="Unwavering" Type="Passive" Row="1" Column="1"/>
             <LayoutButtons Face="Retreat" Type="AbilCmd" AbilCmd="Retreat,Execute" Row="1" Column="3"/>
             <LayoutButtons Face="Equipment" Type="Submenu" SubmenuCardId="0002" Row="1" Column="4"/>
-            <LayoutButtons Face="V1Implant" Type="Passive" Row="2" Column="2"/>
+            <LayoutButtons Face="V1Implant" Type="AbilCmd" AbilCmd="V1Implant,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="DetoniteCharge" Type="AbilCmd" AbilCmd="DetoniteCharge,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="2" Column="1"/>
         </CardLayouts>
@@ -470,6 +474,7 @@
             <LayoutButtons Face="DetoniteCharge" Type="Passive" Row="0" Column="0"/>
             <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="0" Column="1"/>
             <LayoutButtons Face="V1Implant" Type="Passive" Row="0" Column="2"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>
@@ -628,9 +633,9 @@
             <LayoutButtons Face="Gather" Type="AbilCmd" AbilCmd="SCVHarvest,Gather" Row="1" Column="0"/>
             <LayoutButtons Face="ReturnCargo" Type="AbilCmd" AbilCmd="SCVHarvest,Return" Row="1" Column="0"/>
             <LayoutButtons Face="TerranBuild" Type="Passive" Row="2" Column="0"/>
-            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepairRank3,Execute" Row="2" Column="2"/>
-            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepairRank2,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepair,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepairRank2,Execute" Row="2" Column="2"/>
+            <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepairRank3,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="EmergencyShelter" Type="AbilCmd" AbilCmd="BuildMakeshiftBunker,Build1" Row="1" Column="2"/>
             <LayoutButtons Face="Retreat" Type="AbilCmd" AbilCmd="Retreat,Execute" Row="1" Column="3"/>
             <LayoutButtons Face="TerranBuildAdvanced" Type="Passive" Row="2" Column="1"/>

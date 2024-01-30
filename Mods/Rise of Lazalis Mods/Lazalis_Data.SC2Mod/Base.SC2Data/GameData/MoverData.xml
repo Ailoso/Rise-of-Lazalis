@@ -19,11 +19,11 @@
             <AdaptableParabolaClearance value="2"/>
             <YawPitchRoll value="719.2968"/>
             <AdaptableParabolaDistances index="Launch" value="0"/>
-            <AdaptableParabolaDistances index="PreApex" value="0.4"/>
+            <AdaptableParabolaDistances index="PreApex" value="0.2"/>
             <AdaptableParabolaDistances index="PostApex" value="0.4"/>
             <AdaptableParabolaDistances index="Land" value="0"/>
-            <AdaptableParabolaAccels index="Launch" value="10"/>
-            <AdaptableParabolaAccels index="Ascent" value="10"/>
+            <AdaptableParabolaAccels index="Launch" value="25"/>
+            <AdaptableParabolaAccels index="Ascent" value="25"/>
             <AdaptableParabolaAccels index="Apex" value="10"/>
             <AdaptableParabolaAccels index="Descent" value="10"/>
             <AdaptableParabolaAccels index="Land" value="10"/>

@@ -26,7 +26,7 @@
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact2.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact4.wav"/>
-        <Volume value="-6.000000,-6.000000"/>
+        <Volume value="-12.000000,-12.000000"/>
     </CSound>
     <CSound id="AO155RifleLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch0.wav"/>
@@ -38,7 +38,7 @@
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch6.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch7.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Marine\Marine_AttackLaunch8.wav"/>
-        <Volume value="-12.000000,-10.000000"/>
+        <Volume value="-9.000000,-6.000000"/>
     </CSound>
     <CSound id="AlivyseHandgunImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact0.wav"/>
@@ -315,5 +315,12 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
         <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="V1Implant">
+        <AssetArray File="Assets\Sounds\Tychus_Medic_HealingMatrix_Off_01.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Pitch value="-3.000000,5.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
     </CSound>
 </Catalog>

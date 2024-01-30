@@ -189,6 +189,11 @@
     <CActorUnit id="Goliath">
         <Scale value="1.200000"/>
     </CActorUnit>
+    <CActorModelMaterial id="LockdownGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.LockdownDisabled.On" Send="Create"/>
+        <On index="6" Terms="Behavior.LockdownDisabled.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
     <CActorUnit id="MakeshiftBunker" parent="TerranBuildingEx" unitName="MakeshiftBunker">
         <Aliases value="_UnitHuge"/>
         <Macros value="BunkerTransportAnim"/>
@@ -411,6 +416,8 @@
         <AbilSoundArray AbilCmd="PioneerRepair,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
         <AbilSoundArray AbilCmd="Dismantle,Execute" Sound="Pioneer_Dismantle"/>
         <AbilSoundArray AbilCmd="PioneerEquipment,Specialize3" Sound="Pioneer_Weapon"/>
+        <AbilSoundArray AbilCmd="PioneerRepairRank2,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
+        <AbilSoundArray AbilCmd="PioneerRepairRank3,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
         <Scale value="0.900000,0.900000,0.850000"/>
     </CActorUnit>
     <CActorBeamSimple id="PioneerRepairRank2Beam" parent="BeamSimpleAnimationStyleContinuous">
@@ -438,7 +445,7 @@
         <EditorCategories value=""/>
         <On Terms="Effect.SS6Set.Start" Send="Create"/>
     </CActorSound>
-    <CActorModelMaterial id="SS6Glaze" parent="BehaviorGlaze" buff="Disabled">
+    <CActorModelMaterial id="SS6Glaze" parent="BehaviorGlaze" buff="SS6Disabled">
         <EditorCategories value=""/>
     </CActorModelMaterial>
     <CActorUnit id="SiegeTank">
@@ -554,4 +561,14 @@
         </Wireframe>
         <BuildModel value="InvisibleBuild"/>
     </CActorUnit>
+    <CActorModelMaterial id="V1ImplantGlaze" parent="BehaviorGlaze">
+        <EditorCategories value=""/>
+        <On index="5" Terms="Behavior.V1Implant.On" Send="Create"/>
+        <On index="6" Terms="Behavior.V1Implant.Off" Send="AnimBracketStop BSD"/>
+    </CActorModelMaterial>
+    <CActorSound id="V1ImplantSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.V1ImplantAB.Start" Send="Create"/>
+        <Sound value="V1Implant"/>
+    </CActorSound>
 </Catalog>

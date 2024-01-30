@@ -88,6 +88,9 @@
         <ScaleMax value="0.050000,1.000000,0.050000"/>
         <ScaleMin value="0.050000,1.000000,0.050000"/>
     </CModel>
+    <CModelFoliage id="LockdownGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Fenix_Scout_StunMissile\Glaze_Fenix_Scout_StunMissile.m3"/>
+    </CModelFoliage>
     <CModel id="MakeshiftBunkerDeath2" parent="BunkerDeathBase">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
     </CModel>
@@ -251,4 +254,7 @@
     <CModel id="UnarianAdvisorPortrait">
         <Model value="Assets\Portraits\Terran\FemaleDominionOfficer1Portrait\FemaleDominionOfficer1Portrait.m3"/>
     </CModel>
+    <CModelFoliage id="V1ImplantGlaze">
+        <Model value="Assets\Effects\Glaze\Glaze_Dehaka_PrimalRegeneration\Glaze_Dehaka_PrimalRegeneration.m3"/>
+    </CModelFoliage>
 </Catalog>

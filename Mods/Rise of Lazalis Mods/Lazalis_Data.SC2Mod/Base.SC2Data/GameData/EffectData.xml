@@ -133,6 +133,10 @@
     <CEffectDamage id="LanceMissileLaunchersDamage">
         <Amount value="80"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="LockdownAB">
+        <EditorCategories value=""/>
+        <Behavior value="LockdownDisabled"/>
+    </CEffectApplyBehavior>
     <CEffectModifyUnit id="MakeshiftBunkerMU">
         <EditorCategories value=""/>
         <Cost Abil="BuildMakeshiftBunker,Build1" ChargeCountUse="-1"/>
@@ -206,7 +210,7 @@
     </CEffectRemoveBehavior>
     <CEffectApplyBehavior id="SS6AB">
         <EditorCategories value=""/>
-        <Behavior value="Disabled"/>
+        <Behavior value="SS6Disabled"/>
     </CEffectApplyBehavior>
     <CEffectDamage id="SS6Damage">
         <EditorCategories value=""/>
@@ -229,4 +233,26 @@
         <Amount value="40"/>
         <AreaArray Radius="1" Fraction="0.25"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="V1ImplantAB">
+        <EditorCategories value=""/>
+        <Behavior value="V1Implant"/>
+    </CEffectApplyBehavior>
+    <CEffectModifyUnit id="V1ImplantHeal">
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="2.5"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="V1ImplantExtraHeal">
+        <ValidatorArray value="V1ImplanntOutofCombat"/>
+        <EditorCategories value=""/>
+        <VitalArray index="Life">
+            <Change value="2.5"/>
+        </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectSet id="V1ImplantSet">
+        <EditorCategories value=""/>
+        <EffectArray value="V1ImplantExtraHeal"/>
+        <EffectArray value="V1ImplantHeal"/>
+    </CEffectSet>
 </Catalog>
