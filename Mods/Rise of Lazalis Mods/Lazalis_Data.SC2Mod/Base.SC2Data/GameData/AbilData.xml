@@ -40,6 +40,7 @@
         <ShowProgressArray index="Prep" value="1"/>
         <ProgressButtonArray index="Prep" value="Lockdown"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Lockdown"/>
+        <TargetFilters value="Structure;Player,Ally,Missile,Item,Dead,Invulnerable,Benign"/>
     </CAbilEffectTarget>
     <CAbilTransport id="MakeshiftBunkerTransport">
         <AbilSetId value="ULdS"/>
@@ -253,5 +254,6 @@
             <Cooldown TimeUse="3"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="V1Implant"/>
+        <TargetFilters value="Ground,Biological;Neutral,Enemy,Missile,Stasis,Dead"/>
     </CAbilEffectTarget>
 </Catalog>

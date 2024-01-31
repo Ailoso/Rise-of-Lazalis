@@ -288,6 +288,7 @@
         <EditorCategories value=""/>
         <AssetArray File="Assets\Sounds\Pioneer_Retreat_02_Unfiltered.mp3" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Pioneer_Retreat_01_Unfiltered.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_Retreat_03.mp3" FacialGroup=""/>
         <Volume value="-2.000000,-1.000000"/>
         <Category value="Combat"/>
     </CSound>

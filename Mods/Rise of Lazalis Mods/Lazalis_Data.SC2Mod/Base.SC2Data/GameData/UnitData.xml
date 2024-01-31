@@ -157,8 +157,8 @@
         <Collide index="Small" value="1"/>
         <Attributes index="Light" value="1"/>
         <Attributes index="Biological" value="1"/>
-        <LifeStart value="115"/>
-        <LifeMax value="115"/>
+        <LifeStart value="80"/>
+        <LifeMax value="80"/>
         <LifeArmorName value="Unit/LifeArmorName/TerranInfantryArmor"/>
         <Speed value="2.379"/>
         <Acceleration value="1000"/>
