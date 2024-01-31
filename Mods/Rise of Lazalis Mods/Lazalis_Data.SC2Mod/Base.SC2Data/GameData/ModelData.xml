@@ -43,7 +43,7 @@
         <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
     </CModel>
     <CModel id="Bodyguard">
-        <Model value="Assets\Units\Terran\Marine_CovertOps_Collection\Marine_CovertOps_Collection.m3"/>
+        <Model value="Assets\Models\Bodyguard.m3"/>
     </CModel>
     <CModel id="BodyguardDeath">
         <Model value="Assets\Units\Terran\MarineXPRewardDeath\MarineXPRewardDeath.m3"/>
@@ -188,8 +188,8 @@
     </CModel>
     <CModelFoliage id="N11Handcannon">
         <Model value="Assets\Models\N11Handcannon.m3"/>
-        <ScaleMax value="0.400000,0.400000,0.400000"/>
-        <ScaleMin value="0.400000,0.400000,0.400000"/>
+        <ScaleMax value="0.350000,0.350000,0.250000"/>
+        <ScaleMin value="0.350000,0.350000,0.250000"/>
     </CModelFoliage>
     <CModel id="N11HandcannonImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>

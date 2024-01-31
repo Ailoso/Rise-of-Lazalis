@@ -1,5 +1,6 @@
 ﻿Button/Hotkey/76APRifle=A
 Button/Hotkey/AO155Rifle=R
+Button/Hotkey/BearclawFlamethrower=F
 Button/Hotkey/BuildUnari=B
 Button/Hotkey/CStaticSmoke=C
 Button/Hotkey/DetoniteCharge=D

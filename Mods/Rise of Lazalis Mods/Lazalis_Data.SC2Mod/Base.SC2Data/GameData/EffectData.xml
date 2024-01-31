@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
+    <CEffectApplyBehavior id="76APRifleAB">
+        <EditorCategories value=""/>
+        <Behavior value="76APRifle"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="76APRifleDamage" parent="DU_WEAP">
         <AttributeBonus index="Armored" value="24"/>
         <Amount value="18"/>
@@ -27,6 +31,10 @@
         <Amount value="7"/>
         <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="BearclawFlamethrowerAB">
+        <EditorCategories value=""/>
+        <Behavior value="BearclawFlamethrower"/>
+    </CEffectApplyBehavior>
     <CEffectCreatePersistent id="BearclawFlamethrowerCP">
         <EditorCategories value=""/>
         <WhichLocation Value="SourcePoint"/>
@@ -141,6 +149,10 @@
         <EditorCategories value=""/>
         <Cost Abil="BuildMakeshiftBunker,Build1" ChargeCountUse="-1"/>
     </CEffectModifyUnit>
+    <CEffectModifyUnit id="V1ImplantMU">
+        <EditorCategories value=""/>
+        <Cost Abil="MilitiaEquipment,Specialize3" ChargeCountUse="-2"/>
+    </CEffectModifyUnit>
     <CEffectDamage id="N11HandcannonDamage" parent="DU_WEAP">
         <Kind value="Splash"/>
         <Amount value="11"/>
@@ -249,6 +261,10 @@
         <VitalArray index="Life">
             <Change value="2.5"/>
         </VitalArray>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="DetoniteChargeMU">
+        <EditorCategories value=""/>
+        <Cost Abil="MilitiaEquipment,Specialize1" ChargeCountUse="-2"/>
     </CEffectModifyUnit>
     <CEffectSet id="V1ImplantSet">
         <EditorCategories value=""/>

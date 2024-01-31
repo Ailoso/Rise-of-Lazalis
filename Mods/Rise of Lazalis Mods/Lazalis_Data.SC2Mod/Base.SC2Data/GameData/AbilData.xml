@@ -11,7 +11,7 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="DetoniteChargeLaunchMissile"/>
         <Cost>
-            <Charge CountMax="99" CountStart="99" CountUse="1"/>
+            <Charge CountMax="99" CountUse="1"/>
             <Cooldown TimeUse="5"/>
         </Cost>
         <Range value="7"/>
@@ -57,13 +57,13 @@
     </CAbilTransport>
     <CAbilSpecialize id="MilitiaEquipment">
         <EditorCategories value="AbilityorEffectType:Units"/>
-        <InfoArray index="Specialize1">
+        <InfoArray index="Specialize1" Effect="DetoniteChargeMU">
             <Button DefaultButtonFace="DetoniteCharge"/>
         </InfoArray>
-        <InfoArray index="Specialize2">
+        <InfoArray index="Specialize2" Effect="MakeshiftBunkerMU">
             <Button DefaultButtonFace="EmergencyShelter"/>
         </InfoArray>
-        <InfoArray index="Specialize3">
+        <InfoArray index="Specialize3" Effect="V1ImplantMU">
             <Button DefaultButtonFace="V1Implant"/>
         </InfoArray>
     </CAbilSpecialize>
@@ -225,7 +225,7 @@
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="V1ImplantAB"/>
         <Cost>
-            <Charge CountMax="99" CountStart="99" CountUse="1"/>
+            <Charge CountMax="99" CountUse="1"/>
             <Cooldown TimeUse="3"/>
         </Cost>
         <CmdButtonArray index="Execute" DefaultButtonFace="V1Implant"/>

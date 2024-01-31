@@ -8,6 +8,10 @@
         <Icon value="Assets\Icons\ao155rifle.dds"/>
         <AlertIcon value="Assets\Icons\ao155rifle.dds"/>
     </CButton>
+    <CButton id="BearclawFlamethrower">
+        <Icon value="Assets\Textures\btn-upgrade-mengsk-trooper-flamethrower.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-trooper-flamethrower.dds"/>
+    </CButton>
     <CButton id="BuildUnari">
         <Icon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>
         <AlertIcon value="Assets\Textures\btn-command-terran-buildstructure.dds"/>

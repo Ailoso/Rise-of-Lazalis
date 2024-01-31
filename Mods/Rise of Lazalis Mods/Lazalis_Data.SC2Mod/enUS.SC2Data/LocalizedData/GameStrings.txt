@@ -25,6 +25,7 @@ Behavior/Tooltip/V1Implant=This unit is healing.
 BodyguardCount=x1
 Button/Name/76APRifle=76 AP Rifle
 Button/Name/AO155Rifle=AO-155 Rifle
+Button/Name/BearclawFlamethrower=Bearclaw Flamethrower
 Button/Name/BuildUnari=Build
 Button/Name/CStaticSmoke=C-Static Smoke
 Button/Name/CombinedArms=Combined Arms
@@ -68,6 +69,7 @@ Button/Name/YouCanToo=You Can Too
 Button/Tooltip/76APRifle=A slow, heavy-hitting anti-armor weapon.
 Button/Tooltip/AO155Rifle=Equip a stronger weapon that deals bonus damage to Light and fires faster.
 Button/Tooltip/BarracksUnari=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
+Button/Tooltip/BearclawFlamethrower=Equip a stronger anti-biological and anti-light weapon that deals damage in a line.
 Button/Tooltip/Bodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildUnari=Opens a submenu to build structures.
 Button/Tooltip/Bypasser=Hacking specialist. Can use Lockdown, Infiltrate Network, and Withdrawal. Subpar combatant.<n/><n/><c val="FFFF80">Can attack ground units.</c>
@@ -126,11 +128,13 @@ DataCollection/Name/OldReliable=Old Reliable
 DataCollection/Name/Pioneer=Pioneer
 DocInfo/DescShort=Any
 DocInfo/Name=Just Another StarCraft II Mod
+Effect/Name/76APRifleAB=76 AP Rifle AB
 Effect/Name/76APRifleDamage=76APRifleDamage
 Effect/Name/76APRifleLaunchMissile=76APRifleLaunchMissile
 Effect/Name/AO155RifleAB=AO-155 Rifle AB
 Effect/Name/AO155RifleDamage=AO155RifleDamage
 Effect/Name/AlivyseHandgunDamage=AlivyseHandgunDamage
+Effect/Name/BearclawFlamethrowerAB=Bearclaw Flamethrower AB
 Effect/Name/BearclawFlamethrowerCP=Bearclaw Flamethrower CP
 Effect/Name/BearclawFlamethrowerDamage=BearclawFlamethrowerDamage
 Effect/Name/BearclawFlamethrowerSA=Bearclaw Flamethrower SA
@@ -138,6 +142,7 @@ Effect/Name/BearclawFlamethrowerSet=Bearclaw Flamethrower Set
 Effect/Name/DetoniteChargeCP=Detonite Charge CP
 Effect/Name/DetoniteChargeDamage=Detonite Charge Damage
 Effect/Name/DetoniteChargeLaunchMissile=Detonite Charge Launch Missile
+Effect/Name/DetoniteChargeMU=Detonite Charge MU
 Effect/Name/Dismantle=Dismantle
 Effect/Name/F2LongshotDamage=F2LongshotDamage
 Effect/Name/F2LongshotLaunchMissile=F2LongshotLaunchMissile
@@ -161,6 +166,7 @@ Effect/Name/SS6Set=SS-6 Set
 Effect/Name/V1ImplantAB=V1 Implant AB
 Effect/Name/V1ImplantExtraHeal=V1 Implant Extra Heal
 Effect/Name/V1ImplantHeal=V1 Implant Heal
+Effect/Name/V1ImplantMU=V1 Implant MU
 Effect/Name/V1ImplantSet=V1 Implant Set
 FrontiersmanCharges=x2
 HoldAlt=<n/><s val="ABButtonText"><c val="C0C0C0">Hold Alt for more information.</c></s>

@@ -174,31 +174,111 @@ void lib4A5CBC7B_gt_RetreatReOrder_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
-// Trigger: Pioneer WR
+// Trigger: AO-155 Rifle
 //--------------------------------------------------------------------------------------------------
-bool lib4A5CBC7B_gt_PioneerWR_Func (bool testConds, bool runActions) {
+bool lib4A5CBC7B_gt_AO155Rifle_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_count;
+    int lv_weaponSlot;
+
     // Automatic Variable Declarations
-    // Conditions
-    if (testConds) {
-        if (!((UnitGetType(EventUnit()) == "Pioneer"))) {
-            return false;
-        }
-    }
+    const int auto92549A4E_ae = 10;
+    const int auto92549A4E_ai = 1;
+
+    // Variable Initialization
+    lv_count = 10;
 
     // Actions
     if (!runActions) {
         return true;
     }
 
-    UnitWeaponRemove(EventUnit(), "KeltarCarbine");
+    lv_count = 1;
+    for ( ; ( (auto92549A4E_ai >= 0 && lv_count <= auto92549A4E_ae) || (auto92549A4E_ai < 0 && lv_count >= auto92549A4E_ae) ) ; lv_count += auto92549A4E_ai ) {
+        lv_weaponSlot += 1;
+        UnitWeaponRemove(EventUnit(), UnitWeaponGet(EventUnit(), lv_weaponSlot));
+    }
+    Wait(0.0625, c_timeGame);
     UnitWeaponAdd(EventUnit(), "AO155Rifle", null);
     return true;
 }
 
 //--------------------------------------------------------------------------------------------------
-void lib4A5CBC7B_gt_PioneerWR_Init () {
-    lib4A5CBC7B_gt_PioneerWR = TriggerCreate("lib4A5CBC7B_gt_PioneerWR_Func");
-    TriggerAddEventUnitBehaviorChange(lib4A5CBC7B_gt_PioneerWR, null, "AO155Rifle", c_unitBehaviorChangeCreate);
+void lib4A5CBC7B_gt_AO155Rifle_Init () {
+    lib4A5CBC7B_gt_AO155Rifle = TriggerCreate("lib4A5CBC7B_gt_AO155Rifle_Func");
+    TriggerAddEventUnitBehaviorChange(lib4A5CBC7B_gt_AO155Rifle, null, "AO155Rifle", c_unitBehaviorChangeCreate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Bearclaw Flamethrower
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_BearclawFlamethrower_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_count;
+    int lv_weaponSlot;
+
+    // Automatic Variable Declarations
+    const int auto9191B8EF_ae = 10;
+    const int auto9191B8EF_ai = 1;
+
+    // Variable Initialization
+    lv_count = 10;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_count = 1;
+    for ( ; ( (auto9191B8EF_ai >= 0 && lv_count <= auto9191B8EF_ae) || (auto9191B8EF_ai < 0 && lv_count >= auto9191B8EF_ae) ) ; lv_count += auto9191B8EF_ai ) {
+        lv_weaponSlot += 1;
+        UnitWeaponRemove(EventUnit(), UnitWeaponGet(EventUnit(), lv_weaponSlot));
+    }
+    Wait(0.0625, c_timeGame);
+    UnitWeaponAdd(EventUnit(), "BearclawFlamethrower", null);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_BearclawFlamethrower_Init () {
+    lib4A5CBC7B_gt_BearclawFlamethrower = TriggerCreate("lib4A5CBC7B_gt_BearclawFlamethrower_Func");
+    TriggerAddEventUnitBehaviorChange(lib4A5CBC7B_gt_BearclawFlamethrower, null, "BearclawFlamethrower", c_unitBehaviorChangeCreate);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: 76 AP Rifle
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt__76APRifle_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_count;
+    int lv_weaponSlot;
+
+    // Automatic Variable Declarations
+    const int autoB7F7DEF3_ae = 10;
+    const int autoB7F7DEF3_ai = 1;
+
+    // Variable Initialization
+    lv_count = 10;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_count = 1;
+    for ( ; ( (autoB7F7DEF3_ai >= 0 && lv_count <= autoB7F7DEF3_ae) || (autoB7F7DEF3_ai < 0 && lv_count >= autoB7F7DEF3_ae) ) ; lv_count += autoB7F7DEF3_ai ) {
+        lv_weaponSlot += 1;
+        UnitWeaponRemove(EventUnit(), UnitWeaponGet(EventUnit(), lv_weaponSlot));
+    }
+    Wait(0.0625, c_timeGame);
+    UnitWeaponAdd(EventUnit(), "76APRifle", null);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt__76APRifle_Init () {
+    lib4A5CBC7B_gt__76APRifle = TriggerCreate("lib4A5CBC7B_gt__76APRifle_Func");
+    TriggerAddEventUnitBehaviorChange(lib4A5CBC7B_gt__76APRifle, null, "76APRifle", c_unitBehaviorChangeCreate);
 }
 
 void lib4A5CBC7B_InitTriggers () {
@@ -208,7 +288,9 @@ void lib4A5CBC7B_InitTriggers () {
     lib4A5CBC7B_gt_DismantleResources_Init();
     lib4A5CBC7B_gt_Retreat_Init();
     lib4A5CBC7B_gt_RetreatReOrder_Init();
-    lib4A5CBC7B_gt_PioneerWR_Init();
+    lib4A5CBC7B_gt_AO155Rifle_Init();
+    lib4A5CBC7B_gt_BearclawFlamethrower_Init();
+    lib4A5CBC7B_gt__76APRifle_Init();
 }
 
 //--------------------------------------------------------------------------------------------------

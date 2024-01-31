@@ -4,5 +4,7 @@
 <Behavior id="MakeshiftBunkerAppender"/>
 <Behavior id="UP1Appender"/>
 <Race id="Terr"/>
+<Weapon id="76APRifle"/>
 <Weapon id="AO155Rifle"/>
+<Weapon id="BearclawFlamethrower"/>
 </Preload>

@@ -16,17 +16,19 @@
             <Acceleration value="3200"/>
             <MaxSpeed value="18.75"/>
             <Outro value="-1"/>
-            <AdaptableParabolaClearance value="2"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <AdaptableParabolaClearance value="1"/>
             <YawPitchRoll value="719.2968"/>
             <AdaptableParabolaDistances index="Launch" value="0"/>
             <AdaptableParabolaDistances index="PreApex" value="0.2"/>
-            <AdaptableParabolaDistances index="PostApex" value="0.4"/>
+            <AdaptableParabolaDistances index="PostApex" value="0.15"/>
             <AdaptableParabolaDistances index="Land" value="0"/>
             <AdaptableParabolaAccels index="Launch" value="25"/>
             <AdaptableParabolaAccels index="Ascent" value="25"/>
-            <AdaptableParabolaAccels index="Apex" value="10"/>
-            <AdaptableParabolaAccels index="Descent" value="10"/>
-            <AdaptableParabolaAccels index="Land" value="10"/>
+            <AdaptableParabolaAccels index="Apex" value="25"/>
+            <AdaptableParabolaAccels index="Descent" value="25"/>
+            <AdaptableParabolaAccels index="Land" value="25"/>
         </MotionPhases>
     </CMoverMissile>
     <CMoverMissile id="F2LongshotMissile">

@@ -455,6 +455,8 @@
         <AbilArray Link="Retreat"/>
         <AbilArray Link="DetoniteCharge"/>
         <AbilArray Link="V1Implant"/>
+        <AbilArray Link="BuildMakeshiftBunker"/>
+        <AbilArray Link="MilitiaEquipment"/>
         <WeaponArray Link="FerromagSMG"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -468,12 +470,13 @@
             <LayoutButtons Face="Equipment" Type="Submenu" SubmenuCardId="0002" Row="1" Column="4"/>
             <LayoutButtons Face="V1Implant" Type="AbilCmd" AbilCmd="V1Implant,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="DetoniteCharge" Type="AbilCmd" AbilCmd="DetoniteCharge,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="2" Column="1"/>
+            <LayoutButtons Face="EmergencyShelter" Type="AbilCmd" AbilCmd="BuildMakeshiftBunker,Build1" Row="2" Column="1"/>
+            <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="BuildMakeshiftBunker,Halt" Row="2" Column="4"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
-            <LayoutButtons Face="DetoniteCharge" Type="Passive" Row="0" Column="0"/>
-            <LayoutButtons Face="EmergencyShelter" Type="Passive" Row="0" Column="1"/>
-            <LayoutButtons Face="V1Implant" Type="Passive" Row="0" Column="2"/>
+            <LayoutButtons Face="DetoniteCharge" Type="AbilCmd" AbilCmd="MilitiaEquipment,Specialize1" Row="0" Column="0"/>
+            <LayoutButtons Face="EmergencyShelter" Type="AbilCmd" AbilCmd="MilitiaEquipment,Specialize2" Row="0" Column="1"/>
+            <LayoutButtons Face="V1Implant" Type="AbilCmd" AbilCmd="MilitiaEquipment,Specialize3" Row="0" Column="2"/>
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
         </CardLayouts>
         <Radius value="0.375"/>
