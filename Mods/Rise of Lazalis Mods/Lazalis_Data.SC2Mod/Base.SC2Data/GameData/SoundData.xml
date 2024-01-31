@@ -61,6 +61,7 @@
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact2.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact4.wav"/>
+        <Volume value="-6.000000,-3.000000"/>
     </CSound>
     <CSound id="BearclawFlamethrowerLaunchSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch0.wav"/>
@@ -68,6 +69,17 @@
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch2.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch3.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch4.wav"/>
+        <Volume value="-6.000000,-3.000000"/>
+    </CSound>
+    <CSound id="CrucioCannonSound1">
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionSmall4.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionSmall6.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionSmall7.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionSmall8.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran_BuildingExplosionSmall9.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Volume value="6.000000,6.000000"/>
     </CSound>
     <CSound id="DetoniteChargeExplodeSound">
         <AssetArray File="Assets\Sounds\Terran_BuildingExplosionMedium0.wav" FacialGroup=""/>
@@ -161,6 +173,11 @@
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch4.wav"/>
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch5.wav"/>
         <Volume value="-9.000000,-6.000000"/>
+    </CSound>
+    <CSound id="LockdownLoop">
+        <AssetArray File="Assets\Sounds\Goliath_BlackOps_Lockdown_Loop_01.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
     </CSound>
     <CSound id="MilitiaReady">
         <AssetArray File="Assets\Sounds\Advisor2\Militia_Ready01.mp3" FacialGroup=""/>
@@ -324,6 +341,24 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
         <Volume value="-2.000000,-2.000000"/>
+    </CSound>
+    <CSound id="SS6Plant">
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMinePlace0.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMinePlace1.wav" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Terran\Vulture\Vulture_SpiderMinePlace2.wav" FacialGroup=""/>
+        <Category value="Combat"/>
+        <Mode value="3DWorld"/>
+        <Pitch value="-3.000000,-1.000000"/>
+        <Volume value="-6.000000,-6.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_MorphToSiege">
+        <Pitch value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_MorphToTank">
+        <Pitch value="-3.000000,-3.000000"/>
+    </CSound>
+    <CSound id="SiegeTank_SiegedAttackImpact">
+        <Volume value="-5.000000,-5.000000"/>
     </CSound>
     <CSound id="V1Implant">
         <AssetArray File="Assets\Sounds\Tychus_Medic_HealingMatrix_Off_01.wav" FacialGroup=""/>

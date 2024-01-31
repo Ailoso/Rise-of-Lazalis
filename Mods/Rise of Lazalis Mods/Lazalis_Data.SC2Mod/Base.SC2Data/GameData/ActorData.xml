@@ -47,7 +47,7 @@
     </CActorUnit>
     <CActorAction id="BearclawFlamethrowerAction" parent="GenericAttack" effectImpact="BearclawFlamethrowerDamage" effectLaunch="BearclawFlamethrowerCP">
         <EditorCategories value=""/>
-        <LaunchAssets Model="BearclawFlamethrowerImpactModel" Sound="BearclawFlamethrowerImpactSound"/>
+        <LaunchAssets Model="BearclawFlamethrowerImpactModel" Sound="BearclawFlamethrowerLaunchSound"/>
         <ImpactMap index="None" Sound="BearclawFlamethrowerImpactSound"/>
     </CActorAction>
     <CActorBeamSimple id="BearclawFlamethrowerCPBeam" parent="BeamSimpleAnimationStyleContinuous">
@@ -150,6 +150,24 @@
             <Image value="Assets\Textures\Wireframe-Terran-Ghost.dds"/>
         </Wireframe>
     </CActorUnit>
+    <CActorModel id="CrucioCannonImpact1" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SiegeTankSiegedVoid.Start; At Target" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="CrucioCannonImpact2" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SiegeTankSiegedVoid.Start; At Target" Send="Create"/>
+        <HostSiteOps HoldRotation="1"/>
+    </CActorModel>
+    <CActorModel id="CrucioCannonImpact3" parent="ModelAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SiegeTankSiegedVoid.Start; At Target" Send="Create"/>
+        <HostSiteOps Ops="SOpMoveForwardBy05" HoldPosition="1" HoldRotation="1"/>
+    </CActorModel>
+    <CActorSound id="CrucioCannonSound1" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.SiegeTankSiegedVoid.Start; At Target" Send="Create"/>
+    </CActorSound>
     <CActorAction id="DetoniteCharge" parent="GenericAttack" effectLaunch="DetoniteChargeLaunchMissile">
         <LaunchAttachQuery Methods="Weapon 0"/>
     </CActorAction>
@@ -196,6 +214,9 @@
         <On index="5" Terms="Behavior.LockdownDisabled.On" Send="Create"/>
         <On index="6" Terms="Behavior.LockdownDisabled.Off" Send="AnimBracketStop BSD"/>
     </CActorModelMaterial>
+    <CActorSound id="LockdownLoop" parent="SoundContinuous">
+        <EditorCategories value=""/>
+    </CActorSound>
     <CActorUnit id="MakeshiftBunker" parent="TerranBuildingEx" unitName="MakeshiftBunker">
         <Aliases value="_UnitHuge"/>
         <Macros value="BunkerTransportAnim"/>
@@ -273,7 +294,7 @@
         <ImpactMap index="None" Model="F2LongshotImpactModel" Sound="F2LongshotImpactSound"/>
     </CActorAction>
     <CActorMissile id="F2LongshotWeaponMissile" parent="GenericAttackMissile" unitName="F2LongshotWeapon">
-        <On Terms="ActorCreation" Send="SetTintColor {255,247,183 10.000000}"/>
+        <On Terms="ActorCreation" Send="SetTintColor {255,247,183 3.000000}"/>
         <Model value="F2LongshotMissileModel"/>
     </CActorMissile>
     <CActorAction id="FerromagSMGAction" parent="GenericAttack" effectAttack="FerromagSMGDamage">
@@ -450,6 +471,13 @@
         <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
         <HostImpactSiteOps Ops="SOpAttachCenter"/>
     </CActorBeamSimple>
+    <CActorSiteOpLocalOffset id="SOpMoveForwardBy05">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,-0.500000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="SOpMoveRightBy025">
+        <LocalOffset value="-0.250000,0.000000,0.000000"/>
+    </CActorSiteOpLocalOffset>
     <CActorSound id="SS6Detonate" parent="SoundOneShot">
         <EditorCategories value=""/>
         <On Terms="Effect.SS6Set.Start" Send="Create"/>
@@ -461,6 +489,14 @@
     <CActorModelMaterial id="SS6Glaze" parent="BehaviorGlaze" buff="SS6Disabled">
         <EditorCategories value=""/>
     </CActorModelMaterial>
+    <CActorRange id="SS6MineRange" parent="RangeAbil" abil="SS6Mine">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorSound id="SS6Plant" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="UnitCreation.SS6Mine" Send="Create"/>
+    </CActorSound>
     <CActorUnit id="SiegeTank">
         <Scale value="1.300000"/>
     </CActorUnit>

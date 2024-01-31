@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Catalog>
     <CRequirementConst id="3"/>
-    <CRequirementCountBehavior id="CountBehaviorAO155RifleQueuedOrBetterAtUnit">
+    <CRequirementCountBehavior id="CountBehavior76APRifleQueuedOrBetterAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
         <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="76APRifle" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorAO155RifleQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AO155Rifle" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountBehavior id="CountBehaviorBearclawFlamethrowerQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="BearclawFlamethrower" State="QueuedOrBetterAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountUnit id="CountUnitCommentatorBot1QueuedOnly">
         <Flags index="TechTreeCheat" value="0"/>
@@ -14,8 +23,14 @@
         <OperandArray index="0" value="CountUnitCommentatorBot1QueuedOnly"/>
         <OperandArray index="1" value="3"/>
     </CRequirementLT>
-    <CRequirementNot id="NotCountBehaviorAO155RifleQueuedOrBetterAtUnit">
+    <CRequirementNot id="NotOrCountBehaviorBearclawFlamethrowerQueuedOrBetterAtUnitCountBehaviorAO155RifleQueuedOrBetterAtUnitCountBehavior76APRifleQueuedOrBetterAtUnit">
         <Tooltip value="RequirementNode/Tooltip/##id##"/>
-        <OperandArray index="0" value="CountBehaviorAO155RifleQueuedOrBetterAtUnit"/>
+        <OperandArray index="0" value="OrCountBehaviorBearclawFlamethrowerQueuedOrBetterAtUnitCountBehaviorAO155RifleQueuedOrBetterAtUnitCountBehavior76APRifleQueuedOrBetterAtUnit"/>
     </CRequirementNot>
+    <CRequirementOr id="OrCountBehaviorBearclawFlamethrowerQueuedOrBetterAtUnitCountBehaviorAO155RifleQueuedOrBetterAtUnitCountBehavior76APRifleQueuedOrBetterAtUnit">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray value="CountBehaviorBearclawFlamethrowerQueuedOrBetterAtUnit"/>
+        <OperandArray value="CountBehaviorAO155RifleQueuedOrBetterAtUnit"/>
+        <OperandArray value="CountBehavior76APRifleQueuedOrBetterAtUnit"/>
+    </CRequirementOr>
 </Catalog>

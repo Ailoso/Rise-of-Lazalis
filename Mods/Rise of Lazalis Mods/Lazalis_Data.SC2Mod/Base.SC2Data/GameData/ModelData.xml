@@ -68,6 +68,21 @@
         <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
         <Lighting value="GhostPortrait"/>
     </CModel>
+    <CModelFoliage id="CrucioCannonImpact1">
+        <Model value="Assets\Effects\Zerg\YagdraFireBallMissileImpact\YagdraFireBallMissileImpact.m3"/>
+        <ScaleMax value="1.200000,1.200000,0.400000"/>
+        <ScaleMin value="1.200000,1.200000,0.400000"/>
+    </CModelFoliage>
+    <CModelFoliage id="CrucioCannonImpact2">
+        <Model value="Assets\COOP\Mengsk\Effects\Artillery_Mengsk_COOP_Impact\Artillery_Mengsk_COOP_Impact.m3"/>
+        <ScaleMax value="2.000000,2.000000,1.300000"/>
+        <ScaleMin value="2.000000,2.000000,1.300000"/>
+    </CModelFoliage>
+    <CModelFoliage id="CrucioCannonImpact3">
+        <Model value="Assets\Effects\Terran\MiraHorner_Wraith_Coop_Missile_MuzzleFlash\MiraHorner_Wraith_Coop_Missile_MuzzleFlash.m3"/>
+        <ScaleMax value="3.000000,3.000000,3.000000"/>
+        <ScaleMin value="3.000000,3.000000,3.000000"/>
+    </CModelFoliage>
     <CModel id="DetoniteChargeCursorSplat">
         <Model value="Assets\UI\Cursors\TerranAOECursor\TerranAOECursor.m3"/>
     </CModel>
@@ -121,8 +136,8 @@
     </CModel>
     <CModel id="F2LongshotMissileModel" parent="MissileFX">
         <Model value="Assets\Models\Bullet_Unari.m3"/>
-        <ScaleMax value="0.050000,1.000000,0.050000"/>
-        <ScaleMin value="0.050000,1.000000,0.050000"/>
+        <ScaleMax value="0.050000,0.500000,0.050000"/>
+        <ScaleMin value="0.050000,0.500000,0.050000"/>
     </CModel>
     <CModel id="FerromagSMGImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\MarineWeaponImpact\MarineWeaponImpact.m3"/>
@@ -188,8 +203,8 @@
     </CModel>
     <CModelFoliage id="N11Handcannon">
         <Model value="Assets\Models\N11Handcannon.m3"/>
-        <ScaleMax value="0.350000,0.350000,0.250000"/>
-        <ScaleMin value="0.350000,0.350000,0.250000"/>
+        <ScaleMax value="0.350000,0.500000,0.250000"/>
+        <ScaleMin value="0.350000,0.500000,0.250000"/>
     </CModelFoliage>
     <CModel id="N11HandcannonImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\TankWeaponImpact\TankWeaponImpact.m3"/>

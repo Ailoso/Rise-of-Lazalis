@@ -8,8 +8,7 @@
         <Range value="7"/>
         <Period value="2.63"/>
         <Effect value="76APRifleLaunchMissile"/>
-        <DamagePoint value="0"/>
-        <Backswing value="0"/>
+        <Backswing value="1.167"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="90mmCannons">
         <Period value="1.92"/>
@@ -36,7 +35,7 @@
             <MatchFlags index="Id" value="1"/>
         </Marker>
         <Period value="2.4"/>
-        <Effect value="BearclawFlamethrowerCP"/>
+        <Effect value="BearclawFlamethrowerSet"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="CrucioShockCannon">
         <MinimumRange value="3"/>

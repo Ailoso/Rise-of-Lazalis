@@ -3,7 +3,7 @@
     <CRequirement id="Limitof3Bodyguards">
         <NodeArray index="Use" Link="LT3702416715CountUnitCommentatorBot1QueuedOnly3"/>
     </CRequirement>
-    <CRequirement id="NoAO155Rifle">
-        <NodeArray index="Show" Link="NotCountBehaviorAO155RifleQueuedOrBetterAtUnit"/>
+    <CRequirement id="NoExtraWeapon">
+        <NodeArray index="Show" Link="NotOrCountBehaviorBearclawFlamethrowerQueuedOrBetterAtUnitCountBehaviorAO155RifleQueuedOrBetterAtUnitCountBehavior76APRifleQueuedOrBetterAtUnit"/>
     </CRequirement>
 </Catalog>

@@ -34,7 +34,6 @@ bool lib4A5CBC7B_gt_Init_Func (bool testConds, bool runActions) {
     }
 
     PlayerSetRace(1, "Terr");
-    PlayerOptionOverride(1, "tickedunitstatus", "0");
     PlayerSetColorIndex(1, 15, true);
     return true;
 }
@@ -43,6 +42,72 @@ bool lib4A5CBC7B_gt_Init_Func (bool testConds, bool runActions) {
 void lib4A5CBC7B_gt_Init_Init () {
     lib4A5CBC7B_gt_Init = TriggerCreate("lib4A5CBC7B_gt_Init_Func");
     TriggerAddEventMapInit(lib4A5CBC7B_gt_Init);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: Bodyguard Move Test
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_BodyguardMoveTest_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unitgroup lv_unitGroup;
+    unitgroup lv_bodyguards;
+    point lv_point;
+
+    // Automatic Variable Declarations
+    unitgroup auto2CD82AC9_g;
+    int auto2CD82AC9_u;
+    unit auto2CD82AC9_var;
+    unitgroup autoDF16A94B_g;
+    int autoDF16A94B_u;
+    unit autoDF16A94B_var;
+
+    // Variable Initialization
+    lv_unitGroup = UnitGroupEmpty();
+    lv_bodyguards = UnitGroupEmpty();
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) == 1))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerEnable(TriggerGetCurrent(), false);
+    lv_unitGroup = UnitGroupSelected(1);
+    auto2CD82AC9_g = lv_unitGroup;
+    auto2CD82AC9_u = UnitGroupCount(auto2CD82AC9_g, c_unitCountAll);
+    for (;; auto2CD82AC9_u -= 1) {
+        auto2CD82AC9_var = UnitGroupUnitFromEnd(auto2CD82AC9_g, auto2CD82AC9_u);
+        if (auto2CD82AC9_var == null) { break; }
+        if ((UnitGetType(auto2CD82AC9_var) == "MsLazalis")) {
+            lv_point = EventUnitTargetPoint();
+        }
+
+    }
+    autoDF16A94B_g = lv_unitGroup;
+    autoDF16A94B_u = UnitGroupCount(autoDF16A94B_g, c_unitCountAll);
+    for (;; autoDF16A94B_u -= 1) {
+        autoDF16A94B_var = UnitGroupUnitFromEnd(autoDF16A94B_g, autoDF16A94B_u);
+        if (autoDF16A94B_var == null) { break; }
+        if ((UnitGetType(autoDF16A94B_var) == "Bodyguard")) {
+            UnitGroupAdd(lv_bodyguards, autoDF16A94B_var);
+        }
+
+    }
+    UnitGroupIssueOrder(lv_bodyguards, OrderTargetingPoint(AbilityCommand("move", 0), PointWithOffset(lv_point, 1.5, 1.5)), c_orderQueueReplace);
+    TriggerEnable(TriggerGetCurrent(), true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_BodyguardMoveTest_Init () {
+    lib4A5CBC7B_gt_BodyguardMoveTest = TriggerCreate("lib4A5CBC7B_gt_BodyguardMoveTest_Func");
+    TriggerAddEventUnitAbility(lib4A5CBC7B_gt_BodyguardMoveTest, null, AbilityCommand("move", 0), c_abilAttackStageApproach, false);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -174,6 +239,29 @@ void lib4A5CBC7B_gt_RetreatReOrder_Init () {
 }
 
 //--------------------------------------------------------------------------------------------------
+// Trigger: Siege Tank Screen Shake
+//--------------------------------------------------------------------------------------------------
+bool lib4A5CBC7B_gt_SiegeTankScreenShake_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerEnable(TriggerGetCurrent(), false);
+    CameraShakeStart(1, c_cameraPositionEye, c_cameraDirectionX, 0.6, 0.3, 100.0, 0.25);
+    Wait(0.75, c_timeGame);
+    TriggerEnable(TriggerGetCurrent(), true);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void lib4A5CBC7B_gt_SiegeTankScreenShake_Init () {
+    lib4A5CBC7B_gt_SiegeTankScreenShake = TriggerCreate("lib4A5CBC7B_gt_SiegeTankScreenShake_Func");
+    TriggerAddEventPlayerEffectUsed(lib4A5CBC7B_gt_SiegeTankScreenShake, c_playerAny, "SiegeTankSiegedVoid");
+}
+
+//--------------------------------------------------------------------------------------------------
 // Trigger: AO-155 Rifle
 //--------------------------------------------------------------------------------------------------
 bool lib4A5CBC7B_gt_AO155Rifle_Func (bool testConds, bool runActions) {
@@ -283,11 +371,13 @@ void lib4A5CBC7B_gt__76APRifle_Init () {
 
 void lib4A5CBC7B_InitTriggers () {
     lib4A5CBC7B_gt_Init_Init();
+    lib4A5CBC7B_gt_BodyguardMoveTest_Init();
     lib4A5CBC7B_gt_TooltipAppenderOn_Init();
     lib4A5CBC7B_gt_TooltipAppenderOff_Init();
     lib4A5CBC7B_gt_DismantleResources_Init();
     lib4A5CBC7B_gt_Retreat_Init();
     lib4A5CBC7B_gt_RetreatReOrder_Init();
+    lib4A5CBC7B_gt_SiegeTankScreenShake_Init();
     lib4A5CBC7B_gt_AO155Rifle_Init();
     lib4A5CBC7B_gt_BearclawFlamethrower_Init();
     lib4A5CBC7B_gt__76APRifle_Init();

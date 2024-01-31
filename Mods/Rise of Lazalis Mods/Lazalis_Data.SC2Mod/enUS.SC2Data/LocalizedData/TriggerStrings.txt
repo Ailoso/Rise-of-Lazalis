@@ -1,5 +1,7 @@
 ﻿Category/Name/lib_4A5CBC7B_C7DABF81=Weapon Replaces
+Category/Name/lib_4A5CBC7B_EC00700D=FX
 Library/Name/4A5CBC7B=Rise of Lazalis
+Trigger/Name/lib_4A5CBC7B_0682D517=Siege Tank Screen Shake
 Trigger/Name/lib_4A5CBC7B_0A5EA4F1=Retreat!
 Trigger/Name/lib_4A5CBC7B_683298E4=Dismantle Resources
 Trigger/Name/lib_4A5CBC7B_7A84AAD3=Retreat! Re-Order

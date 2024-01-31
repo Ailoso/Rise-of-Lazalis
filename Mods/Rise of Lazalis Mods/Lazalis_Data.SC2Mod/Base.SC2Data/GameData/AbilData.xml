@@ -24,6 +24,14 @@
         <PrepTime value="1"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Dismantle"/>
     </CAbilEffectTarget>
+    <CAbilSpecialize id="FrontiersmanEquipment">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <InfoArray index="Specialize1" Effect="SS6MineMU">
+            <Button DefaultButtonFace="SS6Mine"/>
+        </InfoArray>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="Transient" value="1"/>
+    </CAbilSpecialize>
     <CAbilEffectTarget id="Lockdown">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="LockdownAB"/>
@@ -66,6 +74,8 @@
         <InfoArray index="Specialize3" Effect="V1ImplantMU">
             <Button DefaultButtonFace="V1Implant"/>
         </InfoArray>
+        <Flags index="BestUnit" value="0"/>
+        <Flags index="Transient" value="1"/>
     </CAbilSpecialize>
     <CAbilSpecialize id="PioneerEquipment">
         <EditorCategories value="AbilityorEffectType:Units"/>
@@ -76,7 +86,7 @@
             <Button DefaultButtonFace="EmergencyShelter"/>
         </InfoArray>
         <InfoArray index="Specialize3" Effect="AO155RifleAB">
-            <Button DefaultButtonFace="AO155Rifle" Requirements="NoAO155Rifle"/>
+            <Button DefaultButtonFace="AO155Rifle" Requirements="NoExtraWeapon"/>
         </InfoArray>
         <Flags index="BestUnit" value="0"/>
     </CAbilSpecialize>
@@ -191,6 +201,20 @@
         <AutoCastRange value="1000"/>
         <AutoCastValidatorArray value="SS6Search"/>
         <CmdButtonArray index="Execute" DefaultButtonFace="Decal_Spray_0058_01"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SS6Mine">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="SS6CU"/>
+        <Cost>
+            <Charge CountMax="99" CountUse="1"/>
+        </Cost>
+        <Placeholder value="SS6Mine"/>
+        <Range value="1"/>
+        <PrepTime value="8"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <ProgressButtonArray index="Prep" value="SS6Mine"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="SS6Mine"/>
+        <PlaceUnit value="SS6Mine"/>
     </CAbilEffectTarget>
     <CAbilMorph id="SiegeMode">
         <InfoArray index="0">

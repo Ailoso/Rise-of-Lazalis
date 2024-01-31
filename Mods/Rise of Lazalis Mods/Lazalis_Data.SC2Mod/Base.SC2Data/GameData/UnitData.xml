@@ -364,6 +364,8 @@
         <AbilArray Link="attack"/>
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
+        <AbilArray Link="FrontiersmanEquipment"/>
+        <AbilArray Link="SS6Mine"/>
         <WeaponArray Link="F2Longshot"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -384,10 +386,10 @@
             <LayoutButtons Face="SetupEncampment" Type="Passive" Row="2" Column="0"/>
             <LayoutButtons Face="Patience" Type="Passive" Row="2" Column="1"/>
             <LayoutButtons Face="Sprint" Type="Passive" Row="2" Column="2"/>
-            <LayoutButtons Face="SS6Mine" Type="Passive" Row="1" Column="1"/>
+            <LayoutButtons Face="SS6Mine" Type="AbilCmd" AbilCmd="SS6Mine,Execute" Row="1" Column="1"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
-            <LayoutButtons Face="SS6Mine" Type="Passive" Row="0" Column="0"/>
+            <LayoutButtons Face="SS6Mine" Type="AbilCmd" AbilCmd="FrontiersmanEquipment,Specialize1" Row="0" Column="0"/>
             <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
         </CardLayouts>
         <Radius value="0.375"/>
@@ -697,6 +699,7 @@
     <CUnit id="SS6Mine">
         <DeathRevealRadius value="3"/>
         <Race value="Terr"/>
+        <FlagArray index="Unselectable" value="1"/>
         <FlagArray index="UseLineOfSight" value="1"/>
         <FlagArray index="Cloaked" value="1"/>
         <FlagArray index="Buried" value="1"/>

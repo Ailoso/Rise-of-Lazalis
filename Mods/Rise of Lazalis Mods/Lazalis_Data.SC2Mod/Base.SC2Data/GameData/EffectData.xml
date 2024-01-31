@@ -149,9 +149,14 @@
         <EditorCategories value=""/>
         <Cost Abil="BuildMakeshiftBunker,Build1" ChargeCountUse="-1"/>
     </CEffectModifyUnit>
+    <CEffectCreateUnit id="SS6CU">
+        <EditorCategories value=""/>
+        <WhichLocation Value="TargetPoint"/>
+        <SpawnUnit value="SS6Mine"/>
+    </CEffectCreateUnit>
     <CEffectModifyUnit id="V1ImplantMU">
         <EditorCategories value=""/>
-        <Cost Abil="MilitiaEquipment,Specialize3" ChargeCountUse="-2"/>
+        <Cost Abil="V1Implant,Execute" ChargeCountUse="-2"/>
     </CEffectModifyUnit>
     <CEffectDamage id="N11HandcannonDamage" parent="DU_WEAP">
         <Kind value="Splash"/>
@@ -264,7 +269,11 @@
     </CEffectModifyUnit>
     <CEffectModifyUnit id="DetoniteChargeMU">
         <EditorCategories value=""/>
-        <Cost Abil="MilitiaEquipment,Specialize1" ChargeCountUse="-2"/>
+        <Cost Abil="DetoniteCharge,Execute" ChargeCountUse="-1"/>
+    </CEffectModifyUnit>
+    <CEffectModifyUnit id="SS6MineMU">
+        <EditorCategories value=""/>
+        <Cost Abil="SS6Mine,Execute" ChargeCountUse="-1"/>
     </CEffectModifyUnit>
     <CEffectSet id="V1ImplantSet">
         <EditorCategories value=""/>
