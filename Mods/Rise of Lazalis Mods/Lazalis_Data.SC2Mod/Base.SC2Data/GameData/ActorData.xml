@@ -87,6 +87,8 @@
         <Scale value="1.200000"/>
         <UnitIcon value="Assets\Icons\TrainBodyguard.dds"/>
         <Aliases value="_UnitSmall"/>
+        <On Terms="ActorCreation" Send="AttachModel N11Handcannon N11Handcannon {Weapon 0} {MoveLeftBy025 MoveLeftBy025 SOpMoveDownByDot15}"/>
+        <On Terms="ActorCreation" Target="N11Handcannon" Send="SetTeamColor"/>
     </CActorUnit>
     <CActorUnit id="Bypasser" parent="GenericUnitBase" unitName="Bypasser">
         <Aliases value="_UnitSmall"/>
@@ -364,6 +366,14 @@
         <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-infantryarmorlevel0.dds"/>
         <Aliases value="_UnitSmall"/>
     </CActorUnit>
+    <CActorSiteOpLocalOffset id="MoveLeftBy025">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,0.250000,0.000000"/>
+    </CActorSiteOpLocalOffset>
+    <CActorSiteOpLocalOffset id="MoveRightBy025">
+        <EditorCategories value=""/>
+        <LocalOffset value="0.000000,-0.250000,0.000000"/>
+    </CActorSiteOpLocalOffset>
     <CActorUnit id="MsLazalis" parent="GenericUnitStandard" unitName="MsLazalis">
         <EditorCategories value=""/>
         <DeathArray index="Normal" ModelLink="MsLazalisDeath" VoiceLink="Nova_Death"/>
@@ -381,6 +391,9 @@
         <UnitIcon value="Assets\Textures\nova coop_powerupicon.dds"/>
         <Aliases value="_UnitSmall"/>
     </CActorUnit>
+    <CActorModel id="N11Handcannon" parent="ModelAddition">
+        <EditorCategories value=""/>
+    </CActorModel>
     <CActorAction id="N11HandcannonAction" parent="GenericAttack" effectAttack="N11HandcannonDamage">
         <LaunchAssets Model="N11HandcannonLaunchModel" Sound="N11HandcannonLaunchSound"/>
         <Missile value="N11HandcannonWeaponMissile"/>

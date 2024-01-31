@@ -34,6 +34,8 @@ bool lib4A5CBC7B_gt_Init_Func (bool testConds, bool runActions) {
     }
 
     PlayerSetRace(1, "Terr");
+    PlayerOptionOverride(1, "tickedunitstatus", "0");
+    PlayerSetColorIndex(1, 15, true);
     return true;
 }
 
@@ -41,26 +43,6 @@ bool lib4A5CBC7B_gt_Init_Func (bool testConds, bool runActions) {
 void lib4A5CBC7B_gt_Init_Init () {
     lib4A5CBC7B_gt_Init = TriggerCreate("lib4A5CBC7B_gt_Init_Func");
     TriggerAddEventMapInit(lib4A5CBC7B_gt_Init);
-}
-
-//--------------------------------------------------------------------------------------------------
-// Trigger: Color
-//--------------------------------------------------------------------------------------------------
-bool lib4A5CBC7B_gt_Color_Func (bool testConds, bool runActions) {
-    // Automatic Variable Declarations
-    // Actions
-    if (!runActions) {
-        return true;
-    }
-
-    PlayerSetColorIndex(1, 15, true);
-    return true;
-}
-
-//--------------------------------------------------------------------------------------------------
-void lib4A5CBC7B_gt_Color_Init () {
-    lib4A5CBC7B_gt_Color = TriggerCreate("lib4A5CBC7B_gt_Color_Func");
-    TriggerAddEventMapInit(lib4A5CBC7B_gt_Color);
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -221,7 +203,6 @@ void lib4A5CBC7B_gt_PioneerWR_Init () {
 
 void lib4A5CBC7B_InitTriggers () {
     lib4A5CBC7B_gt_Init_Init();
-    lib4A5CBC7B_gt_Color_Init();
     lib4A5CBC7B_gt_TooltipAppenderOn_Init();
     lib4A5CBC7B_gt_TooltipAppenderOff_Init();
     lib4A5CBC7B_gt_DismantleResources_Init();

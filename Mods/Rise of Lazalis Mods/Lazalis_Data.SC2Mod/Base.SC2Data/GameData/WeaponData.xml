@@ -38,6 +38,9 @@
         <Period value="2.4"/>
         <Effect value="BearclawFlamethrowerCP"/>
     </CWeaponLegacy>
+    <CWeaponLegacy id="CrucioShockCannon">
+        <MinimumRange value="3"/>
+    </CWeaponLegacy>
     <CWeaponLegacy id="F2Longshot">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="F2LongshotDamage"/>

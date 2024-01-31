@@ -10,7 +10,7 @@
         <AmmoUnit value="76APRifleWeapon"/>
     </CEffectLaunchMissile>
     <CEffectDamage id="90mmCannons">
-        <AttributeBonus index="Armored" value="0"/>
+        <AttributeBonus index="Armored" value="15"/>
         <Amount value="45"/>
     </CEffectDamage>
     <CEffectApplyBehavior id="AO155RifleAB">
