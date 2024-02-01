@@ -152,6 +152,7 @@ Model/Name/MakeshiftBunker=Makeshift Bunker
 Model/Name/MakeshiftBunkerDeath=Makeshift Bunker Death
 Model/Name/MakeshiftBunkerDeath2=Makeshift Bunker Death
 Model/Name/MakeshiftBunkerDeathEmpty=Makeshift Bunker Death Empty
+Model/Name/MediumCrater=Medium Crater
 Model/Name/Militia=Militia
 Model/Name/MilitiaDeath=Militia Death
 Model/Name/MilitiaPortrait=Militia Portrait

@@ -176,6 +176,10 @@
     <CModel id="MakeshiftBunkerDeath">
         <Model value="Assets\Buildings\Terran\BunkerDeathEx1\BunkerDeathEx1.m3"/>
     </CModel>
+    <CModel id="MediumCrater">
+        <Model value="Assets\Doodads\Blast_Craters\Blast_Craters_00.m3"/>
+        <VariationCount value="4"/>
+    </CModel>
     <CModel id="Militia">
         <Model value="Assets\COOP\Mengsk\Units\Trooper_Mengsk_COOP\Trooper_Mengsk_COOP.m3"/>
         <Radius value="0.370000"/>

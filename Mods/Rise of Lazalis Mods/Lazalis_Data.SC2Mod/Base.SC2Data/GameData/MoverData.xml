@@ -20,13 +20,13 @@
             <ThrowBandPitch value="-360,-360,-360,-360"/>
             <AdaptableParabolaClearance value="1"/>
             <YawPitchRoll value="719.2968"/>
-            <AdaptableParabolaDistances index="Launch" value="0"/>
-            <AdaptableParabolaDistances index="PreApex" value="0.2"/>
-            <AdaptableParabolaDistances index="PostApex" value="0.15"/>
-            <AdaptableParabolaDistances index="Land" value="0"/>
+            <AdaptableParabolaDistances index="Launch" value="0.05"/>
+            <AdaptableParabolaDistances index="PreApex" value="0.15"/>
+            <AdaptableParabolaDistances index="PostApex" value="0.25"/>
+            <AdaptableParabolaDistances index="Land" value="0.05"/>
             <AdaptableParabolaAccels index="Launch" value="25"/>
             <AdaptableParabolaAccels index="Ascent" value="25"/>
-            <AdaptableParabolaAccels index="Apex" value="25"/>
+            <AdaptableParabolaAccels index="Apex" value="10"/>
             <AdaptableParabolaAccels index="Descent" value="25"/>
             <AdaptableParabolaAccels index="Land" value="25"/>
         </MotionPhases>
