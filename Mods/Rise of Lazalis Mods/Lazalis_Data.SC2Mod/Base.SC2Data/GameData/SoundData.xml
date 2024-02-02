@@ -174,6 +174,20 @@
         <AssetArray File="Assets\Sounds\Terran\Reaper\Reaper_AttackLaunch5.wav"/>
         <Volume value="-9.000000,-6.000000"/>
     </CSound>
+    <CSound id="LightWalkerAutocannonImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact3.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_MultipleBulletAttackImpact4.wav"/>
+        <Volume value="-12.000000,-12.000000"/>
+    </CSound>
+    <CSound id="LightWalkerAutocannonLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Goliath\Goliath_GroundAttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Goliath\Goliath_GroundAttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Goliath\Goliath_GroundAttackLaunch2.wav"/>
+        <Volume value="-3.000000,-3.000000"/>
+    </CSound>
     <CSound id="LockdownLoop">
         <AssetArray File="Assets\Sounds\Goliath_BlackOps_Lockdown_Loop_01.wav" FacialGroup=""/>
         <Category value="Combat"/>

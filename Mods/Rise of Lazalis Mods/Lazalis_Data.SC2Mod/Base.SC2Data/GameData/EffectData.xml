@@ -141,6 +141,10 @@
     <CEffectDamage id="LanceMissileLaunchersDamage">
         <Amount value="80"/>
     </CEffectDamage>
+    <CEffectDamage id="LightWalkerAutocannonDamage" parent="DU_WEAP">
+        <Amount value="24"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
     <CEffectApplyBehavior id="LockdownAB">
         <EditorCategories value=""/>
         <Behavior value="LockdownDisabled"/>

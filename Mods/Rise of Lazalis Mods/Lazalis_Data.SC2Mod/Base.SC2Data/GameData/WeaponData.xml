@@ -39,6 +39,7 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="CrucioShockCannon">
         <MinimumRange value="3"/>
+        <Period value="3.55"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="F2Longshot">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
@@ -75,6 +76,14 @@
     <CWeaponLegacy id="LanceMissileLaunchers">
         <Range value="12"/>
         <!--Effect value="LanceMissileLaunchersLaunchMissile"/-->
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LightWalkerAutocannon">
+        <Icon value="Assets\Textures\btn-upgrade-terran-vehicleweaponslevel0.dds"/>
+        <DisplayEffect value="LightWalkerAutocannonDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="6"/>
+        <Period value="1.5"/>
+        <Effect value="LightWalkerAutocannonDamage"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="N11Handcannon">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>

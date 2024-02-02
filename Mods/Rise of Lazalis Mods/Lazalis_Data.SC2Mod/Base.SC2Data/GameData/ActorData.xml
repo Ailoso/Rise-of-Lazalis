@@ -209,6 +209,74 @@
     <CActorUnit id="Goliath">
         <Scale value="1.200000"/>
     </CActorUnit>
+    <CActorUnit id="LightWalker" parent="GenericUnitBase" unitName="LightWalker">
+        <Aliases value="_UnitLarge"/>
+        <Macros value="UnloadDropAnim"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <On Terms="WeaponStart.GoliathG.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.GoliathG.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.GoliathA.AttackStart" Send="AnimBracketStart Spell Spell"/>
+        <On Terms="WeaponStop.GoliathA.AttackStop" Send="AnimBracketStop Spell"/>
+        <On Terms="WeaponStart.GoliathAUpgraded.AttackStart" Send="AnimBracketStart Spell Spell"/>
+        <On Terms="WeaponStop.GoliathAUpgraded.AttackStop" Send="AnimBracketStop Spell"/>
+        <On Terms="ActorCreation" Send="TextureSelectBySlot main {RequireAll diffuse}"/>
+        <On Terms="ActorCreation" Send="TextureSelectByMatch main.specular main"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveVoidShade" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitDeathCustomize; ValidateUnit HaveTerrazineShadow" Send="DeathCustomize Shadow"/>
+        <On Terms="UnitBirth.LightWalker" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <Scale value="1.200000"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <DeathArray index="Normal" ModelLink="LightWalkerDeath" SoundLink="Goliath_Explode"/>
+        <DeathCustoms>
+            <ModelLink value="DeathVoidShadowMedium"/>
+            <SoundLink value="ShadowUnit_DeathFX"/>
+            <VoiceLink value="ShadowUnit_DeathVox"/>
+            <Name value="Shadow"/>
+        </DeathCustoms>
+        <DeathActorModel value="GoliathDeath"/>
+        <PortraitModel value="LightWalkerPortrait"/>
+        <StandAnimTurnTime value="4"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="1.000000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleMassive2"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="3.6093"/>
+        <BarOffset value="75"/>
+        <BarWidth value="66"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-goliath.dds"/>
+        </GroupIcon>
+        <GroupSoundArray index="Birth" value="Goliath_Birth"/>
+        <GroupSoundArray index="Ready" value="Goliath_Ready"/>
+        <GroupSoundArray index="Help" value="Goliath_Help"/>
+        <GroupSoundArray index="What" value="Goliath_What"/>
+        <GroupSoundArray index="Yes" value="Goliath_Yes"/>
+        <GroupSoundArray index="Attack" value="Goliath_Attack"/>
+        <GroupSoundArray index="Pissed" value="Goliath_Pissed"/>
+        <HeroIcon value="Assets\Textures\btn-unit-terran-goliath.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-terran-vehicleplatinglevel0.dds"/>
+        <SoundArray index="Ready" value="Goliath_Ready"/>
+        <SoundArray index="Help" value="Goliath_Help"/>
+        <SoundArray index="What" value="Goliath_What"/>
+        <SoundArray index="Yes" value="Goliath_Yes"/>
+        <SoundArray index="Attack" value="Goliath_Attack"/>
+        <SoundArray index="Pissed" value="Goliath_Pissed"/>
+        <SoundArray index="Movement" value="Goliath_Movement"/>
+        <UnitIcon value="Assets\Textures\btn-unit-terran-goliath.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-goliath.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorAction id="LightWalkerAutocannonAction" parent="GenericAttack" effectAttack="LightWalkerAutocannonDamage">
+        <LaunchAssets Model="LightWalkerAutocannonLaunchModel" Sound="LightWalkerAutocannonLaunchSound"/>
+        <Missile value="LightWalkerAutocannonWeaponMissile"/>
+        <ImpactMap index="None" Model="LightWalkerAutocannonImpactModel" Sound="LightWalkerAutocannonImpactSound"/>
+    </CActorAction>
     <CActorModelMaterial id="LockdownGlaze" parent="BehaviorGlaze">
         <EditorCategories value=""/>
         <On index="5" Terms="Behavior.LockdownDisabled.On" Send="Create"/>

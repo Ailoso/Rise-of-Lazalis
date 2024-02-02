@@ -103,6 +103,103 @@
         <ScaleMax value="0.050000,1.000000,0.050000"/>
         <ScaleMin value="0.050000,1.000000,0.050000"/>
     </CModel>
+    <CModel id="LightWalker" parent="Unit" Race="Terran">
+        <Model value="Assets\Models\P10.m3"/>
+        <AttachProps Id="Ref_TurretZ">
+            <Keys index="Turret" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 01">
+            <Keys index="SetA" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 02">
+            <Keys index="SetB" value="0"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 03">
+            <Keys index="SetB" value="2"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 04">
+            <Keys index="SetB" value="4"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 05">
+            <Keys index="SetB" value="1"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 06">
+            <Keys index="SetB" value="3"/>
+        </AttachProps>
+        <AttachProps Id="Ref_Weapon 07">
+            <Keys index="SetB" value="5"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh09"/>
+        <Radius value="0.650000"/>
+        <ScaleMax value="0.650000,0.650000,0.650000"/>
+        <ScaleMin value="0.650000,0.650000,0.650000"/>
+        <SelectionRadius value="0.999700"/>
+        <ShadowRadius value="0.999700"/>
+        <TechPurchaseCamera value="TechPurchaseGoliath"/>
+        <TextureDeclares Prefix="Goliath_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraHigh09"/>
+        <Variations Probability="1">
+            <TextureExpressionsForEditor Slot="main" Expression="RequireAll diffuse"/>
+        </Variations>
+    </CModel>
+    <CModel id="LightWalkerAutocannonImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\VikingAssaultWeaponImpact\VikingAssaultWeaponImpact.m3"/>
+    </CModel>
+    <CModel id="LightWalkerAutocannonLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\VikingAssaultWeaponLaunch\VikingAssaultWeaponLaunch.m3"/>
+    </CModel>
+    <CModel id="LightWalkerDeath" parent="UnitDeath" Race="Terran">
+        <Model value="Assets\Doodads\DOM_Explosion_Med\DOM_Explosion_Med.m3"/>
+        <LowQualityModel value="TerranMediumUnitDeathLow"/>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="GoliathDeathFXA"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Goliath_DeathFXA"/>
+        </Events>
+        <Events>
+            <Anim value="Death,01"/>
+            <Name value="GoliathDeathFXA"/>
+            <Type value="Sound"/>
+            <Time value="0.010000"/>
+            <Payload value="Goliath_DeathFXA"/>
+        </Events>
+        <Events>
+            <Anim value="Death,00"/>
+            <Name value="GoliathDeathFXB"/>
+            <Type value="Sound"/>
+            <Time value="2.000000"/>
+            <Payload value="Goliath_DeathFXB"/>
+        </Events>
+        <Events>
+            <Anim value="Death,02"/>
+            <Name value="GoliathDeathFXB"/>
+            <Type value="Sound"/>
+            <Time value="0.870000"/>
+            <Payload value="Goliath_DeathFXB"/>
+        </Events>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.999700"/>
+        <ShadowRadius value="0.999700"/>
+        <TextureDeclares Prefix="Goliath_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+            <Adaptions TriggerOnSubstring="_Specular" Slot="main"/>
+        </TextureDeclares>
+    </CModel>
+    <CModel id="LightWalkerPortrait" parent="FXAPortrait" Race="Terran">
+        <Model value="Assets\COOP\Mengsk\Portraits\Trooper_Mengsk_COOP_Rocket_Portrait\Trooper_Mengsk_COOP_Rocket_Portrait.m3"/>
+        <FacialController value="LocalizedData\Facial\GoliathPortrait.fxa"/>
+        <Image value="Assets\Textures\GoliathPortrait_Static.dds"/>
+        <Lighting value="GoliathPortrait"/>
+    </CModel>
     <CModelFoliage id="LockdownGlaze">
         <Model value="Assets\Effects\Glaze\Glaze_Fenix_Scout_StunMissile\Glaze_Fenix_Scout_StunMissile.m3"/>
     </CModelFoliage>
@@ -146,13 +243,13 @@
         <Model value="Assets\Effects\Terran\MarineWeaponLaunch\MarineWeaponLaunch.m3"/>
     </CModel>
     <CModel id="Frontiersman" parent="GhostBase">
-        <Model value="Assets\Models\Spectre_Junker.m3"/>
+        <Model value="Assets\Models\Bullseye.m3"/>
     </CModel>
     <CModel id="FrontiersmanDeath" parent="GhostDeathBase">
-        <Model value="Assets\Models\Spectre_Junker_Death.m3"/>
+        <Model value="Assets\Effects\Terran\TerranSmallUnitDeath\TerranSmallUnitDeath_Low.m3"/>
     </CModel>
     <CModel id="FrontiersmanPortrait" parent="GhostPortraitBase">
-        <Model value="Assets\Portraits\Terran\GhostPortraitEx3\GhostPortraitEx3.m3"/>
+        <Model value="Assets\Portraits\Terran\DOM_GhostPortrait\DOM_GhostPortrait.m3"/>
         <Flags index="Download" value="1"/>
         <Flags index="VariationFallback" value="0"/>
         <Image value="Assets\Textures\ghostportraitex3_static.dds"/>
