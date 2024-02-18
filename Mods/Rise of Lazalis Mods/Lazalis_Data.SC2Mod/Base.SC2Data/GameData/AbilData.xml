@@ -32,6 +32,14 @@
         <Flags index="BestUnit" value="0"/>
         <Flags index="Transient" value="1"/>
     </CAbilSpecialize>
+    <CAbilEffectInstant id="InfiltrateNetwork">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <Effect index="0" value="InfiltrateNetworkAB"/>
+        <PrepTime value="5"/>
+        <ShowProgressArray index="Prep" value="1"/>
+        <ProgressButtonArray index="Prep" value="InfiltrateNetwork"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="InfiltrateNetwork"/>
+    </CAbilEffectInstant>
     <CAbilEffectTarget id="Lockdown">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <Effect index="0" value="LockdownAB"/>
@@ -234,6 +242,23 @@
             <Unit value="Pioneer"/>
             <Unit value="Pioneer"/>
             <Unit value="Pioneer"/>
+        </InfoArray>
+        <InfoArray index="Train2" Time="21">
+            <Button DefaultButtonFace="TrainMilitia"/>
+            <Unit value="Militia"/>
+            <Unit value="Militia"/>
+            <Unit value="Militia"/>
+            <Unit value="Militia"/>
+            <Unit value="Militia"/>
+        </InfoArray>
+        <InfoArray index="Train3" Time="34">
+            <Button DefaultButtonFace="TrainFrontiersmen"/>
+            <Unit value="Frontiersman"/>
+            <Unit value="Frontiersman"/>
+        </InfoArray>
+        <InfoArray index="Train4" Time="42">
+            <Button DefaultButtonFace="TrainBypassers"/>
+            <Unit value="Bypasser"/>
         </InfoArray>
     </CAbilTrain>
     <CAbilMorph id="Unsiege">

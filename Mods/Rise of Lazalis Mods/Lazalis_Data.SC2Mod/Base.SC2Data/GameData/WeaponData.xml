@@ -57,13 +57,21 @@
         <Period value="1.87"/>
         <Effect value="F5LongshotLaunchMissile"/>
     </CWeaponLegacy>
-    <CWeaponLegacy id="FerromagSMG">
+    <CWeaponLegacy id="FerromagSMGRank0">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>
         <DisplayEffect value="FerromagSMGDamage"/>
         <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
         <Period value="0.96"/>
         <Effect value="FerromagSMGDamage"/>
         <RandomDelayMax value="0.525"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HomemadeFlamethrower">
+        <Icon value="Assets\Icons\infantryweaponsupgraded-level0.dds"/>
+        <DisplayEffect value="HomemadeFlamethrowerDamage"/>
+        <TargetFilters value="Ground,Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Range value="7"/>
+        <Period value="2.4"/>
+        <Effect value="HomemadeFlamethrowerCP"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="KeltarCarbine">
         <Icon value="Assets\Textures\btn-upgrade-terran-infantryweaponslevel0.dds"/>

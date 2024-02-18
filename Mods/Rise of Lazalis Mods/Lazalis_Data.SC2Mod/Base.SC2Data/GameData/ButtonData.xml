@@ -8,6 +8,10 @@
         <Icon value="Assets\Icons\ao155rifle.dds"/>
         <AlertIcon value="Assets\Icons\ao155rifle.dds"/>
     </CButton>
+    <CButton id="AntiArmorCannon">
+        <Icon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-terran-explosiveshrapnelshells.dds"/>
+    </CButton>
     <CButton id="BearclawFlamethrower">
         <Icon value="Assets\Textures\btn-upgrade-mengsk-trooper-flamethrower.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-mengsk-trooper-flamethrower.dds"/>
@@ -119,6 +123,10 @@
     <CButton id="ShockCharge">
         <Icon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
         <AlertIcon value="Assets\Textures\btn-upgrade-terran-interferencematrix.dds"/>
+    </CButton>
+    <CButton id="SignalRelay">
+        <Icon value="Assets\Textures\btn-status-radar.dds"/>
+        <AlertIcon value="Assets\Textures\btn-status-radar.dds"/>
     </CButton>
     <CButton id="Sprint">
         <Icon value="Assets\Textures\btn-missing-kaeo.dds"/>

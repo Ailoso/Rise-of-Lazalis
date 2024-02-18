@@ -12,6 +12,25 @@
         <InfoFlags index="Hidden" value="1"/>
         <EditorCategories value="AbilityorEffectType:Units"/>
     </CBehaviorBuff>
+    <CBehaviorBuff id="BurningHomemadeFlamethrower">
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <MaxStackCount value="99"/>
+        <MaxStackCountPerCaster value="1"/>
+        <Duration value="0.5"/>
+        <Period value="0.45"/>
+        <PeriodicEffect value="HomemadeFlamethrowerDamage"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="InfiltrateNetwork">
+        <Alignment value="Positive"/>
+        <InfoIcon value="Assets\Textures\btn-tips-computerterminals.dds"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <DisplayDuration index="Neutral" value="1"/>
+        <DisplayDuration index="Enemy" value="1"/>
+        <Duration value="15"/>
+        <Modification Radar="25" RadarFilters="-;Player,Ally,Neutral,Missile,Item,Dead,Hidden,Invulnerable,Benign"/>
+    </CBehaviorBuff>
     <CBehaviorBuff id="SS6Disabled">
         <Alignment value="Negative"/>
         <InfoIcon value="Assets\Textures\btn-ability-protoss-targetlock.dds"/>

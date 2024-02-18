@@ -134,6 +134,36 @@
     <CEffectDamage id="GoliathG">
         <Amount value="24"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="HomemadeFlamethrowerAB">
+        <EditorCategories value=""/>
+        <Behavior value="BurningHomemadeFlamethrower"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="HomemadeFlamethrowerCP">
+        <EditorCategories value=""/>
+        <Flags index="Channeled" value="1"/>
+        <Flags index="Channeling" value="1"/>
+        <PeriodCount value="10"/>
+        <PeriodicEffectArray value="HomemadeFlamethrowerLaunchMissile"/>
+        <PeriodicPeriodArray value="0.1"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="HomemadeFlamethrowerDamage" parent="DU_WEAP">
+        <AttributeBonus index="Biological" value="5"/>
+        <AttributeBonus index="Structure" value="5"/>
+        <Kind value="Splash"/>
+        <Amount value="8"/>
+        <Death value="Fire"/>
+        <AreaArray Radius="0.7" Fraction="1"/>
+        <SearchFilters value="Ground;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="HomemadeFlamethrowerLaunchMissile">
+        <ImpactLocation Value="TargetPoint"/>
+        <ImpactEffect value="HomemadeFlamethrowerAB"/>
+        <AmmoUnit value="HomemadeFlamethrowerWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectApplyBehavior id="InfiltrateNetworkAB">
+        <EditorCategories value=""/>
+        <Behavior value="InfiltrateNetwork"/>
+    </CEffectApplyBehavior>
     <CEffectDamage id="KeltarCarbineDamage" parent="DU_WEAP">
         <Amount value="6"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
@@ -219,7 +249,7 @@
     <CEffectEnumArea id="RemoveRetreatSA">
         <EditorCategories value=""/>
         <SearchFilters value="-;Ally,Neutral,Enemy,Missile,Stasis,Dead"/>
-        <AreaArray Radius="5.5" Effect="RetreatRB"/>
+        <AreaArray Radius="7" Effect="RetreatRB"/>
     </CEffectEnumArea>
     <CEffectApplyBehavior id="RetreatAB">
         <EditorCategories value=""/>

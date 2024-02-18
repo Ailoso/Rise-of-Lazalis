@@ -51,4 +51,16 @@
             <YawPitchRoll value="5759.6484"/>
         </MotionPhases>
     </CMoverMissile>
+    <CMoverMissile id="HomemadeFlamethrowerMissile">
+        <MotionPhases>
+            <Driver value="Ballistic"/>
+            <Speed value="10"/>
+            <Gravity value="7.5"/>
+            <ArrivalTestType value="2D"/>
+            <ThrowBandYaw value="-360,-360,-360,-360"/>
+            <ThrowBandPitch value="-360,-360,-360,-360"/>
+            <YawPitchRoll value="5759.6484"/>
+        </MotionPhases>
+        <MotionPhases YawPitchRoll="MAX"/>
+    </CMoverMissile>
 </Catalog>

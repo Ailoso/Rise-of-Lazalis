@@ -48,11 +48,11 @@
         <BehaviorArray Link="FireSuppressionSystem"/>
         <CardLayouts>
             <LayoutButtons Face="TrainPioneers" Type="AbilCmd" AbilCmd="UnariBarracksTrain,Train1" Row="0" Column="0"/>
-            <LayoutButtons Face="TrainMilitia" Type="Passive" Row="0" Column="1"/>
+            <LayoutButtons Face="TrainMilitia" Type="AbilCmd" AbilCmd="UnariBarracksTrain,Train2" Row="0" Column="1"/>
             <LayoutButtons Face="Rally" Type="AbilCmd" AbilCmd="Rally,Rally1" Row="1" Column="4"/>
             <LayoutButtons Face="Cancel" Type="AbilCmd" AbilCmd="que5,CancelLast" Row="2" Column="4"/>
-            <LayoutButtons Face="TrainFrontiersmen" Type="Passive" Row="0" Column="2"/>
-            <LayoutButtons Face="TrainBypassers" Type="Passive" Row="0" Column="3"/>
+            <LayoutButtons Face="TrainFrontiersmen" Type="AbilCmd" AbilCmd="UnariBarracksTrain,Train3" Row="0" Column="2"/>
+            <LayoutButtons Face="TrainBypassers" Type="AbilCmd" AbilCmd="UnariBarracksTrain,Train4" Row="0" Column="3"/>
         </CardLayouts>
         <Radius value="1.75"/>
         <SeparationRadius value="1.75"/>
@@ -180,6 +180,7 @@
         <AbilArray Link="move"/>
         <AbilArray Link="Retreat"/>
         <AbilArray Link="Lockdown"/>
+        <AbilArray Link="InfiltrateNetwork"/>
         <WeaponArray/>
         <WeaponArray Link="AlivyseHandgun"/>
         <CardLayouts>
@@ -200,7 +201,7 @@
             <LayoutButtons Face="ShockCharge" Type="Passive" Row="1" Column="0"/>
             <LayoutButtons Face="X12MobileComputer" Type="Passive" Row="1" Column="1"/>
             <LayoutButtons Face="Lockdown" Type="AbilCmd" AbilCmd="Lockdown,Execute" Row="2" Column="0"/>
-            <LayoutButtons Face="InfiltrateNetwork" Type="Passive" Row="2" Column="1"/>
+            <LayoutButtons Face="InfiltrateNetwork" Type="AbilCmd" AbilCmd="InfiltrateNetwork,Execute" Row="2" Column="1"/>
             <LayoutButtons Face="Withdrawal" Type="Passive" Row="2" Column="2"/>
         </CardLayouts>
         <CardLayouts CardId="0002">
@@ -240,6 +241,69 @@
         <BehaviorArray Link="RemoveRetreat"/>
     </CUnit>
     <CUnit id="DetoniteChargeMissile" parent="MISSILE"/>
+    <CUnit id="Encampment">
+        <DeathRevealRadius value="3"/>
+        <ReviveType value="SensorTower"/>
+        <Facing value="315"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="Turnable" value="0"/>
+        <FlagArray index="PreventDefeat" value="1"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="PenaltyRevealed" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TownAlert" value="1"/>
+        <FlagArray index="NoPortraitTalk" value="1"/>
+        <FlagArray index="ArmorDisabledWhileConstructing" value="1"/>
+        <FogVisibility value="Snapshot"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Burrow" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="Structure" value="1"/>
+        <Collide index="RoachBurrow" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Light" value="1"/>
+        <Attributes index="Structure" value="1"/>
+        <LifeStart value="200"/>
+        <LifeMax value="200"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranBuildingPlating"/>
+        <StationaryTurningRate value="719.4726"/>
+        <TurningRate value="719.4726"/>
+        <Sight value="12"/>
+        <CostCategory value="Technology"/>
+        <RepairTime value="25"/>
+        <AttackTargetPriority value="11"/>
+        <AbilArray Link="BuildInProgress"/>
+        <BehaviorArray Link="SensorTowerRadar"/>
+        <BehaviorArray Link="TerranBuildingBurnDown"/>
+        <BehaviorArray Link="UnderConstruction"/>
+        <BehaviorArray Link="FireSuppressionSystem"/>
+        <CardLayouts>
+            <LayoutButtons Face="Halt" Type="AbilCmd" AbilCmd="BuildInProgress,Halt" Row="2" Column="3"/>
+            <LayoutButtons Face="CancelBuilding" Type="AbilCmd" AbilCmd="BuildInProgress,Cancel" Row="2" Column="4"/>
+            <LayoutButtons Face="SelectBuilder" Type="SelectBuilder" Row="1" Column="3"/>
+        </CardLayouts>
+        <Radius value="0.75"/>
+        <SeparationRadius value="0.75"/>
+        <Footprint value="Footprint1x1"/>
+        <PlacementFootprint value="Footprint1x1"/>
+        <ScoreMake value="225"/>
+        <ScoreKill value="225"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="3"/>
+        <MinimapRadius value="0.75"/>
+        <EditorCategories value="ObjectType:Structure"/>
+        <LeaderAlias value="SensorTower"/>
+        <HotkeyAlias value="SensorTower"/>
+        <SelectAlias value="SensorTower"/>
+        <GlossaryPriority value="314"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <ReviveInfoBase>
+            <Charge Link="SensorTower/Revive"/>
+            <Cooldown Link="SensorTower/Revive"/>
+        </ReviveInfoBase>
+    </CUnit>
     <CUnit id="F5LongshotWeapon" parent="MISSILE">
         <Mover value="F5LongshotMissile"/>
     </CUnit>
@@ -248,6 +312,9 @@
         <LifeMax value="240"/>
         <LifeArmor value="8"/>
         <Radius value="0.8125"/>
+    </CUnit>
+    <CUnit id="HomemadeFlamethrowerWeapon" parent="MISSILE">
+        <Mover value="HomemadeFlamethrowerMissile"/>
     </CUnit>
     <CUnit id="LightWalker">
         <DeathRevealRadius value="3"/>
@@ -295,6 +362,8 @@
         </CardLayouts>
         <CardLayouts CardId="0002">
             <LayoutButtons Face="CancelBuilding" Type="CancelSubmenu" Row="2" Column="4"/>
+            <LayoutButtons Face="AntiArmorCannon" Type="Passive" Row="0" Column="0"/>
+            <LayoutButtons Face="SignalRelay" Type="Passive" Row="0" Column="1"/>
         </CardLayouts>
         <Radius value="0.8125"/>
         <SeparationRadius value="0.65"/>
@@ -530,7 +599,7 @@
         <AbilArray Link="V1Implant"/>
         <AbilArray Link="BuildMakeshiftBunker"/>
         <AbilArray Link="MilitiaEquipment"/>
-        <WeaponArray Link="FerromagSMG"/>
+        <WeaponArray Link="FerromagSMGRank0"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
@@ -759,6 +828,79 @@
         <LifeArmor value="15"/>
         <Radius value="1.125"/>
         <InnerRadius value="1.125"/>
+    </CUnit>
+    <CUnit id="GeneralGeovitz">
+        <DeathRevealRadius value="3"/>
+        <Race value="Terr"/>
+        <Mob value="Multiplayer"/>
+        <FlagArray index="PreventDestroy" value="1"/>
+        <FlagArray index="UseLineOfSight" value="1"/>
+        <FlagArray index="TurnBeforeMove" value="1"/>
+        <FlagArray index="AIPressForwardDisabled" value="1"/>
+        <FlagArray index="ArmySelect" value="1"/>
+        <PlaneArray index="Ground" value="1"/>
+        <Collide index="Ground" value="1"/>
+        <Collide index="ForceField" value="1"/>
+        <Collide index="Locust" value="1"/>
+        <Collide index="Small" value="1"/>
+        <Attributes index="Armored" value="1"/>
+        <Attributes index="Mechanical" value="1"/>
+        <LifeStart value="1100"/>
+        <LifeMax value="1100"/>
+        <LifeArmor value="20"/>
+        <LifeArmorName value="Unit/LifeArmorName/TerranVehiclePlating"/>
+        <Speed value="2.25"/>
+        <Acceleration value="1000"/>
+        <LateralAcceleration value="64"/>
+        <TurningRate value="360"/>
+        <Sight value="11"/>
+        <Food value="-3"/>
+        <CostCategory value="Army"/>
+        <CostResource index="Minerals" value="600"/>
+        <CostResource index="Vespene" value="450"/>
+        <RepairTime value="45"/>
+        <AttackTargetPriority value="20"/>
+        <DamageDealtXP value="1"/>
+        <DamageTakenXP value="1"/>
+        <KillXP value="50"/>
+        <AbilArray Link="stop"/>
+        <AbilArray Link="attack"/>
+        <AbilArray Link="move"/>
+        <WeaponArray Turret="SiegeTank"/>
+        <CardLayouts>
+            <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
+            <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="0" Column="1"/>
+            <LayoutButtons Face="MoveHoldPosition" Type="AbilCmd" AbilCmd="move,HoldPos" Row="0" Column="2"/>
+            <LayoutButtons Face="Attack" Type="AbilCmd" AbilCmd="attack,Execute" Row="0" Column="4"/>
+            <LayoutButtons Face="MovePatrol" Type="AbilCmd" AbilCmd="move,Patrol" Row="0" Column="3"/>
+        </CardLayouts>
+        <Radius value="1.125"/>
+        <SeparationRadius value="1"/>
+        <InnerRadius value="1.125"/>
+        <CargoSize value="4"/>
+        <ScoreMake value="275"/>
+        <ScoreKill value="275"/>
+        <ScoreResult value="BuildOrder"/>
+        <SubgroupPriority value="13"/>
+        <MinimapRadius value="1"/>
+        <EditorCategories value="ObjectType:Unit,ObjectFamily:Melee"/>
+        <TacticalAI value="SiegeTank"/>
+        <AIEvalFactor value="1.5"/>
+        <TechAliasArray value="Alias_SiegeTank"/>
+        <GlossaryCategory value="Unit/Category/TerranUnits"/>
+        <GlossaryPriority value="130"/>
+        <GlossaryStrongArray value="Marine"/>
+        <GlossaryStrongArray value="Hydralisk"/>
+        <GlossaryStrongArray value="Stalker"/>
+        <GlossaryWeakArray value="Banshee"/>
+        <GlossaryWeakArray value="Mutalisk"/>
+        <GlossaryWeakArray value="Immortal"/>
+        <HotkeyCategory value="Unit/Category/TerranUnits"/>
+        <Fidget>
+            <ChanceArray index="Anim" value="33"/>
+            <ChanceArray index="Idle" value="33"/>
+            <ChanceArray index="Turn" value="33"/>
+        </Fidget>
     </CUnit>
     <CUnit id="SiegeTankSieged">
         <LifeStart value="330"/>

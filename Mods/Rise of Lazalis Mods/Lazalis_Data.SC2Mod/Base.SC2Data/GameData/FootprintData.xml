@@ -44,4 +44,25 @@
             <Borders value="0,2,2;1,0,2;2,3,2;3,1,2"/>
         </Shape>
     </CFootprint>
+    <CFootprint id="FootprintEncampment">
+        <Layers index="Check" Area="-2,-2,3,3">
+            <Rows value="x...x"/>
+            <Rows value="....."/>
+            <Rows value="....."/>
+            <Rows value="....."/>
+            <Rows value="x..xx"/>
+        </Layers>
+        <Layers index="Place" Area="-2,-2,3,3">
+            <Rows value="x...x"/>
+            <Rows value="....."/>
+            <Rows value="....."/>
+            <Rows value="....."/>
+            <Rows value="x...x"/>
+        </Layers>
+        <Shape>
+            <Radius value="3.5356"/>
+            <Offsets value="-2.5,-2.5;-0.5,-2.5;0.5,-2.5;2.5,-2.5;-2.5,2.5;-1.5,2.5;1.5,2.5;2.5,2.5;-2.5,-1.5;-2.5,1.5;2.5,-1.5;2.5,1.5;-2,1;-1,2;-2,-1;1,2;2,1;2,-1"/>
+            <Borders value="0,8,2;1,0,2;2,17,2;3,2,2;4,5,2;5,13,2;6,7,2;7,11,2;8,14,2;9,4,2;10,3,2;11,16,2;12,9,2;13,12,2;14,1,2;15,6,2;16,15,2;17,10,2"/>
+        </Shape>
+    </CFootprint>
 </Catalog>

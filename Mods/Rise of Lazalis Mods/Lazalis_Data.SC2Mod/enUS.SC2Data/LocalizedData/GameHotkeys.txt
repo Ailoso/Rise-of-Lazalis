@@ -1,5 +1,6 @@
 ﻿Button/Hotkey/76APRifle=A
 Button/Hotkey/AO155Rifle=R
+Button/Hotkey/AntiArmorCannon=R
 Button/Hotkey/BearclawFlamethrower=F
 Button/Hotkey/BuildUnari=B
 Button/Hotkey/CStaticSmoke=C
@@ -17,6 +18,7 @@ Button/Hotkey/SCVUnari=S
 Button/Hotkey/SS6Mine=T
 Button/Hotkey/SetupEncampment=E
 Button/Hotkey/ShockCharge=C
+Button/Hotkey/SignalRelay=H
 Button/Hotkey/TrainBodyguard=B
 Button/Hotkey/TrainBypassers=B
 Button/Hotkey/TrainFrontiersmen=F

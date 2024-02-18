@@ -156,6 +156,20 @@
         <DupeMaximumMethod value="Replace"/>
         <Volume value="-12.000000,-10.000000"/>
     </CSound>
+    <CSound id="HomemadeFlamethrowerImpactSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact3.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackImpact4.wav"/>
+    </CSound>
+    <CSound id="HomemadeFlamethrowerLaunchSound" parent="Combat">
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch0.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch1.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch2.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch3.wav"/>
+        <AssetArray File="Assets\Sounds\Terran\Hellion\Hellion_AttackLaunch4.wav"/>
+    </CSound>
     <CSound id="KeltarCarbineImpactSound" parent="Combat">
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact0.wav"/>
         <AssetArray File="Assets\Sounds\Terran\SharedEffects\BulletImpacts\Terran_SingleBulletAttackImpact1.wav"/>

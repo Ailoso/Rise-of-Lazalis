@@ -92,6 +92,12 @@
     <CModel id="DetoniteChargeMissile">
         <Model value="Assets\Units\Terran\Griffin_BombRun_COOP\Griffin_BombRun_COOP.m3"/>
     </CModel>
+    <CModelFoliage id="Encampment">
+        <Model value="Assets\Doodads\JarbanMinor_Tent_Large\JarbanMinor_Tent_Large.m3"/>
+    </CModelFoliage>
+    <CModelFoliage id="EncampmentSmall">
+        <Model value="Assets\Doodads\JarbanMinor_TentCover\JarbanMinor_TentCover_03.m3"/>
+    </CModelFoliage>
     <CModel id="F5LongshotImpactModel" parent="ImpactFX">
         <Model value="Assets\Effects\Terran\GhostWeaponImpact\GhostWeaponImpact.m3"/>
     </CModel>
@@ -102,6 +108,15 @@
         <Model value="Assets\Models\Bullet_Unari.m3"/>
         <ScaleMax value="0.050000,1.000000,0.050000"/>
         <ScaleMin value="0.050000,1.000000,0.050000"/>
+    </CModel>
+    <CModel id="HomemadeFlamethrowerImpactModel" parent="ImpactFX">
+        <Model value="Assets\Effects\Terran\FireImpact\FireImpact.m3"/>
+    </CModel>
+    <CModel id="HomemadeFlamethrowerLaunchModel" parent="LaunchFX">
+        <Model value="Assets\Effects\Terran\FirebatFireSprite\FirebatFireSprite.m3"/>
+    </CModel>
+    <CModel id="HomemadeFlamethrowerMissileModel" parent="MissileFX">
+        <Model value="Assets\Effects\Terran\TerranBuildingFireLarge\TerranBuildingFireLarge.m3"/>
     </CModel>
     <CModel id="LightWalker" parent="Unit" Race="Terran">
         <Model value="Assets\Models\P10.m3"/>
@@ -356,6 +371,17 @@
         <ScaleMin value="0.750000,0.750000,0.750000"/>
         <SelectionRadius value="2.000000"/>
         <ShadowRadius value="2.000000"/>
+    </CModel>
+    <CModel id="GeneralGeovitz" parent="SiegeTankBase">
+        <Model value="Assets\Models\Cerberus_Assault_Fix.m3"/>
+    </CModel>
+    <CModel id="GeneralGeovitzDeath" parent="SiegeTankDeathBase">
+        <Model value="Assets\Units\Terran\SiegeTankDeathEx1\SiegeTankDeathEx1.m3"/>
+    </CModel>
+    <CModel id="GeneralGeovitzPortrait" parent="SiegeTankPortraitBase">
+        <Model value="Assets\Portraits\Terran\SiegeTankPortrait\SiegeTankPortrait.m3"/>
+        <Image value="Assets\Textures\SiegeTankPortrait_Static.dds"/>
+        <Lighting value="SiegeTankPortrait"/>
     </CModel>
     <CModel id="ThorHandGunAttackImpact">
         <ScaleMax value="2.000000,2.000000,2.000000"/>
