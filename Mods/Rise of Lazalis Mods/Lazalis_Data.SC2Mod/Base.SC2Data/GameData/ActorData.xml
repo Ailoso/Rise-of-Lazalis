@@ -552,7 +552,7 @@
         <EditorCategories value=""/>
         <DeathArray index="Normal" ModelLink="PioneerDeath" SoundLink="Marine_DeathFXBloodSpray" VoiceLink="Marine_Death"/>
         <PortraitModel value="PioneerPortrait"/>
-        <WalkAnimMoveSpeed value="2.25"/>
+        <WalkAnimMoveSpeed value="3"/>
         <BarOffset value="40"/>
         <BarWidth value="35"/>
         <GroupIcon>
@@ -569,7 +569,7 @@
         <AbilSoundArray AbilCmd="PioneerEquipment,Specialize3" Sound="Pioneer_Weapon"/>
         <AbilSoundArray AbilCmd="PioneerRepairRank2,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
         <AbilSoundArray AbilCmd="PioneerRepairRank3,Execute" Sound="Pioneer_Repair" GroupSound="Pioneer_Group_Repair"/>
-        <Scale value="0.900000,0.900000,0.850000"/>
+        <Scale value="0.850000,0.850000,0.800000"/>
     </CActorUnit>
     <CActorBeamSimple id="PioneerRepairRank2Beam" parent="BeamSimpleAnimationStyleContinuous">
         <On Terms="Effect.PioneerRepairRank2.TargetStart" Send="Create"/>

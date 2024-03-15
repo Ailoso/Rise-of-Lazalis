@@ -24,7 +24,7 @@
     </CEffectApplyBehavior>
     <CEffectDamage id="AO155RifleDamage" parent="DU_WEAP">
         <AttributeBonus index="Light" value="2"/>
-        <Amount value="6"/>
+        <Amount value="7"/>
         <SearchFilters value="-;Missile,Stasis,Dead,Hidden,Invulnerable"/>
     </CEffectDamage>
     <CEffectDamage id="AlivyseHandgunDamage" parent="DU_WEAP">

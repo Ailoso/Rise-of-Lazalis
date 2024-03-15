@@ -760,6 +760,7 @@
         <AbilArray Link="BuildMakeshiftBunker"/>
         <AbilArray Link="PioneerEquipment"/>
         <AbilArray Link="Retreat"/>
+        <AbilArray Link="BuildPioneer"/>
         <WeaponArray Link="KeltarCarbine"/>
         <CardLayouts>
             <LayoutButtons Face="Move" Type="AbilCmd" AbilCmd="move,Move" Row="0" Column="0"/>
@@ -777,7 +778,7 @@
             </LayoutButtons>
             <LayoutButtons Face="Gather" Type="AbilCmd" AbilCmd="SCVHarvest,Gather" Row="1" Column="0"/>
             <LayoutButtons Face="ReturnCargo" Type="AbilCmd" AbilCmd="SCVHarvest,Return" Row="1" Column="0"/>
-            <LayoutButtons Face="TerranBuild" Type="Passive" Row="2" Column="0"/>
+            <LayoutButtons Face="TerranBuild" Type="Submenu" SubmenuCardId="0003" Row="2" Column="0"/>
             <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepair,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepairRank2,Execute" Row="2" Column="2"/>
             <LayoutButtons Face="Repair" Type="AbilCmd" AbilCmd="PioneerRepairRank3,Execute" Row="2" Column="2"/>
@@ -793,6 +794,12 @@
             <LayoutButtons Face="AO155Rifle" Type="AbilCmd" AbilCmd="PioneerEquipment,Specialize3" Row="0" Column="2"/>
             <LayoutButtons Face="MothershipCoreAttack" Type="AbilCmd" AbilCmd="attack,Execute" Row="2" Column="0"/>
             <LayoutButtons Face="Stop" Type="AbilCmd" AbilCmd="stop,Stop" Row="2" Column="1"/>
+        </CardLayouts>
+        <CardLayouts CardId="0003">
+            <LayoutButtons Face="CommandCenter" Type="AbilCmd" AbilCmd="BuildPioneer,Build1" Row="0" Column="0"/>
+            <LayoutButtons Face="Refinery" Type="AbilCmd" AbilCmd="BuildPioneer,Build2" Row="0" Column="1"/>
+            <LayoutButtons Face="SupplyDepot" Type="AbilCmd" AbilCmd="BuildPioneer,Build3" Row="0" Column="2"/>
+            <LayoutButtons Face="Cancel" Type="CancelSubmenu" Row="2" Column="4"/>
         </CardLayouts>
         <Radius value="0.375"/>
         <SeparationRadius value="0.375"/>

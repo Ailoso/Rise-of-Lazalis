@@ -207,10 +207,10 @@
         <Category value="Combat"/>
         <Mode value="3DWorld"/>
     </CSound>
-    <CSound id="MilitiaReady">
-        <AssetArray File="Assets\Sounds\Advisor2\Militia_Ready01.mp3" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Advisor2\Militia_Ready02.mp3" FacialGroup=""/>
-        <AssetArray File="Assets\Sounds\Advisor2\Militia_Ready03.mp3" FacialGroup=""/>
+    <CSound id="PioneerBuildingFinished">
+        <AssetArray File="Assets\Sounds\Pioneer_StructureBuilt_01.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_StructureBuilt_02.mp3" FacialGroup=""/>
+        <AssetArray File="Assets\Sounds\Pioneer_StructureBuilt_03.mp3" FacialGroup=""/>
         <Category value="Alert"/>
         <DupeDestroyCount value="1"/>
         <DupeMaximumMethod value="Replace"/>

@@ -1,4 +1,5 @@
 ﻿Abil/Name/BuildMakeshiftBunker=Build Makeshift Bunker
+Abil/Name/BuildPioneer=Build (Pioneer)
 Abil/Name/DetoniteCharge=Detonite Charge
 Abil/Name/Dismantle=Dismantle
 Abil/Name/FrontiersmanEquipment=Frontiersman Equipment
@@ -15,8 +16,8 @@ Abil/Name/SS6Explode=SS-6 Explode
 Abil/Name/SS6Mine=SS-6 Mine
 Abil/Name/UnariBarracksTrain=Barracks Train
 Abil/Name/V1Implant=V-1 Implant
-Alert/Text/MilitiaReady=Militia trained
-Alert/Tooltip/MilitiaReady=Militia trained
+Alert/Text/PioneerBuildingFinished=Structure finished.
+Alert/Tooltip/PioneerBuildingFinished=Structure finished.
 Behavior/Name/BurningHomemadeFlamethrower=Burning
 Behavior/Name/InfiltrateNetwork=Infiltrate Network
 Behavior/Name/LockdownDisabled=Disabled
@@ -48,7 +49,6 @@ Button/Name/Hardened=Hardened
 Button/Name/Inexperienced=Inexperienced
 Button/Name/InfiltrateNetwork=Infiltrate Network
 Button/Name/InfiltrationPulse=Infiltration Pulse
-Button/Name/Ironclad=Ironclad
 Button/Name/Lockdown=Lockdown
 Button/Name/MedicalStation=Medical Station
 Button/Name/Patience=Patience
@@ -78,7 +78,7 @@ Button/Tooltip/76APRifle=A slow, heavy-hitting anti-armor weapon.
 Button/Tooltip/AO155Rifle=Equip a stronger weapon that deals bonus damage to Light and fires faster.
 Button/Tooltip/AntiArmorCannon=Replace one of the Light Walker's Autocannons with an Anti-Armor Cannon, dealing high damage versus armored targets, but halving Autocannon damage.
 Button/Tooltip/BarracksUnari=Infantry-production facility.<n/><n/><c val="ffff8a">Enables:</c><n/>- Marines<n/>- Reapers<n/>- Bunkers from SCVs<n/>- Orbital Commands from Command Centers
-Button/Tooltip/BearclawFlamethrower=Equip a stronger anti-biological and anti-light weapon that deals damage in a line.
+Button/Tooltip/BearclawFlamethrower=Equip a stronger anti-biological and anti-structure weapon that deals damage in a line.
 Button/Tooltip/Bodyguard=Powerful infantry. Escorts important individuals. Limit of 3.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/BuildUnari=Opens a submenu to build structures.
 Button/Tooltip/Bypasser=Hacking specialist. Can use Lockdown, Infiltrate Network, and Withdrawal. Subpar combatant.<n/><n/><c val="FFFF80">Can attack ground units.</c>
@@ -99,7 +99,6 @@ Button/Tooltip/Hardened=Take 75% reduced damage for 4 seconds after taking damag
 Button/Tooltip/Inexperienced=Militia have a significantly higher random attack delay than other units.
 Button/Tooltip/InfiltrateNetwork=After 5 seconds, reveal the positions of all enemy units within 25 range of the Bypasser for 15 seconds. Does not reveal the area.
 Button/Tooltip/InfiltrationPulse=Cloak nearby allies for 10 seconds and increase movement speed by 20% for 3 seconds. Ends early upon dealing or taking damage.
-Button/Tooltip/Ironclad=This unit takes 50% less damage from enemies in front of it.
 Button/Tooltip/LightWalker=Heavy-fire support unit.<n/><n/><c val="#ColorAttackInfo">Can attack ground and air units.</c>
 Button/Tooltip/Lockdown=Target an enemy structure. After 5 seconds, it becomes disabled for 18 seconds, suppressing detection, sight radius, abilities, and weapons.
 Button/Tooltip/MakeshiftBunker=Defensive structure. <n/>Infantry fights from inside. <n/><n/><c val="#ColorAttackInfo">Bonus: +1 range to units inside.</c>

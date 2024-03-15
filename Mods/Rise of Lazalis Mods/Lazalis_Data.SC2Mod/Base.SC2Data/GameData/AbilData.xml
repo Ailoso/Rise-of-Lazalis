@@ -235,6 +235,21 @@
             </SectionArray>
         </InfoArray>
     </CAbilMorph>
+    <CAbilBuild id="BuildPioneer">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <FlagArray index="Interruptible" value="1"/>
+        <FlagArray index="PeonDisableCollision" value="1"/>
+        <InfoArray index="Build1" Unit="CommandCenter" Time="2" Alert="PioneerBuildingFinished">
+            <Button DefaultButtonFace="CommandCenter"/>
+        </InfoArray>
+        <InfoArray index="Build2" Unit="Refinery" Time="2" Alert="PioneerBuildingFinished">
+            <Button DefaultButtonFace="Refinery"/>
+        </InfoArray>
+        <InfoArray index="Build3" Unit="SupplyDepot" Time="2" Alert="PioneerBuildingFinished">
+            <Button DefaultButtonFace="SupplyDepot"/>
+        </InfoArray>
+        <ConstructionMover value="Construction"/>
+    </CAbilBuild>
     <CAbilTrain id="UnariBarracksTrain">
         <EditorCategories value="AbilityorEffectType:Units"/>
         <InfoArray index="Train1" Time="1">
